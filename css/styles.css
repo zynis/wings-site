@@ -1,0 +1,295 @@
+/*!
+ * Theme for WINGS
+ * Copyright 2016
+ * Developed by Oleg Frolov
+ * www.artof.pro
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin,cyrillic);
+
+
+/* ======================================================================================= */
+
+/* Common */
+
+	body {background: #fff}
+	body, th, td, input, select, textarea, button {font-family: Roboto, sans-serif; font-size: 14px; font-weight: 300; color: #2b474b}
+	
+	a {color: #282a7f; cursor: pointer}
+	a:hover {color: #000}
+
+	a:focus,
+	input:focus,
+	button:focus {outline: none}
+
+	#svgsprite {left: 0; top: 0; position: absolute; z-index: 0}
+	svg:not(:root) {overflow: hidden;}
+
+	h2 {margin: 0; font-size: 48px; font-weight: 500; color: #696969; line-height: 1; text-align: center;}
+
+	.p-center {position: absolute; left: 50%; top: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%)}
+
+	.img-responsive {display: inline-block;}
+
+
+/* ======================================================================================= */
+
+/* Header */
+
+	.site-header {background: #164364 url(../images/bg.svg); position: relative; padding-bottom: 65px; color: #fff;}
+	.site-header:after {content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 15px; background: url(../images/mask1.svg) no-repeat 50% 0;}
+	.site-header > .container {position: relative; z-index: 3}
+	.site-header a {color: #fff;}
+	.site-header .nav {padding: 50px 0 0; font-size: 18px; margin-bottom: 100px;}
+	.site-header .nav ul {margin: 0;}
+	.site-header .nav li {margin: 0 5px;}
+	.site-header .slogan {font-size: 32px; line-height: 1.2; margin: 60px 0;}
+	.site-header .slogan b {font-size: 60px; font-weight: 300; line-height: 1.2}
+	.site-header .socials {margin-top: 50px;}
+	.site-header .socials a svg {fill: #fff;}
+	.site-header .socials a:hover svg {fill: #8ff1ff;}
+	.site-header video {height: 100%; left: 0; object-fit: cover; position: absolute; top: 0; width: 100%; z-index: 0; background-position: 50% 50%; background-size: cover;}
+
+
+/* Block: Bots are future */
+
+	.block-future {margin: 40px 0 90px;}
+	.block-future .item {margin-top: 100px;}
+	.block-future .item h4 {color: #2b474b; font-size: 30px; font-weight: 500;}
+	.block-future .item p {font-size: 16px; color: #2b474b; font-weight: 400;}
+	.block-future .item .icon {position: relative; line-height: 0;}
+	.block-future .item .icon span {position: relative; display: inline-block; width: 190px; height: 190px; border-radius: 100%; background: #9aa4a6}
+	.block-future .item .icon span svg {fill: #fff;}
+	.block-future .item .icon span:after {content: ""; display: block; position: absolute; right: -30px; width: 14px; height: 14px; top: 50%; margin-top: -7px; background: #b2bbcf; border-radius: 100%}
+	.block-future .item .icon:before {content: ""; display: block; position: absolute; left: 220px; right: 0; border-top: #b2bbcf 2px dashed; top: 50%; margin-top: -1px;}
+	.block-future .item .icon:after {content: ""; display: block; position: absolute; right: 0; height: 110px; border-left: #b2bbcf 3px solid; top: 50%; margin-top: -55px;}
+	.block-future .item:nth-child(even) .icon {text-align: right}
+	.block-future .item:nth-child(even) .icon:before {right: 220px; left: 0;}
+	.block-future .item:nth-child(even) .icon:after {right: auto; left: 0;}
+	.block-future .item:nth-child(even) .icon span:after {right: auto; left: -30px;}
+
+
+/* Block: Interactive chat */
+
+	.block-interactive {background: #164364 url(../images/bg.svg); position: relative; padding-top: 50px;}
+	.block-interactive:after {content: ""; z-index: 10; display: block; position: absolute; bottom: 0; height: 340px; width: 100%; left: 0; background: url(../images/mask2.svg) 50% 100%;}
+	.block-interactive .data {position: relative; z-index: 11; color: #fff; max-width: 380px; display: inline-block;}
+	.block-interactive .data h3 {font-size: 30px; font-weight: 500; margin: 50px 0 30px;}
+	.block-interactive .data p {font-size: 16px; font-weight: 400; margin-bottom: 30px;}
+
+	#interactive {position: relative; width: 455px;}
+	#interactive .bg {height: 630px; position: relative; z-index: 2; background: url(../images/phone-bg.svg) no-repeat 0 0;}
+
+	#interactive .typist {position: absolute; top: 566px; left: 56px; width: 210px; height: 20px; z-index: 3; color: #fff; white-space: nowrap; overflow: hidden; line-height: 20px;}
+
+	#interactive .data {position: absolute; left: 15px; top: 165px; width: 300px; height: 395px; background: #4e6266; z-index: 1; overflow: hidden;}
+	#interactive .data ul {position: absolute; bottom: 3px; left: 6px; right: 7px;}
+	#interactive .data li {margin-bottom: 10px; position: relative; padding: 0 30px 0 50px; min-height: 44px; text-align: left;}
+	#interactive .data li img {position: absolute; left: 0; top: 0; width: 42px; height: 42px; border-radius: 100%; overflow: hidden;}
+	#interactive .data li .msg {display: inline-block; padding: 12px; border-radius: 20px; line-height: 16px; font-size: 13px; background: #8fa7ac; position: relative;}
+	#interactive .data li .msg:after {content: ""; position: absolute; bottom: 0; left: -8px; width: 15px; height: 17px; background: url(../images/icon-bubble-left.svg) no-repeat;}
+
+	#interactive .data li.s1 {padding: 0 50px 0 30px; text-align: right;}
+	#interactive .data li.s1 img {left: auto; right: 0;}
+	#interactive .data li.s1 .msg {background: #eaf7f7; color: #4e6266;}
+	#interactive .data li.s1 .msg:after {background-image: url(../images/icon-bubble-right.svg); left: auto; right: -8px;}
+
+
+/* Block: Features */
+
+	.block-features {margin: 40px 0 0; position: relative; padding-bottom: 60px;}
+	.block-features:before {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 25%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}
+	.block-features:after {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 75%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}
+	.block-features h2 {margin-bottom: 80px}
+	.block-features h4 {color: #2b474b; font-size: 30px; font-weight: 300; margin: 0;}
+	.block-features .icon {position: relative; line-height: 0; width: 130px; height: 130px; margin: 40px auto; border-radius: 100%; background: #9aa4a6}
+	.block-features .icon svg {fill: #fff;}
+	.block-features p {font-size: 16px; font-weight: 400;}
+
+
+/* Block: Cases */
+
+	.block-cases {background: #164364 url(../images/bg.svg); position: relative; padding: 90px 0 95px; color: #fff;}
+	.block-cases:after {content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 15px; background: url(../images/mask.svg) no-repeat 50% 0;}
+	.block-cases h4 {font-size: 24px; font-weight: 700; margin: 0;}
+	.block-cases h4 svg {fill: #fff; vertical-align: middle; margin-right: 10px;}
+	.block-cases p {font-size: 16px; font-weight: 400; margin: 15px 0 25px;}
+
+
+/* Block: Team */
+
+	.block-team {margin: 70px 0 95px;}
+	.block-team h2 {margin-bottom: 90px;}
+	.block-team li {float: left; width: 20%;}
+	.block-team li .name {font-size: 24px; font-weight: 500; line-height: 1; margin-top: 15px;}
+	.block-team li .role {font-size: 24px; font-weight: 300; line-height: 1}
+	.block-team li .info {font-size: 18px; font-weight: 300; line-height: 1; margin-top: 20px;}
+
+
+/* Block: Press */
+
+	.block-press {margin-bottom: 70px;}
+	.block-press h2 {margin-bottom: 65px; font-size: 36px; font-weight: 300;}
+	.block-press .text {background: #efefef; font-size: 15px; padding: 35px 30px 40px; position: relative; border-radius: 4px; position: relative; margin-bottom: 45px;}
+	.block-press .text:after {content: ""; display: block; position: absolute; top: 100%; left: 30px; border-left: #efefef 25px solid; border-bottom: transparent 15px solid;}
+	.block-press .author {font-size: 24px; line-height: 1.3;}
+
+	.carousel-indicators {bottom: -30px; margin-bottom: 0}
+	.carousel-indicators li {border-color: #164364; background-color: #164364; opacity: 0.5}
+	.carousel-indicators .active {background-color: #164364; opacity: 1}
+
+
+/* Footer */
+
+	.site-footer {background: #164364 url(../images/bg.svg); position: relative; padding: 125px 0 60px; color: #fff;}
+	.site-footer:after {content: ""; display: block; position: absolute; z-index: 2; top: 0; left: 50%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}
+	.site-footer a {color: #fff;}
+	.site-footer .nav {font-size: 18px; margin-bottom: 80px;}
+	.site-footer .nav ul {margin: 0;}
+	.site-footer .nav li {margin: 0 5px;}
+	.site-footer .copy {font-size: 18px; line-height: 1; margin: 60px 0 0;}
+
+
+/* ======================================================================================= */
+
+/* buttons */
+
+	.btn {border-radius: 0;}
+
+	.btn-info {background: #fff !important; color: #3f92d3 !important; border-color: #fff !important;}
+	.btn-info:hover,
+	.btn-info:active,
+	.btn-info:focus {background: #3f92d3 !important; color: #fff !important; border-color: #3f92d3 !important;}
+
+
+/* ======================================================================================= */
+
+/* Animation */
+
+	a, a svg, button,
+	.carousel-indicators li {-webkit-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease}
+
+
+/* ======================================================================================= */
+
+
+
+
+/* Medium devices (desktops) */
+
+	@media (max-width: 1199px) {
+
+	}
+
+
+/* Small devices (tablets) */
+
+	@media (max-width: 991px) {
+		.site-header .slogan {margin: 40px 0;}
+		.site-header .slogan b {font-size: 50px;}
+
+		h2 {font-size: 40px;}
+
+		.block-future .item {margin-top: 60px;}
+
+		.block-future .item h4,
+		.block-features h4 {font-size: 22px;}
+
+		.block-future .item p,
+		.block-features p,
+		.block-team li .info {font-size: 15px;}
+
+		.block-interactive .data {max-width: 100%;}
+
+		.block-features h2,
+		.block-team h2,
+		.block-press h2,
+		.site-header .nav,
+		.site-footer .nav {margin-bottom: 50px;}
+
+		.block-team li .name,
+		.block-team li .role,
+		.block-press .author {font-size: 20px;}
+
+		.site-footer {padding: 65px 0 50px;}
+		.site-footer .copy {margin-top: 40px;}
+	}
+
+
+/* Extra Small devices (phones) */
+
+	@media (max-width: 767px) {
+		.site-header .nav {font-size: 13px; padding-top: 30px;}
+		.site-header .nav ul {margin: 0 -15px; position: relative;}
+		.site-header .nav li {margin: 0;}
+		.site-header .slogan {font-size: 24px;}
+		.site-header .slogan b {font-size: 34px;}
+		h2 {font-size: 34px;}
+
+		.block-future .item .icon {width: 60px; margin: 0 auto;}
+		.block-future .item .icon span {height: 60px; width: 60px;}
+		.block-future .item .icon span svg {width: 40px; height: 40px;}
+
+		.block-future .item .icon:before,
+		.block-future .item .icon:after,
+		.block-future .item .icon span:after,
+		.block-features:before {display: none;}
+
+		.block-future {margin-bottom: 40px;}
+		.block-future .item {margin-top: 40px;}
+		.block-future .item .text-right {text-align: left !important;}
+
+		.block-future .item h4 {font-size: 18px; margin-top: 0;}
+
+		.block-future .item p,
+		.block-features p,
+		.block-team li .info {font-size: 13px;}
+
+		.block-interactive .data {text-align: center; margin-bottom: 30px;}
+		.block-interactive .data h3 {margin: 0 0 20px; font-size: 22px}
+		.block-interactive .data p {font-size: 14px;}
+
+		#interactive {width: 100%;}
+
+		.block-features {padding-bottom: 20px;}
+		.block-features .icon {margin: 15px auto;}
+		.block-features p {margin-bottom: 40px;}
+
+		.block-features:after {left: 50%;}
+
+		.block-cases {padding: 50px 0 25px;}
+		.block-cases p {font-size: 14px;}
+		.block-cases .btn {margin-bottom: 40px;}
+
+		.block-team {margin: 40px 0 20px;}
+		.block-team li {width: 50%; margin-bottom: 40px;}
+		.block-team li:last-child {width: 100%;}
+
+		.block-features h2,
+		.block-team h2,
+		.block-press h2,
+		.site-header .nav,
+		.site-footer .nav {margin-bottom: 40px;}
+
+		.block-team li .name,
+		.block-team li .role,
+		.block-press .author {font-size: 17px;}
+		.block-team li .info {margin-top: 10px;}
+
+		.block-press {margin-bottom: 20px;}
+		.block-press .text {padding: 25px 20px; margin-bottom: 25px;}
+		.block-press .author {margin-bottom: 40px;}
+
+		.site-footer {padding: 45px 0 40px;}
+		.site-footer .nav {font-size: 13px; margin-bottom: 30px;}
+		.site-footer .nav ul {margin: 0 -15px; position: relative;}
+		.site-footer .nav li {margin: 0;}
+		.site-footer .copy {margin-top: 10px;}
+		.site-footer .copy {font-size: 14px;}
+
+		.carousel-indicators {bottom: 0;}
+	}
+
+
+
+
