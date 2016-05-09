@@ -119,4 +119,29 @@ $(document).ready(function(){
 
 		}, 3000);
 	}
+
+  var defaultState = "company";
+  var anotherState = "investor";
+  var futureBlock = "future-block";
+  var futureBlockCount = 4;
+
+
+  function changeFuture() {
+	 for (var i = 1; i <= futureBlockCount; i++) {
+		$("#" + futureBlock + "-" + i + "-" + defaultState).show();
+		$("#" + futureBlock + "-" + i + "-" + anotherState).hide();
+	 }
+  }
+
+  $("#forCompanies").click(function () {
+	 defaultState = "company";
+	 anotherState = "investor";
+	 changeFuture();
+  });
+
+  $("#forInvestors").click(function () {
+	 defaultState = "investor";
+	 anotherState = "company";
+	 changeFuture();
+  });
 });
