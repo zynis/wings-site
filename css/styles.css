@@ -31,9 +31,7 @@
 
 	.img-responsive {display: inline-block;}
 
-    .selector {
-        margin-top: 30px;
-    }
+    .selector {margin-top: 30px;}
 
 
 /* ======================================================================================= */
@@ -156,9 +154,32 @@
 
 /* ======================================================================================= */
 
+/* JS: Modal */
+
+	.modal-content {border-radius: 0}
+	.modal-title {color: #000; font-size: 26px; font-weight: 500; line-height: 1; text-align: center;}
+	.modal-header {border-bottom: none; padding: 40px 30px 20px;}
+	.modal-body {padding: 20px 30px 40px;}
+
+	#dao .modal-body .list-inline a {display: block; padding: 0 25px; color: #2b474b; font-weight: 500; font-size: 16px;}
+	#dao .modal-body .list-inline svg {display: block; margin: 0 auto 10px; fill: #9aa4a6;}
+	#dao .modal-body .list-inline a:hover {color: #3f92d3; text-decoration: none}
+	#dao .modal-body .list-inline a:hover svg {fill: #3f92d3;}
+	#dao #subscribe-form {display: block; max-width: 300px; margin: 40px auto 0;}
+	#dao #subscribe-form .form-control {margin-bottom: 10px;}
+	#dao .claim {margin-top: 20px; color: #999; font-weight: 400;}
+
+
+/* ======================================================================================= */
+
 /* buttons */
 
 	.btn {border-radius: 0;}
+
+	.btn-default {background: #3f92d3 !important; color: #fff !important; border-color: #3f92d3 !important;}
+	.btn-default:hover,
+	.btn-default:active,
+	.btn-default:focus {background: #fff !important; color: #3f92d3 !important; border-color: #3f92d3 !important;}
 
 	.btn-info {background: #fff !important; color: #3f92d3 !important; border-color: #fff !important;}
 	.btn-info:hover,
@@ -166,11 +187,17 @@
 	.btn-info:focus {background: #3f92d3 !important; color: #fff !important; border-color: #3f92d3 !important;}
 
 
+/* Form items */
+
+	.form-control {border-radius: 0; font-size: 15px; height: 44px; line-height: 16px; padding: 13px 15px;}
+
+
 /* ======================================================================================= */
 
 /* Animation */
 
 	a, a svg, button,
+	.form-control,
 	.carousel-indicators li {-webkit-transition: all 300ms ease; -ms-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease}
 
 
@@ -228,6 +255,7 @@
 		.site-header .nav li {margin: 0;}
 		.site-header .slogan {font-size: 24px;}
 		.site-header .slogan b {font-size: 34px;}
+		.site-header .btn-info {width: 80%; margin: 3px 0;}
 		h2 {font-size: 34px;}
 
 		.block-future .item .icon {width: 60px; margin: 0 auto;}
@@ -292,6 +320,11 @@
 		.site-footer .copy {font-size: 14px;}
 
 		.carousel-indicators {bottom: 0;}
+
+		#dao .modal-body .list-inline a {padding: 0 5px; font-size: 14px;}
+		#dao .modal-body .list-inline svg {width: 40px; height: 40px;}
+		.modal-header {padding: 30px 20px 20px;}
+		.modal-body {padding: 20px 20px 30px;}
 	}
 
 

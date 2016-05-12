@@ -32,7 +32,7 @@
 					<b>New age crowdfunding</b><br>
 					secure, simple, transparent 
 				</div>
-				<a href="#" class="btn btn-info btn-lg"><b>DAO Starting soon</b></a>
+				<a href="#" class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b>DAO Starting soon</b></a>
 				<a href="#" class="btn btn-info btn-lg"><b>Try the platform</b></a>
 				<ul class="list-inline socials">
 					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
@@ -93,7 +93,7 @@
 									</div>
 								</div>
 								<div class="col-sm-6 col-sm-pull-6 col-xs-9 text-right" id="future-block-2-company">
-									<h4>Simple set-up & management</h4>
+									<h4>Simple set-up &amp; management</h4>
 									<p>With our simple to use web platform, you will have your DAO up and running in no time. Additionally, our IM Bots will allow you to control your DAO, reach the crowds and save time and resources</p>
 								</div>
 								<div class="col-sm-6 col-sm-pull-6 col-xs-9 text-right" id="future-block-2-investor" style="display: none;">
@@ -127,11 +127,11 @@
 									</div>
 								</div>
 								<div class="col-sm-6 col-sm-pull-6 col-xs-9 text-right" id="future-block-4-company">
-									<h4>Transparency & Investors security</h4>
+									<h4>Transparency &amp; Investors security</h4>
 									<p>A DAO protects you and your investors. Blockchain transparency and the secure investment nature of DAOs will provide a more successful campaign in comparison to traditional ICOs</p>
 								</div>
 								<div class="col-sm-6 col-sm-pull-6 col-xs-9 text-right" id="future-block-4-investor" style="display: none;">
-									<h4>Control & Transparency</h4>
+									<h4>Control &amp; Transparency</h4>
 									<p>Your investment is secured by the nature of the DAO and the transparency of the blockchain. The core of the platform is open source and the contract, commits and advancement are visible to all</p>
 								</div>
 							</div>
@@ -378,6 +378,44 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="modal fade" id="dao" tabindex="-1" role="dialog" aria-labelledby="daoLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="daoLabel">Stay updated - We&nbsp;don't&nbsp;spam!</h4>
+					</div>
+					<div class="modal-body text-center">
+						<ul class="list-inline">
+							<li>
+								<a data-slidetoggle="subscribe-form">
+									<svg width="64" height="64"><use xlink:href="#icon-email"></use></svg>
+									E-mail
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="64" height="64"><use xlink:href="#icon-telegram"></use></svg>
+									Telegram
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg width="64" height="64"><use xlink:href="#icon-rocket-chat"></use></svg>
+									Rocket Chat
+								</a>
+							</li>
+						</ul>
+						<form action="#" method="post" id="subscribe-form" style="display: none;">
+							<input class="form-control" placeholder="Your e-mail" type="email">
+							<button class="btn btn-block btn-lg btn-default"><b>Subscribe</b></button>
+							<div class="claim">We respect your privacy</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script src="js/libs.js"></script>
 		<script src="js/jquery.wings.js"></script>
