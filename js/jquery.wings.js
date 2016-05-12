@@ -24,6 +24,8 @@ $(document).ready(function(){
 		return false;
 	});
 
+	// chat
+
 	var chat = [
 		{
 			'author': 's1',
