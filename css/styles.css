@@ -51,6 +51,8 @@
 	.site-header .socials a svg {fill: #fff;}
 	.site-header .socials a:hover svg {fill: #8ff1ff;}
 	.site-header video {height: 100%; left: 0; object-fit: cover; position: absolute; top: 0; width: 100%; z-index: 0; background-position: 50% 50%; background-size: cover;}
+	.site-header .btn-set {display: inline-block;}
+	.site-header .btn-set .btn {padding-left: 35px; padding-right: 35px; margin: 1px 0 2px;}
 
 
 /* Block: Bots are future */

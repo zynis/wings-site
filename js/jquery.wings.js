@@ -24,6 +24,14 @@ $(document).ready(function(){
 		return false;
 	});
 
+	// Anchor scroll
+
+	$('[data-anchor]').on('click', function(e){
+		e.preventDefault();
+		var top = $('[name="' + $(this).data('anchor') + '"]').offset().top;
+		$('body,html').animate({scrollTop: top}, 300);
+	});
+
 	// chat
 
 	var chat = [
