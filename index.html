@@ -268,18 +268,18 @@
 					<div class="col-sm-6 col-md-4 col-md-offset-1">
 						<h4>
 							<svg width="48" height="48"><use xlink:href="#icon-puzzle"></use></svg>
-							How it works
+							<span id="how_it_works">How it works</span>
 						</h4>
-						<p>Below you will find a diagram explaining how the Wings platform will work</p>
-						<a href="#" class="btn btn-info btn-lg">Coming soon</a>
+						<p id="how_it_works_text">Below you will find a diagram explaining how the Wings platform will work</p>
+						<a href="#" class="btn btn-info btn-lg" id="how_it_works_btn">Coming soon</a>
 					</div>
 					<div class="col-sm-6 col-md-4 col-md-offset-2">
 						<h4>
 							<svg width="48" height="48"><use xlink:href="#icon-paper"></use></svg>
-							Whitepaper
+							<span id=whitepaper>Whitepaper</span>
 						</h4>
-						<p>Read our whitepaper</p>
-						<a href="#" class="btn btn-info btn-lg">Read now</a>
+						<p id="whitepaper_text">Read our whitepaper</p>
+						<a href="#" class="btn btn-info btn-lg" id="whitepaper_btn">Read now</a>
 					</div>
 				</div>
 			</div>
@@ -408,16 +408,16 @@
 			<div class="container">
 				<nav class="nav">
 					<ul class="list-inline text-uppercase">
-						<li><a href="#"><b>BTT</b> Thread</a></li>
-						<li><a href="#">Chat</a></li>
-						<li><a href="#">Whitepaper</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="#"><b>BTT</b> <span id="footer_menu_btt">Thread</span></a></li>
+						<li><a href="#" id="footer_menu_chat">Chat</a></li>
+						<li><a href="#" id="footer_menu_whitepaper">Whitepaper</a></li>
+						<li><a href="#" id="footer_menu_contact_us">Contact us</a></li>
 					</ul>
 				</nav>
 				<div class="logo">
 					<a href="#"><svg width="160" height="70"><use xlink:href="#logo-gray"></use></svg></a>
 				</div>
-				<div class="copy">
+				<div class="copy" id="footer_text">
 				  New age crowdfunding secure, simple, transparent
 				</div>
 			</div>
@@ -435,7 +435,6 @@
 							<li>
 								<a data-slidetoggle="subscribe-form">
 									<svg width="64" height="64"><use xlink:href="#icon-email"></use></svg>
-									E-mail
 								</a>
 							</li>
 							<li>
@@ -452,10 +451,10 @@
 							</li>
 						</ul>
 						<form action="#" method="post" id="subscribe-form" style="display: none;">
-							<div class="alert alert-success" role="alert">Your request was completed!</div>
+							<div class="alert alert-success" role="alert" id="subscribe_successful">Thanks! You subscribed.</div>
 							<input class="form-control" placeholder="Your e-mail" type="email" required>
-							<button class="btn btn-block btn-lg btn-default"><b>Subscribe</b></button>
-							<div class="claim">We respect your privacy</div>
+							<button class="btn btn-block btn-lg btn-default"><b id="subscribe_btn">Subscribe</b></button>
+							<div class="claim" id="subscribe_claim">We respect your privacy</div>
 						</form>
 					</div>
 				</div>
