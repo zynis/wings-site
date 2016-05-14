@@ -169,7 +169,7 @@ $(document).ready(function(){
 	 name: 'Content',
 	 path: 'bundle/',
 	 mode: 'both',
-	 language: 'ru_RU',
+	 language: lang,
 	 checkAvailableLanguages: true,
 	 async: true,
 	 callback: function() {
