@@ -75,7 +75,7 @@
 
 /* Block: Interactive chat */
 
-	.block-interactive {background: #164364 url(../images/bg.svg); position: relative; padding-top: 50px; height: 680px; overflow: hidden; color: #fff;}
+	.block-interactive {background: #164364 url(../images/bg.svg); position: relative; padding-top: 50px; overflow: hidden; color: #fff;}
 	.block-interactive:after {content: ""; z-index: 10; display: block; position: absolute; bottom: 0; height: 340px; width: 100%; left: 0; background: url(../images/mask2.svg) 50% 100%;}
 	.block-interactive .data {position: relative; z-index: 11; max-width: 380px; display: inline-block;}
 	.block-interactive .data h3 {font-size: 30px; font-weight: 500; margin: 50px 0 30px;}
@@ -83,6 +83,8 @@
 	/*.block-interactive .charts {max-width: 400px;}*/
 	.block-interactive .charts {position: relative; z-index: 12}
 	.block-interactive .charts h3 {font-weight: 300; font-size: 24px; margin: 0 0 30px;}
+
+	.block-interactive .item {height: 630px}
 
 	.chart-changer {position: relative; text-align: center; line-height: 0; margin-bottom: 30px}
 	.chart-changer:after {content: ""; display: block; position: absolute; left: 30px; right: 30px; top: 50%; margin-top: -1px; border-top: #fff 2px solid;}
