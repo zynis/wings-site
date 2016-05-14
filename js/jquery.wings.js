@@ -35,7 +35,9 @@ $(document).ready(function(){
 
 	/* Chart.Js */
 
-		var randomScalingFactor = function() {
+	  	Chart.defaults.global.legend.display = false;
+
+  		var randomScalingFactor = function() {
 			return Math.round(Math.random() * 100);
 		};
 		var randomColorFactor = function() {
@@ -70,7 +72,9 @@ $(document).ready(function(){
 				]
 			},
 			options: {
-				responsive: true
+			  	responsive: true,
+			  	animationSteps: 100,
+			  	animationEasing: 'easeInOutQuart'
 			}
 		};
 
