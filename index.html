@@ -19,23 +19,23 @@
 			<div class="container text-center">
 				<nav class="nav">
 					<ul class="list-inline text-uppercase">
-						<li><a href="#"><b>BTT</b> Thread</a></li>
-						<li><a href="#">Chat</a></li>
-						<li><a href="#">Whitepaper</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="#"><b>BTT</b> <span id="menu_btt">Thread</span></a></li>
+						<li><a href="#" id="menu_chat">Chat</a></li>
+						<li><a href="#" id="menu_whitepaper">Whitepaper</a></li>
+						<li><a href="#" id="menu_contact_us">Contact us</a></li>
 					</ul>
 				</nav>
 				<div class="logo">
 					<a href="#"><svg width="270" height="91" class="img-responsive"><use xlink:href="#logo"></use></svg></a>
 				</div>
 				<div class="slogan">
-					<b>Kickstart your DAO</b><br>
-					Simple, secure, transparent 
+					<b id="header_title">Kickstart your DAO</b><br>
+					<span id="header_sub_title">Simple, secure, transparent</span>
 				</div>
 				<div class="btn-set">
-					<a href="#" class="btn btn-info btn-lg btn-block"><b>The DAO will be Starting soon!</b></a>
-					<a href="#" class="btn btn-info btn-lg"><b>Try platform</b></a>
-					<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b>Subscribe</b></a>
+					<a href="#" class="btn btn-info btn-lg btn-block"><b id="header_button_soon">The DAO will be Starting soon!</b></a>
+					<a href="#" class="btn btn-info btn-lg"><b id="header_button_platform">Try platform</b></a>
+					<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
 				</div>
 				<ul class="list-inline socials">
 					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
@@ -462,7 +462,8 @@
 			</div>
 		</div>
 
-		<script src="js/libs.js"></script>
-		<script src="js/jquery.wings.js"></script>
+		<script src="js/libs.js" type="text/javascript"></script>
+		<script src="js/jquery.wings.js" type="text/javascript"></script>
+        <script src="js/jquery.i18n.properties.min.js" type="text/javascript"></script>
 	</body>
 </html>

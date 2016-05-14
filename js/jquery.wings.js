@@ -162,4 +162,20 @@ $(document).ready(function(){
 		anotherState = "company";
 		changeFuture();
 	});
+
+  var lang = "en_GB";
+
+  jQuery.i18n.properties({
+	 name: 'Content',
+	 path: 'bundle/',
+	 mode: 'both',
+	 language: 'ru_RU',
+	 checkAvailableLanguages: true,
+	 async: true,
+	 callback: function() {
+		for (var i in $.i18n.map) {
+		  $("#" + i).text($.i18n.prop(i));
+		}
+	 }
+  });
 });
