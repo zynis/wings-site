@@ -75,11 +75,22 @@
 
 /* Block: Interactive chat */
 
-	.block-interactive {background: #164364 url(../images/bg.svg); position: relative; padding-top: 50px;}
+	.block-interactive {background: #164364 url(../images/bg.svg); position: relative; padding-top: 50px; overflow: hidden; color: #fff;}
 	.block-interactive:after {content: ""; z-index: 10; display: block; position: absolute; bottom: 0; height: 340px; width: 100%; left: 0; background: url(../images/mask2.svg) 50% 100%;}
-	.block-interactive .data {position: relative; z-index: 11; color: #fff; max-width: 380px; display: inline-block;}
+	.block-interactive .data {position: relative; z-index: 11; max-width: 380px; display: inline-block;}
 	.block-interactive .data h3 {font-size: 30px; font-weight: 500; margin: 50px 0 30px;}
 	.block-interactive .data p {font-size: 16px; font-weight: 400; margin-bottom: 30px;}
+	/*.block-interactive .charts {max-width: 400px;}*/
+	.block-interactive .charts {position: relative; z-index: 12}
+	.block-interactive .charts h3 {font-weight: 300; font-size: 24px; margin: 0 0 30px;}
+
+	.block-interactive .item {height: 630px}
+
+	.chart-changer {position: relative; text-align: center; line-height: 0; margin-bottom: 30px}
+	.chart-changer:after {content: ""; display: block; position: absolute; left: 30px; right: 30px; top: 50%; margin-top: -1px; border-top: #fff 2px solid;}
+	.chart-changer a {display: inline-block; width: 22px; height: 22px; border-radius: 100%; background: #164364; border: #fff 2px solid; vertical-align: middle; margin: 0 10px; position: relative; z-index: 2}
+	.chart-changer a:hover {background: #fff;}
+	.chart-changer a.active {background: #fff;}
 
 	#interactive {position: relative; width: 455px;}
 	#interactive .bg {height: 630px; position: relative; z-index: 2; background: url(../images/phone-bg.svg) no-repeat 0 0;}
@@ -114,7 +125,7 @@
 /* Block: Cases */
 
 	.block-cases {background: #164364 url(../images/bg.svg); position: relative; padding: 90px 0 95px; color: #fff;}
-	.block-cases:after {content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 15px; background: url(../images/mask.svg) no-repeat 50% 0;}
+	.block-cases:after {content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 15px; background: url(../images/mask1.svg) no-repeat 50% 0;}
 	.block-cases h4 {font-size: 24px; font-weight: 700; margin: 0;}
 	.block-cases h4 svg {fill: #fff; vertical-align: middle; margin-right: 10px;}
 	.block-cases p {font-size: 16px; font-weight: 400; margin: 15px 0 25px;}
@@ -180,6 +191,11 @@
 	.nav-tabs > li.active > a,
 	.nav-tabs > li.active > a:focus,
 	.nav-tabs > li.active > a:hover {color: #000;}
+
+
+/* JS: Carousel */
+
+	.carousel-control {background: none !important; z-index: 13}
 
 
 /* ======================================================================================= */

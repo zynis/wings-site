@@ -32,6 +32,88 @@ $(document).ready(function(){
 		$('body,html').animate({scrollTop: top}, 300);
 	});
 
+
+	/* Chart.Js */
+
+	  	Chart.defaults.global.legend.display = false;
+
+  		var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+		var randomColorFactor = function() {
+			return Math.round(Math.random() * 255);
+		};
+		var randomColor = function(opacity) {
+			return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+		};
+		var config = {
+			type: 'pie',
+			scaleShowLabels: false,
+			data: {
+				datasets: [{
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor()
+					],
+					backgroundColor: [
+						"#F7464A",
+						"#46BFBD",
+						"#FDB45C",
+						"#949FB1"
+					],
+				}],
+				labels: [
+					"Red",
+					"Green",
+					"Yellow",
+					"Dark Grey"
+				]
+			},
+			options: {
+			  	responsive: true,
+			  	animationSteps: 100,
+			  	animationEasing: 'easeInOutQuart'
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById("chart-area").getContext("2d");
+			window.myPie = new Chart(ctx, config);
+		};
+
+		$('.chart-changer a').click(function() {
+			$(this).parent().children('.active').removeClass('active');
+			$(this).addClass('active');
+			$.each(config.data.datasets, function(i, piece) {
+				$.each(piece.data, function(j, value) {
+					config.data.datasets[i].data[j] = randomScalingFactor();
+					config.data.datasets[i].backgroundColor[j] = randomColor(0.7);
+				});
+			});
+			window.myPie.update();
+		});
+
+	/* Mobile swipe */
+
+		$(".carousel.slide")
+			.on("swiperight", function() {
+				$(this).find('.carousel-control.left').click();
+			})
+			.on("swipeleft", function() {
+				$(this).find('.carousel-control.right').click();
+			});
+
+		$('.box-calendar')
+			.on("swiperight", function() {
+				$(this).find('.ui-datepicker-prev').click();
+			})
+			.on("swipeleft", function() {
+				$(this).find('.ui-datepicker-next').click();
+			});
+
+
 	// chat
 
 	var chat = [
