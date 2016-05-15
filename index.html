@@ -33,7 +33,6 @@
 					<span id="header_sub_title">Simple, Secure, Transparent</span>
 				</div>
 				<div class="btn-set">
-					<a href="#" class="btn btn-info btn-lg btn-block"><b id="header_button_soon">The DAO will be Starting soon!</b></a>
 					<a href="#" class="btn btn-info btn-lg"><b id="header_button_platform">Try Out Wings</b></a>
 					<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
 				</div>
@@ -552,6 +551,7 @@
 							<li>
 								<a data-slidetoggle="subscribe-form">
 									<svg width="64" height="64"><use xlink:href="#icon-email"></use></svg>
+                                    Email
 								</a>
 							</li>
 							<li>
@@ -568,8 +568,10 @@
 							</li>
 						</ul>
 						<form action="#" method="post" id="subscribe-form" style="display: none;">
-							<div class="alert alert-success" role="alert" id="subscribe_successful">Thanks! You subscribed.</div>
-							<input class="form-control" placeholder="Your e-mail" type="email" required>
+                          <div class="alert alert-success hidden" role="alert" id="subscribe_successful">Thanks! You subscribed.</div>
+                          <div class="alert alert-danger hidden" role="alert" id="subscribe_error"></div>
+
+                          <input class="form-control" placeholder="Your e-mail" type="email" required>
 							<button class="btn btn-block btn-lg btn-default"><b id="subscribe_btn">Subscribe</b></button>
 							<div class="claim" id="subscribe_claim">We respect your privacy</div>
 						</form>
