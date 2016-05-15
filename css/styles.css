@@ -54,6 +54,9 @@
 	.site-header .btn-set {display: inline-block;}
 	.site-header .btn-set .btn {padding-left: 35px; padding-right: 35px; margin: 1px 0 2px;}
 
+	.site-header .btn-group {vertical-align: baseline;}
+	.site-header .btn-group > .btn {padding: 0; margin: 0; border: none !important; border-radius: 0; background: none !important}
+
 
 /* Block: Bots are future */
 
@@ -288,9 +291,10 @@
 /* Extra Small devices (phones) */
 
 	@media (max-width: 767px) {
-		.site-header .nav {font-size: 13px; padding-top: 30px;}
+		.site-header .nav {font-size: 14px; padding-top: 30px;}
 		.site-header .nav ul {margin: 0 -15px; position: relative;}
 		.site-header .nav li {margin: 0;}
+		.site-header .nav .btn-group {margin-top: 5px;}
 		.site-header .slogan {font-size: 24px;}
 		.site-header .slogan b {font-size: 34px;}
 		.site-header .btn-set {display: block;}
@@ -320,8 +324,6 @@
 		.block-interactive .data {text-align: center; margin-bottom: 30px;}
 		.block-interactive .data h3 {margin: 0 0 20px; font-size: 22px}
 		.block-interactive .data p {font-size: 14px;}
-
-		#interactive {width: 100%;}
 
 		.block-features {padding-bottom: 20px;}
 		.block-features .icon {margin: 15px auto;}
@@ -368,7 +370,21 @@
 
 		.nav-tabs > li > a {font-size: 14px}
 
-		.block-interactive .item {height: 880px}
+		.block-interactive .data h3 {padding: 0 60px;}
+		.block-interactive .item {height: auto}
+		.block-interactive .item.i1,
+		.block-interactive .item.i2 {padding-bottom: 50px;}
+		.block-interactive .carousel-control .glyphicon {color: #3f92d3; background: #fff; width: 40px; height: 40px; top: 10px; line-height: 40px; font-size: 24px; text-align: center; border-radius: 100%; text-shadow: none;}
+
+		#interactive {width: 326px; margin: 0 auto;}
+	}
+
+	/* Super extra small devices */
+
+	@media (max-width: 349px) {
+		#interactive {margin: 0 -15px; width: auto;}
+		#interactive .bg {background: url("../images/phone-bg-xs.svg") no-repeat 50% 0;}
+		#interactive .data {width: auto; left: 12px; right: 12px}
 	}
 
 
