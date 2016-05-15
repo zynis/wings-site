@@ -213,8 +213,6 @@ $(document).ready(function(){
 		}
 	];
 
-	chatting();
-
 	$(window).on('load resize', function(){
 		// Header 100% height fix
 		$('.site-header').css({'min-height': $(window).height() + 15});
@@ -228,13 +226,26 @@ $(document).ready(function(){
 		}
 	});
 
+  	var chatEnabled = false;
 	function chatting() {
+	  if (chatEnabled) {
+		 return;
+	  }
+
+	  chatEnabled = true;
+	  var i = 0;
+
 	  function postMessage(msg, cb) {
 		 if (msg.author === "bot") {
+			var timeout = 1000;
+			if (i == 0) {
+			  timeout = 0;
+			}
+
 			setTimeout(function () {
 			  $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
 			  cb();
-			}, 5000);
+			}, timeout);
 		 } else {
 			var author = msg.author;
 			var img = msg.avatar;
@@ -252,16 +263,13 @@ $(document).ready(function(){
 			  $('#interactive .typist').html('');
 			  $('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + msg + '</div></li>');
 			  cb();
-			}, 1500);
+			}, 1000);
 		 }
 	  }
 
-	  var i = 0;
 	  setTimeout(function chatLoop() {
 		 if (i == chat.length) {
-			$('#interactive ul').html('');
-			i = 0;
-			return setTimeout(chatLoop);
+			return;
 		 } else {
 			var msg = chat[i];
 
@@ -341,5 +349,11 @@ $(document).ready(function(){
 		  $("#subscribe_error").show();
 		}
 	 })
+  });
+
+  $("#tryout").waypoint({
+	 handler: function (direction) {
+		chatting();
+	 }
   });
 });

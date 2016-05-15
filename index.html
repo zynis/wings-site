@@ -33,16 +33,15 @@
 					<span id="header_sub_title">Simple, Secure, Transparent</span>
 				</div>
 				<div class="btn-set">
-					<a href="#" class="btn btn-info btn-lg"><b id="header_button_platform">Try Out Wings</b></a>
+					<a data-anchor="tryout" class="btn btn-info btn-lg"><b id="header_button_platform">Try Out Wings</b></a>
 					<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
 				</div>
 				<ul class="list-inline socials">
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-tumblr"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
+					<li><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
+					<li><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
+					<li><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
+					<li><a href="https://bitcointalk.org" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
+					<li><a href="https://chat.wings.ai" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
 				</ul>
 			</div>
 			<!-- <video loop preload="none" class="hidden-xs">
@@ -183,7 +182,7 @@
 			</div>
 		</div>
 
-		<div class="block-interactive">
+		<div class="block-interactive" id="tryout" name="tryout">
 			<div id="interactiv" class="carousel slide" data-ride="carousel" data-interval="0">
 				<div class="carousel-inner" role="listbox">
 					<div class="item i0 active">
@@ -584,6 +583,7 @@
         <script src="js/d3.min.js" type="text/javascript"></script>
         <script src="js/d3pie.min.js" type="text/javascript"></script>
         <script src="js/jquery.i18n.properties.min.js" type="text/javascript"></script>
+        <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
         <script src="js/jquery.wings.js" type="text/javascript"></script>
     </body>
 </html>
