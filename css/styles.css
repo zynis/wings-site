@@ -292,9 +292,9 @@
 
 	@media (max-width: 767px) {
 		.site-header .nav {font-size: 14px; padding-top: 30px;}
-		.site-header .nav ul {margin: 0 -15px; position: relative;}
-		.site-header .nav li {margin: 0;}
-		.site-header .nav .btn-group {margin-top: 5px;}
+		.site-header .nav > ul {margin: 0 -15px; position: relative;}
+		.site-header .nav > ul > li {margin: 0;}
+		.site-header .nav .btn-group {margin-top: 5px; position: relative; z-index: 10;}
 		.site-header .slogan {font-size: 24px;}
 		.site-header .slogan b {font-size: 34px;}
 		.site-header .btn-set {display: block;}
