@@ -95,26 +95,47 @@ $(document).ready(function(){
 			window.myPie.update();
 		});
 
+
+	/* Connected carousels */
+
+		$('#interactiv .carousel-control.left').on('click',function(e){
+			e.preventDefault();
+			$('#interactiv').carousel('prev');
+			$('#features').carousel('prev');
+		});
+
+		$('#interactiv .carousel-control.right').on('click',function(e){
+			e.preventDefault();
+			$('#interactiv').carousel('next');
+			$('#features').carousel('next');
+		});
+
+		$('#features').on('slide.bs.carousel',function(e){
+			if (e.direction == 'left')		$('#interactiv').carousel('next');
+			else							$('#interactiv').carousel('prev');
+		});
+
+
 	/* Mobile swipe */
 
 		$(".carousel.slide")
 			.on("swiperight", function() {
-				$(this).find('.carousel-control.left').click();
+				if ($(this).find('.carousel-control.left').length) {
+					$(this).find('.carousel-control.left').click();
+				} else {
+					$(this).carousel('prev');
+				}
 			})
 			.on("swipeleft", function() {
-				$(this).find('.carousel-control.right').click();
-			});
-
-		$('.box-calendar')
-			.on("swiperight", function() {
-				$(this).find('.ui-datepicker-prev').click();
-			})
-			.on("swipeleft", function() {
-				$(this).find('.ui-datepicker-next').click();
+				if ($(this).find('.carousel-control.right').length) {
+					$(this).find('.carousel-control.right').click();
+				} else {
+					$(this).carousel('next');
+				}
 			});
 
 
-	// chat
+	/* CHAT */
 
 	var chat = [
 		{

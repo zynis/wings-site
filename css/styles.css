@@ -76,7 +76,7 @@
 /* Block: Interactive chat */
 
 	.block-interactive {background: #164364 url(../images/bg.svg); position: relative; padding-top: 50px; overflow: hidden; color: #fff;}
-	.block-interactive:after {content: ""; z-index: 10; display: block; position: absolute; bottom: 0; height: 340px; width: 100%; left: 0; background: url(../images/mask2.svg) 50% 100%;}
+	.block-interactive:after {content: ""; z-index: 10; display: block; position: absolute; bottom: 0; height: 220px; width: 100%; left: 0; background: url(../images/mask2.svg) 50% 100%;}
 	.block-interactive .data {position: relative; z-index: 11; max-width: 380px; display: inline-block;}
 	.block-interactive .data h3 {font-size: 30px; font-weight: 500; margin: 50px 0 30px;}
 	.block-interactive .data p {font-size: 16px; font-weight: 400; margin-bottom: 30px;}
@@ -84,7 +84,8 @@
 	.block-interactive .charts {position: relative; z-index: 12}
 	.block-interactive .charts h3 {font-weight: 300; font-size: 24px; margin: 0 0 30px;}
 
-	.block-interactive .item {height: 630px}
+	.block-interactive .item {height: 630px; z-index: 12;}
+	.block-interactive .item.i0.active {z-index: 10}
 
 	.chart-changer {position: relative; text-align: center; line-height: 0; margin-bottom: 30px}
 	.chart-changer:after {content: ""; display: block; position: absolute; left: 30px; right: 30px; top: 50%; margin-top: -1px; border-top: #fff 2px solid;}
@@ -115,8 +116,10 @@
 	.block-features {margin: 40px 0 0; position: relative; padding-bottom: 60px;}
 	.block-features:before {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 25%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}
 	.block-features:after {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 75%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}
+	.block-features > .row {margin-bottom: 40px;}
+	.block-features > .row:last-child {margin-bottom: 0;}
 	.block-features h2 {margin-bottom: 80px}
-	.block-features h4 {color: #2b474b; font-size: 30px; font-weight: 300; margin: 0;}
+	.block-features h4 {color: #2b474b; font-size: 24px; font-weight: 500; margin: 0;}
 	.block-features .icon {position: relative; line-height: 0; width: 130px; height: 130px; margin: 40px auto; border-radius: 100%; background: #9aa4a6}
 	.block-features .icon svg {fill: #fff;}
 	.block-features p {font-size: 16px; font-weight: 400;}
@@ -135,10 +138,12 @@
 
 	.block-team {margin: 70px 0 95px;}
 	.block-team h2 {margin-bottom: 90px;}
-	.block-team li {float: left; width: 20%;}
+	.block-team > ul > li {float: left; width: 20%;}
 	.block-team li .name {font-size: 24px; font-weight: 500; line-height: 1; margin-top: 15px;}
 	.block-team li .role {font-size: 24px; font-weight: 300; line-height: 1}
-	.block-team li .info {font-size: 18px; font-weight: 300; line-height: 1; margin-top: 20px;}
+	.block-team li .info {font-size: 18px; font-weight: 300; line-height: 1; margin: 20px 0 15px;}
+	.block-team li li a svg {fill: #2b474b;}
+	.block-team li li a:hover svg {fill: #3f92d3;}
 
 
 /* Block: Press */
@@ -288,7 +293,9 @@
 		.site-header .nav li {margin: 0;}
 		.site-header .slogan {font-size: 24px;}
 		.site-header .slogan b {font-size: 34px;}
-		.site-header .btn-info {width: 80%; margin: 3px 0;}
+		.site-header .btn-set {display: block;}
+		.site-header .btn-set .btn {margin: 0 auto 3px; padding-left: 0; padding-right: 0; width: 100%;}
+
 		h2 {font-size: 34px;}
 
 		.block-future .item .icon {width: 60px; margin: 0 auto;}
@@ -327,8 +334,8 @@
 		.block-cases .btn {margin-bottom: 40px;}
 
 		.block-team {margin: 40px 0 20px;}
-		.block-team li {width: 50%; margin-bottom: 40px;}
-		.block-team li:last-child {width: 100%;}
+		.block-team > ul > li {width: 50%; margin-bottom: 40px;}
+		.block-team > ul > li:last-child {width: 100%;}
 
 		.block-features h2,
 		.block-team h2,
@@ -360,6 +367,8 @@
 		.modal-body {padding: 20px 20px 30px;}
 
 		.nav-tabs > li > a {font-size: 14px}
+
+		.block-interactive .item {height: 880px}
 	}
 
 
