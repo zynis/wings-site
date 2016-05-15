@@ -112,7 +112,7 @@ $(document).ready(function(){
 
 		$('#features').on('slide.bs.carousel',function(e){
 			if (e.direction == 'left')		$('#interactiv').carousel('next');
-			else							$('#interactiv').carousel('prev');
+			else	$('#interactiv').carousel('prev');
 		});
 
 
@@ -139,49 +139,39 @@ $(document).ready(function(){
 
 	var chat = [
 		{
-			'author': 's1',
+			'author': 'bot',
 			'avatar': 'images/tmp-face.jpg',
-			'msg': 'some message'
+			'msg': 'Welcome to Wings DAO Bot. We allow to fund and manage your DAOs easily.'
 		},
 		{
-			'author': 's1',
+			'author': 'user',
 			'avatar': 'images/tmp-face.jpg',
-			'msg': 'some message - second string'
+			'msg': '/start'
 		},
-		{
-			'author': 's2',
-			'avatar': 'images/tmp-face.jpg',
-			'msg': 'some answer'
+	  	{
+		  'author': 'bot',
+		  'avatar': 'images/tmp-face.jpg',
+		  'msg': 'List of commands: <br><br> /daolist - List of DAOs<br> /instruction - Instruction how to invest<br> /mybalance - Your DAO balance<br> /transfer - Transfer your BTC/ETH to dao<br> /terms - Terms & Conditions<br> /help - Help'
 		},
-		{
-			'author': 's1',
-			'avatar': 'images/tmp-face.jpg',
-			'msg': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit!'
+	  	{
+		  'author': 'user',
+		  'avatar': 'images/tmp-face.jpg',
+		  'msg': '/mybalance'
 		},
-		{
-			'author': 's2',
-			'avatar': 'images/tmp-face.jpg',
-			'msg': 'some another answer'
+	  	{
+		  'author': 'bot',
+		  'avatar': 'images/tmp-face.jpg',
+		  'msg':  "You've invested in 3 DAOs: <br><br> - Wings DAO<br> - Demo DAO<br> - SuperCool DAO<br><br>Write DAO name to get more info"
 		},
-		{
-			'author': 's1',
+		 {
+			'author': 'user',
 			'avatar': 'images/tmp-face.jpg',
-			'msg': 'some message - second string'
-		},
-		{
-			'author': 's2',
-			'avatar': 'images/tmp-face.jpg',
-			'msg': 'some answer'
-		},
-		{
-			'author': 's1',
-			'avatar': 'images/tmp-face.jpg',
-			'msg': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit!'
-		},
-		{
-			'author': 's2',
-			'avatar': 'images/tmp-face.jpg',
-			'msg': 'some another answer'
+			'msg': 'Wings DAO'
+		 },
+	   {
+		  'author': 'bot',
+		  'avatar': 'images/tmp-face.jpg',
+		  'msg':  "You have 100k Wings DAO Tokens, you've earned 1000% profit"
 		}
 	];
 
@@ -201,47 +191,50 @@ $(document).ready(function(){
 	});
 
 	function chatting() {
-		var i=0, interactive = setInterval(function(){
+	  function postMessage(msg, cb) {
+		 console.log("post message");
+		 if (msg.author === "bot") {
+			setTimeout(function () {
+			  $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
+			  cb();
+			}, 5000);
+		 } else {
+			var author = msg.author;
+			var img = msg.avatar;
+			var msg = msg.msg;
 
-			// disable continued interval after all chat typed successfully
-			if ( i == chat.length ) {
-				clearInterval(interactive);
-				$('#interactive ul').html('');
-				chatting(); // repeat
+			$('#interactive .typist')
+			  .html('')
+			  .typist({
+				 speed: 40,
+				 cursor: false,
+				 text: msg
+			  });
 
-			// do all magic
-			} else {
+			setTimeout(function () {
+			  $('#interactive .typist').html('');
+			  $('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + msg + '</div></li>');
+			  cb();
+			}, 1500);
+		 }
+	  }
 
-				// if message from author
-				if ( chat[i].author == 's1' ) {
-					var author = chat[i].author;
-					var img = chat[i].avatar;
-					var msg = chat[i].msg;
+	  var i = 0;
+	  setTimeout(function chatLoop() {
+		 if (i == chat.length) {
+			$('#interactive ul').html('');
+			i = 0;
+			return setTimeout(chatLoop);
+		 } else {
+			var msg = chat[i];
 
-					$('#interactive .typist')
-						.html('')
-						.typist({
-							speed: 40,
-							cursor: false,
-							text: msg
-						});
+			postMessage(msg, function () {
+			  i++;
+			  setTimeout(chatLoop, 3000);
+			});
+		 }
+	  });
 
-						// wait for typing to emulate human
-						setTimeout(function(){
-							$('#interactive .typist').html('');
-							$('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + msg + '</div></li>');
-						},1200);
-
-				// other cases
-				} else{
-					$('#interactive ul').append('<li class="' + chat[i].author + '"><img src="' + chat[i].avatar + '"><div class="msg">' + chat[i].msg + '</div></li>');
-				}
-			}
-
-			// counter
-			i++;
-
-		}, 3000);
 	}
 
 	var defaultState = "company";

@@ -108,10 +108,10 @@
 	#interactive .data li .msg {display: inline-block; padding: 12px; border-radius: 20px; line-height: 16px; font-size: 13px; background: #8fa7ac; position: relative;}
 	#interactive .data li .msg:after {content: ""; position: absolute; bottom: 0; left: -8px; width: 15px; height: 17px; background: url(../images/icon-bubble-left.svg) no-repeat;}
 
-	#interactive .data li.s1 {padding: 0 50px 0 30px; text-align: right;}
-	#interactive .data li.s1 img {left: auto; right: 0;}
-	#interactive .data li.s1 .msg {background: #eaf7f7; color: #4e6266;}
-	#interactive .data li.s1 .msg:after {background-image: url(../images/icon-bubble-right.svg); left: auto; right: -8px;}
+	#interactive .data li.bot {padding: 0 50px 0 30px; text-align: left;}
+	#interactive .data li.bot img {left: auto; right: 0;}
+	#interactive .data li.bot .msg {background: #eaf7f7; color: #4e6266;}
+	#interactive .data li.bot .msg:after {background-image: url(../images/icon-bubble-right.svg); left: auto; right: -8px;}
 
 
 /* Block: Features */
