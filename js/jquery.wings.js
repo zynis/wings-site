@@ -188,6 +188,9 @@ $(document).ready(function(){
 	chatting();
 
 	$(window).on('load resize', function(){
+		// Header 100% height fix
+		$('.site-header').css({'min-height': $(window).height() + 15});
+
 		if ( $('.site-header video').length ) {
 			if ( $(window).width() < 768 ) {
 				$('.site-header video').get(0).pause();
