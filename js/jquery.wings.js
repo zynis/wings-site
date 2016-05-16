@@ -89,7 +89,7 @@ $(document).ready(function(){
 		  },
 		  "labels": {
 			 "outer": {
-				"pieDistance": 25
+				"pieDistance": 10
 			 },
 			 "inner": {
 				"format": "none"
@@ -127,6 +127,8 @@ $(document).ready(function(){
   		function renderPie() {
 		  window.pie = new d3pie("chart-area", pieConfig);
 		}
+
+  		renderPie();
 
 		$('.chart-changer a').click(function() {
 		  $(this).parent().children('.active').removeClass('active');
