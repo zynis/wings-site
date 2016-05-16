@@ -54,8 +54,8 @@
 	.site-header .nav {padding: 50px 0 0; font-size: 18px; margin-bottom: 100px;}
 	.site-header .nav ul {margin: 0;}
 	.site-header .nav li {margin: 0 5px;}
-	.site-header .slogan {font-size: 32px; line-height: 1.2; margin: 0 0 60px;}
-	.site-header .slogan b {font-size: 60px; font-weight: 300; line-height: 1.2}
+	.site-header .slogan {font-size: 20px; line-height: 1.2; margin: 0 0 60px;}
+	.site-header .slogan b {font-size: 40px; font-weight: 300; line-height: 1.2; display: block;}
 	.site-header .socials {position: absolute; bottom: 60px;}
 	.site-header .socials a svg {fill: #fff;}
 	.site-header .socials a:hover svg {fill: #8ff1ff;}
@@ -210,6 +210,11 @@
 	.nav-tabs > li.active > a:focus,
 	.nav-tabs > li.active > a:hover {color: #000;}
 
+    .switcher > li.active > a {
+        color: #154364;
+        font-weight: 500;
+    }
+
 
 /* JS: Carousel */
 
@@ -220,7 +225,7 @@
 
 /* buttons */
 
-	.btn {border-radius: 0;}
+	.btn {border-radius: 3px;}
 
 	.btn-default {background: #3f92d3 !important; color: #fff !important; border-color: #3f92d3 !important;}
 	.btn-default:hover,
@@ -301,6 +306,13 @@
 /* Extra Small devices (phones) */
 
 	@media (max-width: 767px) {
+		.top-fixed {position: relative;}
+		.top-fixed ul {margin: 0;}
+		.top-fixed .logo {float: none !important;}
+		.site-header {padding: 0;}
+		.site-header > .container {min-height: auto !important; padding-bottom: 45px;}
+		.site-header > .container > .p-center {position: static; margin-top: 0; left: auto; top: auto; -webkit-transform: translateX(0) translateY(0); -moz-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); -o-transform: translateX(0) translateY(0)}
+		.site-header .socials {margin-top: 30px; position: static; bottom: auto; left: auto; -webkit-transform: translateX(0) translateY(0); -moz-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); -o-transform: translateX(0) translateY(0)}
 		.site-header .nav {font-size: 14px; padding-top: 30px;}
 		.site-header .nav > ul {margin: 0 -15px; position: relative;}
 		.site-header .nav > ul > li {margin: 0;}
