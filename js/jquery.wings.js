@@ -393,6 +393,7 @@ $(document).ready(function(){
 
   var lang = "en_GB";
 
+  /*
   jQuery.i18n.properties({
 	 name: 'Content',
 	 path: 'bundle/',
@@ -405,7 +406,7 @@ $(document).ready(function(){
 		  $("#" + i).text($.i18n.prop(i));
 		}
 	 }
-  });
+  });*/
 
   $("#subscribe-form").submit(function (e) {
 	 e.preventDefault();
