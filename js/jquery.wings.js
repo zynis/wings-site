@@ -195,38 +195,48 @@ $(document).ready(function(){
 		{
 			'author': 'bot',
 			'avatar': 'images/bot.svg',
-			'msg': 'Welcome to Wings DAO Bot. We allow to fund and manage your DAOs easily.'
+			'msg': 'Hi! I am Wings DAO management bot. How may i be of service ?'
 		},
 		{
 			'author': 'user',
 			'avatar': 'images/face.png',
-			'msg': '/start'
+			'msg': 'show me my daos'
 		},
-	  	{
+		{
 		  'author': 'bot',
 		  'avatar': 'images/bot.svg',
-		  'msg': 'List of commands: <br><br> /daolist - List of DAOs<br> /instruction - Instruction how to invest<br> /mybalance - Your DAO balance<br> /transfer - Transfer your BTC/ETH to dao<br> /terms - Terms & Conditions<br> /help - Help'
+		  'msg': 'You supported the following DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Would you like more details ?'
 		},
-	  	{
+		{
 		  'author': 'user',
 		  'avatar': 'images/face.png',
-		  'msg': '/mybalance'
+		  'msg': 'yes'
 		},
-	  	{
+		{
 		  'author': 'bot',
 		  'avatar': 'images/bot.svg',
-		  'msg':  "You've invested in 3 DAOs: <br><br> - Wings DAO<br> - Demo DAO<br> - SuperCool DAO<br><br>Write DAO name to get more info"
+		  'msg':  "You currently have:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
 		},
-		 {
-			'author': 'user',
-			'avatar': 'images/face.png',
-			'msg': 'Wings DAO'
-		 },
-	   {
+		{
+		  'author': 'user',
+		  'avatar': 'images/face.png',
+		  'msg': 'manage Wings'
+		},
+		{
 		  'author': 'bot',
 		  'avatar': 'images/bot.svg',
-		  'msg':  "You have 100k Wings DAO Tokens, you've earned 1000% profit"
-		}
+		  'msg':  "Did you mean manage Wings DAO ?"
+		},
+	  {
+		 'author': 'user',
+		 'avatar': 'images/face.png',
+		 'msg': 'yes'
+	  },
+	  {
+		 'author': 'bot',
+		 'avatar': 'images/bot.svg',
+		 'msg':  "Here are a list of options for Wings DAO:<br><br> - Create vote<br> - View status<br> - Withdraw tokens<br> - Deposit tokens<br> - More<br>"
+	  },
 	];
 
   	var chatEnabled = false;
