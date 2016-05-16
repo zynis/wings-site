@@ -28,52 +28,63 @@
 	h2 {margin: 0; font-size: 48px; font-weight: 500; color: #696969; line-height: 1; text-align: center;}
 
 	.p-center {position: absolute; left: 50%; top: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); -o-transform: translateX(-50%) translateY(-50%)}
+	.p-vertical {position: absolute; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%)}
+	.p-horizontal {position: absolute; left: 50%; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%)}
 
 	.img-responsive {display: inline-block;}
 
-    .selector {margin-top: 30px;}
+	.selector {margin-top: 30px;}
 
 
 /* ======================================================================================= */
 
 /* Header */
 
-	.site-header {background: #164364 url(../images/bg.svg); position: relative; padding-bottom: 65px; color: #fff;}
+	.top-fixed {position: fixed; left: 0; top: 0; width: 100%; background: #fff; padding: 5px 0; z-index: 50; border-bottom: #ddd 1px solid;}
+	.top-fixed .logo {display: block; line-height: 0;}
+	.top-fixed ul {margin: 0 90px 0 0;}
+	.top-fixed ul a {color: #154364;}
+	.top-fixed ul li {line-height: 20px; padding-top: 5px; margin: 0 5px;}
+
+	.site-header {background: #164364 url(../images/bg.svg); position: relative; padding: 40px 0 0; color: #fff;}
 	.site-header:after {content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 15px; background: url(../images/mask1.svg) no-repeat 50% 0;}
-	.site-header > .container {position: relative; z-index: 3}
+	.site-header > .container {position: relative; z-index: 3; min-height: 380px}
+	.site-header > .container > .p-center {margin-top: -50px;}
 	.site-header a {color: #fff;}
 	.site-header .nav {padding: 50px 0 0; font-size: 18px; margin-bottom: 100px;}
 	.site-header .nav ul {margin: 0;}
 	.site-header .nav li {margin: 0 5px;}
-	.site-header .slogan {font-size: 32px; line-height: 1.2; margin: 60px 0;}
+	.site-header .slogan {font-size: 32px; line-height: 1.2; margin: 0 0 60px;}
 	.site-header .slogan b {font-size: 60px; font-weight: 300; line-height: 1.2}
-	.site-header .socials {margin-top: 50px;}
+	.site-header .socials {position: absolute; bottom: 60px;}
 	.site-header .socials a svg {fill: #fff;}
 	.site-header .socials a:hover svg {fill: #8ff1ff;}
 	.site-header video {height: 100%; left: 0; object-fit: cover; position: absolute; top: 0; width: 100%; z-index: 0; background-position: 50% 50%; background-size: cover;}
 	.site-header .btn-set {display: inline-block;}
-	.site-header .btn-set .btn {padding-left: 35px; padding-right: 35px; margin: 1px 0 2px;}
+	.site-header .btn-set .btn {padding-left: 35px; padding-right: 35px; margin: 1px 5px;}
 
 	.site-header .btn-group {vertical-align: baseline;}
 	.site-header .btn-group > .btn {padding: 0; margin: 0; border: none !important; border-radius: 0; background: none !important}
 
 
-/* Block: Bots are future */
+/* Block: DAOs are future */
 
-	.block-future {margin: 40px 0 90px;}
+	.block-future {margin: 75px 0 90px;}
 	.block-future .item {margin-top: 100px;}
-	.block-future .item h4 {color: #2b474b; font-size: 30px; font-weight: 500;}
-	.block-future .item p {font-size: 16px; color: #2b474b; font-weight: 400;}
+	.block-future .item h4 {color: #154364; font-size: 30px; font-weight: 500;}
+	.block-future .item p {color: #154364; font-size: 16px; color: #2b474b; font-weight: 400;}
 	.block-future .item .icon {position: relative; line-height: 0;}
-	.block-future .item .icon span {position: relative; display: inline-block; width: 190px; height: 190px; border-radius: 100%; background: #9aa4a6}
+	.block-future .item .icon span {position: relative; display: inline-block; width: 190px; height: 190px; border-radius: 100%; background: #215579}
 	.block-future .item .icon span svg {fill: #fff;}
-	.block-future .item .icon span:after {content: ""; display: block; position: absolute; right: -30px; width: 14px; height: 14px; top: 50%; margin-top: -7px; background: #b2bbcf; border-radius: 100%}
-	.block-future .item .icon:before {content: ""; display: block; position: absolute; left: 220px; right: 0; border-top: #b2bbcf 2px dashed; top: 50%; margin-top: -1px;}
-	.block-future .item .icon:after {content: ""; display: block; position: absolute; right: 0; height: 110px; border-left: #b2bbcf 3px solid; top: 50%; margin-top: -55px;}
+	.block-future .item .icon span:after {content: ""; display: block; position: absolute; right: -30px; width: 14px; height: 14px; top: 50%; margin-top: -7px; background: #154364; border-radius: 100%}
+	.block-future .item .icon:before {content: ""; display: block; position: absolute; left: 220px; right: 0; border-top: #154364 2px dashed; top: 50%; margin-top: -1px;}
+	.block-future .item .icon:after {content: ""; display: block; position: absolute; right: 0; height: 110px; border-left: #154364 3px solid; top: 50%; margin-top: -55px;}
 	.block-future .item:nth-child(even) .icon {text-align: right}
 	.block-future .item:nth-child(even) .icon:before {right: 220px; left: 0;}
 	.block-future .item:nth-child(even) .icon:after {right: auto; left: 0;}
 	.block-future .item:nth-child(even) .icon span:after {right: auto; left: -30px;}
+	.block-future .container .subtitle {font-weight: 200; text-align: center; color: #154364;}
+	.block-future .container .title {color: #154364;}
 
 
 /* Block: Interactive chat */
@@ -83,7 +94,6 @@
 	.block-interactive .data {position: relative; z-index: 11; max-width: 380px; display: inline-block;}
 	.block-interactive .data h3 {font-size: 30px; font-weight: 500; margin: 50px 0 30px;}
 	.block-interactive .data p {font-size: 16px; font-weight: 400; margin-bottom: 30px;}
-	/*.block-interactive .charts {max-width: 400px;}*/
 	.block-interactive .charts {position: relative; z-index: 12}
 	.block-interactive .charts h3 {font-weight: 300; font-size: 24px; margin: 0 0 30px;}
 
@@ -116,16 +126,16 @@
 
 /* Block: Features */
 
-	.block-features {margin: 40px 0 0; position: relative; padding-bottom: 60px;}
-	.block-features:before {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 25%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}
-	.block-features:after {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 75%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}
+	.block-features {margin: 80px 0 0; position: relative; padding-bottom: 60px;}
+	/*.block-features:before {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 25%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}*/
+	/*.block-features:after {content: ""; display: block; position: absolute; z-index: 2; top: 100%; left: 75%; margin-left: -18px; border-top: #fff 15px solid; border-left: transparent 18px solid;  border-right: transparent 18px solid;}*/
 	.block-features > .row {margin-bottom: 40px;}
 	.block-features > .row:last-child {margin-bottom: 0;}
-	.block-features h2 {margin-bottom: 80px}
-	.block-features h4 {color: #2b474b; font-size: 24px; font-weight: 500; margin: 0;}
-	.block-features .icon {position: relative; line-height: 0; width: 130px; height: 130px; margin: 40px auto; border-radius: 100%; background: #9aa4a6}
+	.block-features h2 {color: #154364; margin-bottom: 80px}
+	.block-features h4 {color: #154364; font-size: 24px; font-weight: 500; margin-top: 40px;}
+	.block-features .icon {position: relative; line-height: 0; width: 130px; height: 130px; margin: 20px auto; border-radius: 100%; background: #215579}
 	.block-features .icon svg {fill: #fff;}
-	.block-features p {font-size: 16px; font-weight: 400;}
+	.block-features p {color: #154364; font-size: 16px; font-weight: 400;}
 
 
 /* Block: Cases */
@@ -140,12 +150,12 @@
 /* Block: Team */
 
 	.block-team {margin: 70px 0 95px;}
-	.block-team h2 {margin-bottom: 90px;}
+	.block-team h2 {margin-bottom: 90px; color: #154364;}
 	.block-team > ul > li {float: left; width: 20%;}
-	.block-team li .name {font-size: 24px; font-weight: 500; line-height: 1; margin-top: 15px;}
-	.block-team li .role {font-size: 24px; font-weight: 300; line-height: 1}
-	.block-team li .info {font-size: 18px; font-weight: 300; line-height: 1; margin: 20px 0 15px;}
-	.block-team li li a svg {fill: #2b474b;}
+	.block-team li .name {font-size: 20px; font-weight: 500; line-height: 1; margin-top: 15px;}
+	.block-team li .role {font-size: 16.5px; font-weight: 300; line-height: 1}
+	.block-team li .info {font-size: 14px; font-weight: 300; line-height: 1; margin: 20px 0 15px;}
+	.block-team li li a svg {fill: #154364;}
 	.block-team li li a:hover svg {fill: #3f92d3;}
 
 
@@ -170,7 +180,7 @@
 	.site-footer .nav {font-size: 18px; margin-bottom: 80px;}
 	.site-footer .nav ul {margin: 0;}
 	.site-footer .nav li {margin: 0 5px;}
-	.site-footer .copy {font-size: 18px; line-height: 1; margin: 60px 0 0;}
+	.site-footer .copy {font-size: 14px; line-height: 1; margin: 60px 0 0;}
 
 
 /* ======================================================================================= */
@@ -178,7 +188,7 @@
 /* JS: Modal */
 
 	.modal-content {border-radius: 0}
-	.modal-title {color: #000; font-size: 26px; font-weight: 500; line-height: 1; text-align: center;}
+	.modal-title {color: #154364; font-size: 26px; font-weight: 500; line-height: 1; text-align: center;}
 	.modal-header {border-bottom: none; padding: 40px 30px 20px;}
 	.modal-body {padding: 20px 30px 40px;}
 
@@ -298,7 +308,7 @@
 		.site-header .slogan {font-size: 24px;}
 		.site-header .slogan b {font-size: 34px;}
 		.site-header .btn-set {display: block;}
-		.site-header .btn-set .btn {margin: 0 auto 3px; padding-left: 0; padding-right: 0; width: 100%;}
+		.site-header .btn-set .btn {margin: 0px auto 3px; padding-left: 0; padding-right: 0; width: 100%;}
 
 		h2 {font-size: 34px;}
 

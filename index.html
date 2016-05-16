@@ -16,49 +16,43 @@
 	</head>
 	<body>
 		<header class="site-header">
-			<div class="container text-center">
-				<nav class="nav clearfix">
+			<div class="top-fixed">
+				<div class="container text-center">
+					<a href="/" class="logo pull-left"><svg width="89" height="30"><use xlink:href="#logo"></use></svg></a>
 					<ul class="list-inline text-uppercase">
-						<li><a href="#" target="_blank"><b>BTT</b> <span id="menu_btt">Thread</span></a></li>
-						<li><a href="https://chat.wings.ai" target="_blank" id="menu_chat">Chat</a></li>
-						<li><a data-anchor="whitepaper" id="menu_whitepaper">Whitepaper</a></li>
-						<li><a href="https://chat.wings.ai" id="menu_contact_us">Contact us</a></li>
+						<li><a href="#">Benefits</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Team</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Try it</a></li>
 					</ul>
-				</nav>
-				<div class="logo">
-					<a href="#"><svg width="270" height="91" class="img-responsive"><use xlink:href="#logo"></use></svg></a>
 				</div>
-				<div class="slogan">
-					<b id="header_title">Kickstarting DAOs</b><br>
-					<span id="header_sub_title">Simple, Secure, Transparent</span>
+			</div>
+			<div class="container text-center">
+				<div class="p-center">
+					<div class="slogan">
+						<b id="header_title">Kickstarting DAOs</b>
+						<span id="header_sub_title">Simple, Secure, Transparent</span>
+					</div>
+					<div class="btn-set">
+						<a data-anchor="tryout" class="btn btn-info btn-lg"><b id="header_button_platform">Learn More</b></a>
+						<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
+					</div>
 				</div>
-				<div class="btn-set">
-					<a data-anchor="tryout" class="btn btn-info btn-lg"><b id="header_button_platform">Try Out Wings</b></a>
-					<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
-				</div>
-				<ul class="list-inline socials">
-					<li><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
-					<li><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
-					<li><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
-					<li><a href="https://bitcointalk.org" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
-					<li><a href="https://chat.wings.ai" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
+				<ul class="list-inline socials p-horizontal">
+					<li title="Twitter"><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
+					<li title="Facebook"><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
+					<li title="Reddit"><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
+					<li title="Bitcointalk"><a href="https://bitcointalk.org" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
+					<li title="Rocket Chat"><a href="https://chat.wings.ai" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
 				</ul>
 			</div>
-			<!-- <video loop preload="none" class="hidden-xs">
-				<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/intro.mp4"></source>
-				<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="images/intro.webm"></source>
-				<source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="images/intro.ogv"></source>
-				<script>
-					var video = document.currentScript.parentElement;
-					video.volume = 0;
-					video.playbackRate = 0.5;
-				</script>
-			</video> -->
 		</header>
 
 		<div class="block-future">
 			<div class="container">
-				<h2 id="future_title">DAOs Are The Future</h2>
+				<h2 id="future_title" class="title">DAOs are the future</h2>
+                <h3 class="subtitle">Main benefits</h3>
 
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
@@ -76,7 +70,7 @@
 												<span><svg width="110" height="110" class="p-center"><use xlink:href="#icon-line-chart"></use></svg></span>
 											</div>
 										</div>
-										<div class="col-sm-6 col-xs-9">
+										<div class="col-sm-6 col-xs-9 item-text">
 											<h4 id="future_item_rewards_title">Sharing The Rewards</h4>
 											<p id="future_item_rewards_text">DAO token owners are eligible to receive a portion of all revenues from future campaigns.</p>
 										</div>
@@ -378,7 +372,7 @@
 						<img src="images/boris.png" width="80" height="80" alt="" class="img-circle">
 						<div class="name">Boris Povod</div>
 						<div class="role">Co-Founder</div>
-						<div class="info">Blockchain developer. Crypti Co-Founder</div>
+						<p class="info">Blockchain developer. Crypti Co-Founder</p>
 						<ul class="list-inline">
 							<li><a href="https://www.facebook.com/MrPovod" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
 							<li><a href="https://twitter.com/mr_povod" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
@@ -389,7 +383,7 @@
 						<img src="images/nikolay.png" width="80" height="80" alt="" class="img-circle">
 						<div class="name">Nikolay</div>
 						<div class="role">Community Manager</div>
-						<div class="info">East Europe Community Manager</div>
+						<p class="info">Community Manager EU East<br><br></p>
 						<ul class="list-inline">
 							<li><a href="https://www.facebook.com/nelegalproject" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
 							<li><a href="https://twitter.com/btcturbo" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
@@ -400,7 +394,7 @@
 						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
 						<div class="name">Domi</div>
 						<div class="role">Community Managr</div>
-						<div class="info">Western Europe Community Manager</div>
+						<div class="info">Community Manager EU West<br><br></div>
 						<ul class="list-inline">
 							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
 							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
@@ -513,11 +507,8 @@
 						<li><a href="https://chat.wings.ai" id="footer_menu_contact_us">Contact us</a></li>
 					</ul>
 				</nav>
-				<div class="logo">
-					<a href="#"><svg width="160" height="70"><use xlink:href="#logo-gray"></use></svg></a>
-				</div>
 				<div class="copy" id="footer_text">
-                  A secure, simple, and transparent sharing economy.
+                  Wings &copy; 2016. All Rights Reserved.
 				</div>
 			</div>
 		</footer>
@@ -527,7 +518,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="daoLabel">Stay updated - We&nbsp;don't&nbsp;spam!</h4>
+						<h4 class="modal-title" id="daoLabel">Stay updated!</h4>
 					</div>
 					<div class="modal-body text-center">
 						<ul class="list-inline">
