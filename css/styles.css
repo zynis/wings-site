@@ -301,6 +301,13 @@
 /* Extra Small devices (phones) */
 
 	@media (max-width: 767px) {
+		.top-fixed {position: relative;}
+		.top-fixed ul {margin: 0;}
+		.top-fixed .logo {float: none !important;}
+		.site-header {padding: 0;}
+		.site-header > .container {min-height: auto !important; padding-bottom: 45px;}
+		.site-header > .container > .p-center {position: static; margin-top: 0; left: auto; top: auto; -webkit-transform: translateX(0) translateY(0); -moz-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); -o-transform: translateX(0) translateY(0)}
+		.site-header .socials {margin-top: 30px; position: static; bottom: auto; left: auto; -webkit-transform: translateX(0) translateY(0); -moz-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); -o-transform: translateX(0) translateY(0)}
 		.site-header .nav {font-size: 14px; padding-top: 30px;}
 		.site-header .nav > ul {margin: 0 -15px; position: relative;}
 		.site-header .nav > ul > li {margin: 0;}
