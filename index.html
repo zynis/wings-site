@@ -18,22 +18,11 @@
 		<header class="site-header">
 			<div class="container text-center">
 				<nav class="nav clearfix">
-					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<img src="images/flags/flag-russia.png" alt="">
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Русский</a></li>
-							<li><a href="#">Английский</a></li>
-							<li><a href="#">Испанский</a></li>
-							<li><a href="#">Китайский</a></li>
-						</ul>
-					</div>
 					<ul class="list-inline text-uppercase">
-						<li><a href="#"><b>BTT</b> <span id="menu_btt">Thread</span></a></li>
-						<li><a href="#" id="menu_chat">Chat</a></li>
-						<li><a href="#" id="menu_whitepaper">Whitepaper</a></li>
-						<li><a href="#" id="menu_contact_us">Contact us</a></li>
+						<li><a href="#" target="_blank"><b>BTT</b> <span id="menu_btt">Thread</span></a></li>
+						<li><a href="https://chat.wings.ai" target="_blank" id="menu_chat">Chat</a></li>
+						<li><a data-anchor="whitepaper" id="menu_whitepaper">Whitepaper</a></li>
+						<li><a href="https://chat.wings.ai" id="menu_contact_us">Contact us</a></li>
 					</ul>
 				</nav>
 				<div class="logo">
@@ -44,17 +33,15 @@
 					<span id="header_sub_title">Simple, Secure, Transparent</span>
 				</div>
 				<div class="btn-set">
-					<a href="#" class="btn btn-info btn-lg btn-block"><b id="header_button_soon">The DAO will be Starting soon!</b></a>
-					<a href="#" class="btn btn-info btn-lg"><b id="header_button_platform">Try Out Wings</b></a>
+					<a data-anchor="tryout" class="btn btn-info btn-lg"><b id="header_button_platform">Learn More</b></a>
 					<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
 				</div>
 				<ul class="list-inline socials">
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-tumblr"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
+					<li title="Twitter"><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
+					<li title="Facebook"><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
+					<li title="Reddit"><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
+					<li title="Bitcointalk"><a href="https://bitcointalk.org" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
+					<li title="Rocket Chat"><a href="https://chat.wings.ai" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
 				</ul>
 			</div>
 			<!-- <video loop preload="none" class="hidden-xs">
@@ -71,7 +58,8 @@
 
 		<div class="block-future">
 			<div class="container">
-				<h2 id="future_title">DAOs Are The Future</h2>
+				<h2 id="future_title" class="title">DAOs are the future</h2>
+                <h3 class="subtitle">Main benefits</h3>
 
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
@@ -89,7 +77,7 @@
 												<span><svg width="110" height="110" class="p-center"><use xlink:href="#icon-line-chart"></use></svg></span>
 											</div>
 										</div>
-										<div class="col-sm-6 col-xs-9">
+										<div class="col-sm-6 col-xs-9 item-text">
 											<h4 id="future_item_rewards_title">Sharing The Rewards</h4>
 											<p id="future_item_rewards_text">DAO token owners are eligible to receive a portion of all revenues from future campaigns.</p>
 										</div>
@@ -195,16 +183,16 @@
 			</div>
 		</div>
 
-		<div class="block-interactive">
+		<div class="block-interactive" id="tryout" name="tryout">
 			<div id="interactiv" class="carousel slide" data-ride="carousel" data-interval="0">
 				<div class="carousel-inner" role="listbox">
 					<div class="item i0 active">
 						<div class="container">
 							<div class="row">
-								<div class="col-sm-5 text-right">
+								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
 										<h3>Control your DAOs using chatbots</h3>
-										<p>Wings brings the power to supporters. All backed projects are accessible using the web application and IM bots. Back a project, create a vote or write a review - all from the palm of your hand</p>
+										<p class="text-justify">Wings brings the power to supporters. All backed projects are accessible using the web application and IM bots. Back a project, create a vote or write a review - all from the palm of your hand</p>
 										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
 									</div>
 								</div>
@@ -223,10 +211,10 @@
 					<div class="item i1">
 						<div class="container">
 							<div class="row">
-								<div class="col-sm-5 text-right">
+								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
 										<h3>Never miss out a new DAO opportunity!</h3>
-										<p>Wings enables you to set an auto-participation fund and your preffered participation strategy, thus enabling you to take part in new DAO's without the fear of missing out!</p>
+										<p class="text-justify">Wings enables you to set an auto-participation fund and your preffered participation strategy, thus enabling you to take part in new DAO's without the fear of missing out!</p>
 										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
 									</div>
 								</div>
@@ -240,7 +228,7 @@
 											<a></a>
 											<a></a>
 										</div>
-										<canvas id="chart-area" width="250"></canvas>
+										<div id="chart-area"></div>
 									</div>
 								</div>
 							</div>
@@ -249,10 +237,10 @@
 					<div class="item i2">
 						<div class="container">
 							<div class="row">
-								<div class="col-sm-5 text-right">
+								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
 										<h3>Follow succesfull community members</h3>
-										<p>You can use Wings to follow the DAO leaders and automatically participate in same DAO's as they are thus broadening your opportunities</p>
+										<p class="text-justify">You can use Wings to follow the DAO leaders and automatically participate in same DAO's as they are thus broadening your opportunities</p>
 										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
 									</div>
 								</div>
@@ -374,10 +362,10 @@
 					<div class="col-sm-6 col-md-4 col-md-offset-2">
 						<h4>
 							<svg width="48" height="48"><use xlink:href="#icon-paper"></use></svg>
-							<span id=whitepaper>Whitepaper</span>
+							<span name="whitepaper" id="whitepaper">Whitepaper</span>
 						</h4>
 						<p id="whitepaper_text">Read the Wings whitepaper.</p>
-						<a href="#" class="btn btn-info btn-lg" id="whitepaper_btn">Read now</a>
+						<a href="#" class="btn btn-info btn-lg" id="whitepaper_btn">Coming soon</a>
 					</div>
 				</div>
 			</div>
@@ -388,22 +376,32 @@
 				<h2>Team</h2>
 				<ul class="list-unstyled clearfix text-center">
 					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
+						<img src="images/boris.png" width="80" height="80" alt="" class="img-circle">
+						<div class="name">Boris Povod</div>
+						<div class="role">Co-Founder</div>
+						<p class="info">Blockchain developer. Crypti Co-Founder</p>
 						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
+							<li><a href="https://www.facebook.com/MrPovod" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
+							<li><a href="https://twitter.com/mr_povod" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
+							<li><a href="https://bitcointalk.org/index.php?action=profile" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
+						</ul>
+					</li>
+					<li>
+						<img src="images/nikolay.png" width="80" height="80" alt="" class="img-circle">
+						<div class="name">Nikolay</div>
+						<div class="role">Community Manager</div>
+						<p class="info">Community Manager EU East<br><br></p>
+						<ul class="list-inline">
+							<li><a href="https://www.facebook.com/nelegalproject" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
+							<li><a href="https://twitter.com/btcturbo" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
+							<li><a href="https://bitcointalk.org/index.php?action=profile;u=561585" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
 						</ul>
 					</li>
 					<li>
 						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
+						<div class="name">Domi</div>
+						<div class="role">Community Managr</div>
+						<div class="info">Community Manager EU West<br><br></div>
 						<ul class="list-inline">
 							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
 							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
@@ -411,46 +409,20 @@
 							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
 						</ul>
 					</li>
-					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
-						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
-						</ul>
-					</li>
-					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
-						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
-						</ul>
-					</li>
-					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
-						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
-						</ul>
-					</li>
+                    <li>
+                      <img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
+                      <div class="name">Coming Soon</div>
+                      <div class="role">Co-Founder</div>
+                    </li>
+                    <li>
+                      <img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
+                      <div class="name">Coming Soon</div>
+                      <div class="role">Co-Founder</div>
+                    </li>
 				</ul>
 			</div>
 
-			<div class="block-press">
+			<div class="block-press hidden">
 				<h2>Press about us</h2>
 
 				<div id="press-slider" class="carousel slide" data-ride="carousel">
@@ -536,17 +508,14 @@
 			<div class="container">
 				<nav class="nav">
 					<ul class="list-inline text-uppercase">
-						<li><a href="#"><b>BTT</b> <span id="footer_menu_btt">Thread</span></a></li>
-						<li><a href="#" id="footer_menu_chat">Chat</a></li>
-						<li><a href="#" id="footer_menu_whitepaper">Whitepaper</a></li>
-						<li><a href="#" id="footer_menu_contact_us">Contact us</a></li>
+						<li><a href="#" target="_blank"><b>BTT</b> <span id="footer_menu_btt">Thread</span></a></li>
+						<li><a href="https://chat.wings.ai" target="_blank" id="footer_menu_chat">Chat</a></li>
+						<li><a data-anchor="whitepaper" id="footer_menu_whitepaper">Whitepaper</a></li>
+						<li><a href="https://chat.wings.ai" id="footer_menu_contact_us">Contact us</a></li>
 					</ul>
 				</nav>
-				<div class="logo">
-					<a href="#"><svg width="160" height="70"><use xlink:href="#logo-gray"></use></svg></a>
-				</div>
 				<div class="copy" id="footer_text">
-                  A secure, simple, and transparent sharing economy.
+                  Wings &copy; 2016. All Rights Reserved.
 				</div>
 			</div>
 		</footer>
@@ -556,32 +525,35 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="daoLabel">Stay updated - We&nbsp;don't&nbsp;spam!</h4>
+						<h4 class="modal-title" id="daoLabel">Stay updated!</h4>
 					</div>
 					<div class="modal-body text-center">
 						<ul class="list-inline">
 							<li>
 								<a data-slidetoggle="subscribe-form">
 									<svg width="64" height="64"><use xlink:href="#icon-email"></use></svg>
+                                    Email
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://telegram.me/joinchat/Ab2FrghqclcDO9p9vHIQig" target="_blank">
 									<svg width="64" height="64"><use xlink:href="#icon-telegram"></use></svg>
 									Telegram
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://chat.wings.ai" target="_blank">
 									<svg width="64" height="64"><use xlink:href="#icon-rocket-chat"></use></svg>
 									Rocket Chat
 								</a>
 							</li>
 						</ul>
-						<form action="#" method="post" id="subscribe-form" style="display: none;">
-							<div class="alert alert-success" role="alert" id="subscribe_successful">Thanks! You subscribed.</div>
-							<input class="form-control" placeholder="Your e-mail" type="email" required>
-							<button class="btn btn-block btn-lg btn-default"><b id="subscribe_btn">Subscribe</b></button>
+						<form method="post" id="subscribe-form" style="display: none;">
+                          <div class="alert alert-success" style="display: none;" role="alert" id="subscribe_successful">Thanks! You subscribed.</div>
+                          <div class="alert alert-danger" style="display: none;" role="alert" id="subscribe_error"></div>
+
+                          <input class="form-control" id="subscribe-email" placeholder="Your e-mail" type="email" required>
+							<button type="submit" class="btn btn-block btn-lg btn-default"><b id="subscribe_btn">Subscribe</b></button>
 							<div class="claim" id="subscribe_claim">We respect your privacy</div>
 						</form>
 					</div>
@@ -590,7 +562,10 @@
 		</div>
 
 		<script src="js/libs.js" type="text/javascript"></script>
-		<script src="js/jquery.wings.js" type="text/javascript"></script>
-		<script src="js/jquery.i18n.properties.min.js" type="text/javascript"></script>
-	</body>
+        <script src="js/d3.min.js" type="text/javascript"></script>
+        <script src="js/d3pie.min.js" type="text/javascript"></script>
+        <script src="js/jquery.i18n.properties.min.js" type="text/javascript"></script>
+        <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
+        <script src="js/jquery.wings.js" type="text/javascript"></script>
+    </body>
 </html>
