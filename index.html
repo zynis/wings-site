@@ -20,11 +20,10 @@
 				<div class="container text-center">
 					<a href="/" class="logo pull-left"><svg width="89" height="30"><use xlink:href="#logo"></use></svg></a>
 					<ul class="list-inline text-uppercase">
-						<li><a href="#">Benefits</a></li>
-						<li><a href="#">Features</a></li>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="#">Try it</a></li>
+						<li><a data-anchor="benefitsBlock">Benefits</a></li>
+						<li><a data-anchor="features">Features</a></li>
+						<li><a data-anchor="team">Team</a></li>
+						<li><a href="mailto:support@wings.ai">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,7 +34,7 @@
 						<span id="header_sub_title">Simple, Secure, Transparent</span>
 					</div>
 					<div class="btn-set">
-						<a data-anchor="tryout" class="btn btn-info btn-lg"><b id="header_button_platform">Learn More</b></a>
+						<!--<a data-anchor="tryout" class="btn btn-info btn-lg"><b id="header_button_platform">Learn More</b></a>-->
 						<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
 					</div>
 				</div>
@@ -50,7 +49,7 @@
 		</header>
 
 		<div class="block-future">
-			<div class="container">
+			<div class="container" name="benefitsBlock">
 				<h2 id="future_title" class="title">DAOs are the future</h2>
                 <h3 class="subtitle">Main benefits</h3>
 
@@ -176,7 +175,7 @@
 			</div>
 		</div>
 
-		<div class="block-interactive" id="tryout" name="tryout">
+		<div class="block-interactive" id="tryout" name="features">
 			<div id="interactiv" class="carousel slide" data-ride="carousel" data-interval="0">
 				<div class="carousel-inner" role="listbox">
 					<div class="item i0 active">
@@ -366,7 +365,7 @@
 
 		<div class="container">
 			<div class="block-team">
-				<h2>Team</h2>
+				<h2 name="team">Team</h2>
 				<ul class="list-unstyled clearfix text-center">
 					<li>
 						<img src="images/boris.png" width="80" height="80" alt="" class="img-circle">
@@ -392,8 +391,8 @@
 					</li>
 					<li>
 						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Domi</div>
-						<div class="role">Community Managr</div>
+						<div class="name">Dominik Zynis</div>
+						<div class="role">Marketing & Communications</div>
 						<div class="info">Community Manager EU West<br><br></div>
 						<ul class="list-inline">
 							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
@@ -504,7 +503,7 @@
 						<li><a href="#" target="_blank"><b>BTT</b> <span id="footer_menu_btt">Thread</span></a></li>
 						<li><a href="https://chat.wings.ai" target="_blank" id="footer_menu_chat">Chat</a></li>
 						<li><a data-anchor="whitepaper" id="footer_menu_whitepaper">Whitepaper</a></li>
-						<li><a href="https://chat.wings.ai" id="footer_menu_contact_us">Contact us</a></li>
+						<li><a href="mailto:support@wings.ai" id="footer_menu_contact_us">Contact us</a></li>
 					</ul>
 				</nav>
 				<div class="copy" id="footer_text">

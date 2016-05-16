@@ -42,7 +42,7 @@ $(document).ready(function(){
 	$('[data-anchor]').on('click', function(e){
 		e.preventDefault();
 		var top = $('[name="' + $(this).data('anchor') + '"]').offset().top;
-		$('body,html').animate({scrollTop: top}, 300);
+		$('body,html').animate({scrollTop: top - 40}, 300);
 	});
 
 
@@ -220,7 +220,7 @@ $(document).ready(function(){
 		{
 		  'author': 'user',
 		  'avatar': 'images/face.png',
-		  'msg': 'manage Wings'
+		  'msg': 'manage Wnigs'
 		},
 		{
 		  'author': 'bot',
