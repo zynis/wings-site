@@ -151,43 +151,47 @@ $(document).ready(function(){
 		  if (nextSlide == 1 && !window.pie) {
 			 renderPie();
 		  }
+
+		  setTimeout(function () {
+			 $('#features.carousel').carousel(nextSlide);
+		  }, 10);
 		});
 
 		$('#interactiv .carousel-control.left').on('click',function(e){
 			e.preventDefault();
 			$('#interactiv').carousel('prev');
-			$('#features').carousel('prev');
+		  	$('#interactiv').carousel("cycle");
 		});
 
 		$('#interactiv .carousel-control.right').on('click',function(e){
 			e.preventDefault();
 			$('#interactiv').carousel('next');
-			$('#features').carousel('next');
-		});
-
-		$('#features').on('slide.bs.carousel',function(e){
-			if (e.direction == 'left')		$('#interactiv').carousel('next');
-			else	$('#interactiv').carousel('prev');
+		  	$('#interactiv').carousel("cycle");
 		});
 
 
 	/* Mobile swipe */
+  $('#interactiv').carousel({
+	 interval:5000
+  });
+  $('#interactiv').carousel("pause");
 
-		$(".carousel.slide")
-			.on("swiperight", function() {
-				if ($(this).find('.carousel-control.left').length) {
-					$(this).find('.carousel-control.left').click();
-				} else {
-					$(this).carousel('prev');
-				}
-			})
-			.on("swipeleft", function() {
-				if ($(this).find('.carousel-control.right').length) {
-					$(this).find('.carousel-control.right').click();
-				} else {
-					$(this).carousel('next');
-				}
-			});
+
+	 $(".carousel.slide")
+		 .on("swiperight", function() {
+			 if ($(this).find('.carousel-control.left').length) {
+				 $(this).find('.carousel-control.left').click();
+			 } else {
+				 $(this).carousel('prev');
+			 }
+		 })
+		 .on("swipeleft", function() {
+			 if ($(this).find('.carousel-control.right').length) {
+				 $(this).find('.carousel-control.right').click();
+			 } else {
+				 $(this).carousel('next');
+			 }
+		 });
 
 
 	/* CHAT */
@@ -241,7 +245,6 @@ $(document).ready(function(){
 	];
 
   	var chatEnabled = false;
-  	var next_carousel;
 	function chatting() {
 	  if (chatEnabled) {
 		 return;
@@ -284,29 +287,7 @@ $(document).ready(function(){
 
 	  setTimeout(function chatLoop() {
 		 if (i == chat.length) {
-			$('#interactiv').carousel('next');
-			$('#features').carousel('next');
-
-			next_carousel = setTimeout(function(){
-				$('#interactiv').carousel('next');
-				$('#features').carousel('next');
-				clearTimeout(next_carousel);
-
-				next_carousel = setTimeout(function(){
-					$('#interactiv').carousel('next');
-					$('#features').carousel('next');
-					$('#interactive ul').html('');
-					clearTimeout(next_carousel);
-
-					next_carousel = setTimeout(function(){
-						$('#interactive ul').html('');
-						chatEnabled = false;
-						clearTimeout(next_carousel);
-					}, 5000);
-				}, 5000);
-			}, 5000);
-			return;
-
+			$("#interactiv").carousel("cycle");
 		 } else {
 			var msg = chat[i];
 
@@ -318,19 +299,6 @@ $(document).ready(function(){
 	  });
 
 	}
-
-	$('#interactiv').on('slid.bs.carousel',function(e){
-		clearTimeout(next_carousel);
-
-		if ($(e.relatedTarget).hasClass('i0')) {
-			i=0;
-			chatEnabled = false;
-			$('#interactive ul').html('');
-			chatting();
-		} else {
-			chatEnabled = true;
-		}
-	});
 
 	var defaultState = "company";
 	var anotherState = "investor";
