@@ -17,6 +17,19 @@
 
 $(document).ready(function(){
 
+	$(window).on('load resize', function(){
+		// Header 100% height fix
+		$('.site-header > .container').css({'min-height': $(window).height() - 25});
+
+		// if ( $('.site-header video').length ) {
+		// 	if ( $(window).width() < 768 ) {
+		// 		$('.site-header video').get(0).pause();
+		// 	} else {
+		// 		$('.site-header video').prop('preload','auto').get(0).play();
+		// 	}
+		// }
+	});
+
 	// slideToggle items
 
 	$(document).on('click','[data-slidetoggle]',function(){
@@ -175,10 +188,13 @@ $(document).ready(function(){
 				}
 			});
 
+
+	/* CHAT */
+
 	var chat = [
 		{
 			'author': 'bot',
-			'avatar': 'images/bot.png',
+			'avatar': 'images/bot.svg',
 			'msg': 'Welcome to Wings DAO Bot. We allow to fund and manage your DAOs easily.'
 		},
 		{
@@ -188,7 +204,7 @@ $(document).ready(function(){
 		},
 	  	{
 		  'author': 'bot',
-		  'avatar': 'images/bot.png',
+		  'avatar': 'images/bot.svg',
 		  'msg': 'List of commands: <br><br> /daolist - List of DAOs<br> /instruction - Instruction how to invest<br> /mybalance - Your DAO balance<br> /transfer - Transfer your BTC/ETH to dao<br> /terms - Terms & Conditions<br> /help - Help'
 		},
 	  	{
@@ -198,7 +214,7 @@ $(document).ready(function(){
 		},
 	  	{
 		  'author': 'bot',
-		  'avatar': 'images/bot.png',
+		  'avatar': 'images/bot.svg',
 		  'msg':  "You've invested in 3 DAOs: <br><br> - Wings DAO<br> - Demo DAO<br> - SuperCool DAO<br><br>Write DAO name to get more info"
 		},
 		 {
@@ -208,25 +224,13 @@ $(document).ready(function(){
 		 },
 	   {
 		  'author': 'bot',
-		  'avatar': 'images/bot.png',
+		  'avatar': 'images/bot.svg',
 		  'msg':  "You have 100k Wings DAO Tokens, you've earned 1000% profit"
 		}
 	];
 
-	$(window).on('load resize', function(){
-		// Header 100% height fix
-		$('.site-header > .container').css({'min-height': $(window).height() - 25});
-
-		if ( $('.site-header video').length ) {
-			if ( $(window).width() < 768 ) {
-				$('.site-header video').get(0).pause();
-			} else {
-				$('.site-header video').prop('preload','auto').get(0).play();
-			}
-		}
-	});
-
   	var chatEnabled = false;
+  	var next_carousel;
 	function chatting() {
 	  if (chatEnabled) {
 		 return;
@@ -269,7 +273,29 @@ $(document).ready(function(){
 
 	  setTimeout(function chatLoop() {
 		 if (i == chat.length) {
+			$('#interactiv').carousel('next');
+			$('#features').carousel('next');
+
+			next_carousel = setTimeout(function(){
+				$('#interactiv').carousel('next');
+				$('#features').carousel('next');
+				clearTimeout(next_carousel);
+
+				next_carousel = setTimeout(function(){
+					$('#interactiv').carousel('next');
+					$('#features').carousel('next');
+					$('#interactive ul').html('');
+					clearTimeout(next_carousel);
+
+					next_carousel = setTimeout(function(){
+						$('#interactive ul').html('');
+						chatEnabled = false;
+						clearTimeout(next_carousel);
+					}, 5000);
+				}, 5000);
+			}, 5000);
 			return;
+
 		 } else {
 			var msg = chat[i];
 
@@ -281,6 +307,19 @@ $(document).ready(function(){
 	  });
 
 	}
+
+	$('#interactiv').on('slid.bs.carousel',function(e){
+		clearTimeout(next_carousel);
+
+		if ($(e.relatedTarget).hasClass('i0')) {
+			i=0;
+			chatEnabled = false;
+			$('#interactive ul').html('');
+			chatting();
+		} else {
+			chatEnabled = true;
+		}
+	});
 
 	var defaultState = "company";
 	var anotherState = "investor";
