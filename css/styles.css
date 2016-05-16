@@ -90,7 +90,7 @@
 /* Block: Interactive chat */
 
 	.block-interactive {background: #164364 url(../images/bg.svg); position: relative; padding-top: 50px; overflow: hidden; color: #fff;}
-	.block-interactive:after {content: ""; z-index: 10; display: block; position: absolute; bottom: 0; height: 220px; width: 100%; left: 0; background: url(../images/mask2.svg) 50% 100%;}
+	.block-interactive:after {content: ""; z-index: 9999; display: block; position: absolute; bottom: 0; height: 220px; width: 100%; left: 0; background: url(../images/mask2.svg) 50% 100%;}
 	.block-interactive .data {position: relative; z-index: 11; max-width: 380px; display: inline-block;}
 	.block-interactive .data h3 {font-size: 30px; font-weight: 500; margin: 50px 0 30px;}
 	.block-interactive .data p {font-size: 16px; font-weight: 400; margin-bottom: 30px;}
