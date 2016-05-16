@@ -19,7 +19,8 @@ $(document).ready(function(){
 
 	$(window).on('load resize', function(){
 		// Header 100% height fix
-		$('.site-header > .container').css({'min-height': $(window).height() - 25});
+	   var windowHeight = ($(window).height() - 25) * 0.8;
+		$('.site-header > .container').css({'min-height': windowHeight});
 
 		// if ( $('.site-header video').length ) {
 		// 	if ( $(window).width() < 768 ) {
