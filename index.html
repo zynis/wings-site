@@ -21,7 +21,7 @@
 					<a href="/" class="logo pull-left"><svg width="89" height="30"><use xlink:href="#logo"></use></svg></a>
 					<ul class="list-inline text-uppercase">
 						<li><a data-anchor="benefitsBlock">Benefits</a></li>
-						<li><a data-anchor="features">Features</a></li>
+						<li><a data-anchor="featuresBlock">Features</a></li>
 						<li><a data-anchor="team">Team</a></li>
 						<li><a href="mailto:support@wings.ai">Contact</a></li>
 					</ul>
@@ -175,7 +175,7 @@
 			</div>
 		</div>
 
-		<div class="block-interactive" id="tryout" name="features">
+		<div class="block-interactive" id="tryout" name="featuresBlock">
 			<div id="interactiv" class="carousel slide" data-pause="hover">
 				<div class="carousel-inner" role="listbox">
 					<div class="item i0">
@@ -212,16 +212,14 @@
 								</div>
 								<div class="col-sm-6 col-sm-offset-1">
 									<div class="charts">
-										<h3 class="text-center text-uppercase">Moderately Aggressive</h3>
+										<h3 class="text-center text-uppercase">Moderately <span id="mode">conservative</span></h3>
 										<div class="chart-changer">
-											<a class="active"></a>
-											<a></a>
-											<a></a>
-											<a></a>
-											<a></a>
+											<a data-mode="conservative" class="active"></a>
+											<a data-mode="moderate"></a>
+											<a data-mode="aggresive"></a>
 										</div>
-										<div id="chart-area" class="chart"></div>
-									</div>
+                                      <canvas id="chart" height="450" width="650"></canvas>
+                                    </div>
 								</div>
 							</div>
 						</div>
@@ -384,7 +382,7 @@
 						<div class="role">Community Manager</div>
 						<p class="info">Community Manager EU East<br><br></p>
 						<ul class="list-inline">
-							<li><a href="https://www.facebook.com/nelegalproject" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
+							<li><a href="https://www.facebook.com/btcturbo" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
 							<li><a href="https://twitter.com/btcturbo" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
 							<li><a href="https://bitcointalk.org/index.php?action=profile;u=561585" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
 						</ul>
@@ -414,7 +412,7 @@
 				</ul>
 			</div>
 
-			<div class="block-press hidden">
+			<!--<div class="block-press hidden">
 				<h2>Press about us</h2>
 
 				<div id="press-slider" class="carousel slide" data-ride="carousel">
@@ -493,7 +491,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
+
 		</div>
 
 		<footer class="site-footer text-center">
@@ -554,8 +553,7 @@
 		</div>
 
 		<script src="js/libs.js" type="text/javascript"></script>
-        <script src="js/d3.min.js" type="text/javascript"></script>
-        <script src="js/d3pie.min.js" type="text/javascript"></script>
+        <script src="js/Chart.min.js" type="text/javascript"></script>
         <script src="js/jquery.i18n.properties.min.js" type="text/javascript"></script>
         <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
         <script src="js/jquery.wings.js" type="text/javascript"></script>

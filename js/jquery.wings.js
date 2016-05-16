@@ -57,129 +57,193 @@ $(document).ready(function(){
 			return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
 		};
 
-  		var pieConfig = {
-		  "size": {
-			 "canvasHeight": 400,
-			 "canvasWidth": 590,
-			 "pieOuterRadius": "78%"
+  		Chart.defaults.global.responsive = true;
+
+
+ 		 var pieData = {
+		  type: "pie",
+		  data: {
+			 labels: [
+				"Red",
+				"Green",
+				"Yellow"
+			 ],
+			 datasets: [
+				{
+				  data: [300, 50, 100],
+				  backgroundColor: [
+					 "#FF6384",
+					 "#36A2EB",
+					 "#FFCE56"
+				  ],
+				  hoverBackgroundColor: [
+					 "#FF6384",
+					 "#36A2EB",
+					 "#FFCE56"
+				  ]
+				}]
 		  },
-		  "data": {
-			 "content": [
-				{
-				  "label": "Test 1",
-				  "value": 8,
-				  "color": "#7e3838"
-				},
-				{
-				  "label": "Test 2",
-				  "value": 5,
-				  "color": "#7e6538"
-				},
-				{
-				  "label": "Test 4",
-				  "value": 2,
-				  "color": "#7c7e38"
-				},
-				{
-				  "label": "Test 5",
-				  "value": 3,
-				  "color": "#587e38"
-				}
-			 ]
-		  },
-		  "labels": {
-			 "outer": {
-				"pieDistance": 10
-			 },
-			 "inner": {
-				"format": "none"
-			 },
-			 "mainLabel": {
-				"color": "#FFF",
-				"font": "verdana"
-			 },
-			 "percentage": {
-				"color": "#FFF",
-				"font": "verdana",
-				"decimalPlaces": 0
-			 },
-			 "value": {
-				"color": "#FFF",
-				"font": "verdana"
-			 },
-			 "lines": {
-				"enabled": true,
-				"color": "#FFF"
-			 },
-			 "truncation": {
-				"enabled": true
-			 }
-		  },
-		  "effects": {
-			 "pullOutSegmentOnClick": {
-				"effect": "linear",
-				"speed": 400,
-				"size": 8
-			 }
+		  options: {
+			 responsive: true
 		  }
 		};
 
-  		function renderPie() {
-		  window.pie = new d3pie("chart-area", pieConfig);
+  		var models= {
+		  'conservative': {
+			 data: [
+				35,
+				28,
+				22,
+				15
+			 ],
+			 labels: [
+				'Edisson Electric Bike',
+				'Space MicroSat',
+				'Eco-Solar Panel',
+				'Other'
+			 ]
+		  },
+		  'moderate': {
+			 data: [
+				40,
+				15,
+				25,
+				20
+			 ],
+			 labels: [
+				'Private Social Network',
+				'Instant Messaging Bot',
+				'Bitcoin Hardware Wallet',
+				'Other'
+			 ]
+		  },
+		  'aggresive': {
+			 data: [
+				15,
+				35,
+				25,
+				25
+			 ],
+			 labels: [
+				'Cold Fusion Generator',
+				'Personal Jetpack',
+				'AI Assistant',
+				'Other'
+			 ]
+		  }
 		}
 
-  		renderPie();
+		var config = {
+		  type: 'pie',
+		  options: {
+			 events: false,
+			 animation: {
+				duration: 0
+			 },
+			 onAnimationComplete: function () {
+				var self = this;
+
+				var elementsArray = [];
+				Chart.helpers.each(self.data.datasets, function (dataset, datasetIndex) {
+				  Chart.helpers.each(dataset.metaData, function (element, index) {
+					 var tooltip = new Chart.Tooltip({
+						_chart: self.chart,
+						_data: self.data,
+						_options: self.options,
+						_active: [element]
+					 }, self);
+
+					 tooltip.update();
+					 tooltip.transition(Chart.helpers.easingEffects.linear).draw();
+				  }, self);
+				}, self);
+			 }
+		  },
+		  data: {
+			 datasets: [{
+				data: [
+				  2,
+				  4,
+				  7,
+				  1
+				],
+				backgroundColor: [
+				  "#F7464A",
+				  "#46BFBD",
+				  "#FDB45C",
+				  "#949FB1",
+				  "#4D5360",
+				],
+			 }],
+			 labels: [
+				"Edisson Electric Bike",
+				"Space MicroSat",
+				"Eco-Solar Panel",
+				"Grey",
+				"Dark Grey"
+			 ]
+		  },
+		};
+
+  		function setConfig(conf, type) {
+		  var data = models[type];
+
+		  conf.datasets[0].data = data.data;
+		  conf.labels = data.labels;
+		}
+
+  		function renderPie() {
+		  setConfig(config.data, 'conservative');
+		  var ctx = document.getElementById("chart").getContext("2d");
+		  window.pie = new Chart(ctx, config);
+		}
 
 		$('.chart-changer a').click(function() {
 		  $(this).parent().children('.active').removeClass('active');
 		  $(this).addClass('active');
+		  var mode = $(this).data("mode");
+		  $("#mode").text(mode);
 
-		  var pieData = pieConfig.data.content;
-		  var newData = [];
-		  pieData.forEach(function (i) {
-			 newData.push({
-				label: i.label,
-				value: randomScalingFactor(),
-				color: randomColor(0.7)
-			 });
-		  });
-
-		  window.pie.updateProp("data.content", newData);
+		  setConfig(window.pie.data, mode);
+		  window.pie.update();
 		});
 
 		$("#interactiv").on('slide.bs.carousel', function(evt) {
 		  var nextSlide = $(evt.relatedTarget).index();
-
-		  if (nextSlide == 1 && !window.pie) {
-			 renderPie();
-		  }
 
 		  setTimeout(function () {
 			 $('#features.carousel').carousel(nextSlide);
 		  }, 10);
 		});
 
+		/*$("#interactiv").on('slid.bs.carousel', function(evt) {
+		  var nextSlide = $(evt.relatedTarget).index();
+
+		  if (nextSlide == 1 && !window.pie) {
+			 renderPie();
+		  }
+		 });*/
+
 		$('#interactiv .carousel-control.left').on('click',function(e){
 			e.preventDefault();
 			$('#interactiv').carousel('prev');
-		  	$('#interactiv').carousel("cycle");
 		});
 
 		$('#interactiv .carousel-control.right').on('click',function(e){
 			e.preventDefault();
 			$('#interactiv').carousel('next');
-		  	$('#interactiv').carousel("cycle");
 		});
 
+		renderPie();
 
-	/* Mobile swipe */
-  $('#interactiv').carousel({
-	 interval:5000
-  });
-  $('#interactiv').carousel("pause");
+		 /* Mobile swipe */
+		$('#interactiv').carousel({
+		  interval:0
+		});
 
+		$('#interactiv').carousel('prev');
 
-	 $(".carousel.slide")
+	 	$(".carousel.slide")
 		 .on("swiperight", function() {
 			 if ($(this).find('.carousel-control.left').length) {
 				 $(this).find('.carousel-control.left').click();
@@ -289,7 +353,7 @@ $(document).ready(function(){
 
 	  setTimeout(function chatLoop() {
 		 if (i == chat.length) {
-			$("#interactiv").carousel("cycle");
+			return;
 		 } else {
 			var msg = chat[i];
 

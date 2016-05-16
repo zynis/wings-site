@@ -96,6 +96,9 @@
 	.block-interactive .data p {font-size: 16px; font-weight: 400; margin-bottom: 30px;}
 	.block-interactive .charts {position: relative; z-index: 12}
 	.block-interactive .charts h3 {font-weight: 300; font-size: 24px; margin: 0 0 30px;}
+    .block-interactive .charts canvas {
+        margin-top: 30px;
+    }
 
 	.block-interactive .item {height: 630px; z-index: 12;}
 	.block-interactive .item.i0.active {z-index: 10}
@@ -218,7 +221,7 @@
 
 /* JS: Carousel */
 
-	.carousel-control {background: none !important; z-index: 13}
+	.carousel-control {background: none !important; z-index: 13; opacity: 1 !important;}
 
 
 /* ======================================================================================= */
@@ -353,7 +356,7 @@
 
 		.block-features:after {left: 50%;}
 
-		.block-cases {padding: 50px 0 25px;}
+		.block-cases {padding: 50px 0 25px; text-align: center;}
 		.block-cases p {font-size: 14px;}
 		.block-cases .btn {margin-bottom: 40px;}
 
