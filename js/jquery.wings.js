@@ -16,8 +16,16 @@
 
 
 $(document).ready(function(){
+  Chart.defaults.global.tooltips = $.extend(Chart.defaults.global.tooltips, {
+	 backgroundColor: "rgba(255,255,255,0.5)",
+	 fontColor: "#000",
+	 fontFamily: "Roboto, sans-serif",
+	 template: "<% if(label){ %><%=label %>: <% } %><%=value %>%"
+  });
+  console.log( Chart.defaults.global.tooltips);
 
-	$(window).on('load resize', function(){
+
+  $(window).on('load resize', function(){
 		// Header 100% height fix
 	   var windowHeight = ($(window).height() - 25) * 0.8;
 		$('.site-header > .container').css({'min-height': windowHeight});
@@ -59,34 +67,6 @@ $(document).ready(function(){
 
   		Chart.defaults.global.responsive = true;
 
-
- 		 var pieData = {
-		  type: "pie",
-		  data: {
-			 labels: [
-				"Red",
-				"Green",
-				"Yellow"
-			 ],
-			 datasets: [
-				{
-				  data: [300, 50, 100],
-				  backgroundColor: [
-					 "#FF6384",
-					 "#36A2EB",
-					 "#FFCE56"
-				  ],
-				  hoverBackgroundColor: [
-					 "#FF6384",
-					 "#36A2EB",
-					 "#FFCE56"
-				  ]
-				}]
-		  },
-		  options: {
-			 responsive: true
-		  }
-		};
 
   		var models= {
 		  'conservative': {
@@ -146,6 +126,7 @@ $(document).ready(function(){
 				var elementsArray = [];
 				Chart.helpers.each(self.data.datasets, function (dataset, datasetIndex) {
 				  Chart.helpers.each(dataset.metaData, function (element, index) {
+
 					 var tooltip = new Chart.Tooltip({
 						_chart: self.chart,
 						_data: self.data,
