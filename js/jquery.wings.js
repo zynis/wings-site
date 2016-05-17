@@ -16,8 +16,16 @@
 
 
 $(document).ready(function(){
+  Chart.defaults.global.tooltips = $.extend(Chart.defaults.global.tooltips, {
+	 backgroundColor: "rgba(255,255,255,0.5)",
+	 fontColor: "#000",
+	 fontFamily: "Roboto, sans-serif",
+	 template: "<% if(label){ %><%=label %>: <% } %><%=value %>%"
+  });
+  console.log( Chart.defaults.global.tooltips);
 
-	$(window).on('load resize', function(){
+
+  $(window).on('load resize', function(){
 		// Header 100% height fix
 	   var windowHeight = ($(window).height() - 25) * 0.8;
 		$('.site-header > .container').css({'min-height': windowHeight});
@@ -111,16 +119,6 @@ $(document).ready(function(){
 			 events: false,
 			 animation: {
 				duration: 0
-			 },
-			 tooltips: {
-				custom: function(tooltip) {
-				  // tooltip will be false if tooltip is not visible or should be hidden
-				  if (!tooltip) {
-					 return;
-				  }
-
-				  console.log(tooltip);
-				}
 			 },
 			 onAnimationComplete: function () {
 				var self = this;
