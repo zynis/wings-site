@@ -60,34 +60,6 @@ $(document).ready(function(){
   		Chart.defaults.global.responsive = true;
 
 
- 		 var pieData = {
-		  type: "pie",
-		  data: {
-			 labels: [
-				"Red",
-				"Green",
-				"Yellow"
-			 ],
-			 datasets: [
-				{
-				  data: [300, 50, 100],
-				  backgroundColor: [
-					 "#FF6384",
-					 "#36A2EB",
-					 "#FFCE56"
-				  ],
-				  hoverBackgroundColor: [
-					 "#FF6384",
-					 "#36A2EB",
-					 "#FFCE56"
-				  ]
-				}]
-		  },
-		  options: {
-			 responsive: true
-		  }
-		};
-
   		var models= {
 		  'conservative': {
 			 data: [
@@ -140,12 +112,23 @@ $(document).ready(function(){
 			 animation: {
 				duration: 0
 			 },
+			 tooltips: {
+				custom: function(tooltip) {
+				  // tooltip will be false if tooltip is not visible or should be hidden
+				  if (!tooltip) {
+					 return;
+				  }
+
+				  console.log(tooltip);
+				}
+			 },
 			 onAnimationComplete: function () {
 				var self = this;
 
 				var elementsArray = [];
 				Chart.helpers.each(self.data.datasets, function (dataset, datasetIndex) {
 				  Chart.helpers.each(dataset.metaData, function (element, index) {
+
 					 var tooltip = new Chart.Tooltip({
 						_chart: self.chart,
 						_data: self.data,
