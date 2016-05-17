@@ -414,10 +414,12 @@ $(document).ready(function(){
 	 $("#subscribe_successful").hide();
 
 	 var email = $("#subscribe-email").val();
+	 $("#subscribe-form-btn").prop('disabled', true);
+	 $("#subscribe_btn").text("Wait...");
 
 	 $.ajax({
 		type: "POST",
-		url: "http://localhost:3030/subscribe",
+		url: "/api/subscribe",
 		data: JSON.stringify({
 		  email: email
 		}),
@@ -425,6 +427,8 @@ $(document).ready(function(){
 		dataType: "json",
 		success: function () {
 		  $("#subscribe_successful").show();
+		  $("#subscribe-form-btn").prop('disabled', false);
+		  $("#subscribe_btn").text("Subscribe");
 		},
 		error: function (resp) {
 		  var defaultError = "Something went wrong, contact us: support@wings.ai";
@@ -432,6 +436,8 @@ $(document).ready(function(){
 
 		  $("#subscribe_error").text(error);
 		  $("#subscribe_error").show();
+		  $("#subscribe-form-btn").prop('disabled', false);
+		  $("#subscribe_btn").text("Subscribe");
 		}
 	 })
   });
