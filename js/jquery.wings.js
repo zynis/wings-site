@@ -20,9 +20,10 @@ $(document).ready(function(){
 	 backgroundColor: "rgba(255,255,255,0.5)",
 	 fontColor: "#000",
 	 fontFamily: "Roboto, sans-serif",
-	 template: "<% if(label){ %><%=label %>: <% } %><%=value %>%"
+	 template: "<% if(label){ %><%=label %>: <% } %><%=value %>%",
+	 fontSize: 14
   });
-  console.log( Chart.defaults.global.tooltips);
+  //console.log( Chart.defaults.global.tooltips);
 
 
   $(window).on('load resize', function(){
