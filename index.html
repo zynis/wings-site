@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Create, manage and join new DAOs on Wings Platform. Place where DAOs Unicorns born.">
 
-		<title>Wings</title>
+        <title>Wings - A decentralized platform to create, join and manage DAOs</title>
 
 		<link href="css/libs.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
@@ -13,69 +14,52 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-	</head>
+
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+    </head>
 	<body>
 		<header class="site-header">
-			<div class="container text-center">
-				<nav class="nav clearfix">
-					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<img src="images/flags/flag-russia.png" alt="">
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Русский</a></li>
-							<li><a href="#">Английский</a></li>
-							<li><a href="#">Испанский</a></li>
-							<li><a href="#">Китайский</a></li>
-						</ul>
-					</div>
+			<div class="top-fixed">
+				<div class="container text-center">
+					<a href="/" class="logo pull-left"><svg width="89" height="30"><use xlink:href="#logo"></use></svg></a>
 					<ul class="list-inline text-uppercase">
-						<li><a href="#"><b>BTT</b> <span id="menu_btt">Thread</span></a></li>
-						<li><a href="#" id="menu_chat">Chat</a></li>
-						<li><a href="#" id="menu_whitepaper">Whitepaper</a></li>
-						<li><a href="#" id="menu_contact_us">Contact us</a></li>
+						<li><a id="benefits" data-anchor="benefitsBlock">Benefits</a></li>
+						<li><a id="features" data-anchor="featuresBlock">Features</a></li>
+						<li><a id="team" data-anchor="team">Team</a></li>
+						<li><a id="contact" href="mailto:support@wings.ai">Contact</a></li>
 					</ul>
-				</nav>
-				<div class="logo">
-					<a href="#"><svg width="270" height="91" class="img-responsive"><use xlink:href="#logo"></use></svg></a>
 				</div>
-				<div class="slogan">
-					<b id="header_title">Kickstarting DAOs</b><br>
-					<span id="header_sub_title">Simple, Secure, Transparent</span>
+			</div>
+			<div class="container text-center">
+				<div class="p-center">
+					<div class="slogan">
+						<b id="header_title">Kickstarting DAOs</b>
+						<span id="header_sub_title">A decentralized platform to create, join and manage DAOs</span>
+					</div>
+					<div class="btn-set">
+						<!--<a data-anchor="tryout" class="btn btn-info btn-lg"><b id="header_button_platform">Learn More</b></a>-->
+						<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
+					</div>
 				</div>
-				<div class="btn-set">
-					<a href="#" class="btn btn-info btn-lg btn-block"><b id="header_button_soon">The DAO will be Starting soon!</b></a>
-					<a href="#" class="btn btn-info btn-lg"><b id="header_button_platform">Try Out Wings</b></a>
-					<a class="btn btn-info btn-lg" data-toggle="modal" data-target="#dao"><b id="header_button_subscribe">Subscribe</b></a>
-				</div>
-				<ul class="list-inline socials">
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-tumblr"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
-					<li><a href="#"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
+				<ul class="list-inline socials p-horizontal">
+					<li title="Twitter"><a href="https://twitter.com/wingsplatform" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-twitter"></use></svg></a></li>
+					<li title="Facebook"><a href="#" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-facebook"></use></svg></a></li>
+					<li title="Reddit"><a href="https://www.reddit.com/user/wingsplatform/" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-reddit"></use></svg></a></li>
+					<li title="Bitcointalk"><a href="https://bitcointalk.org" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-bitcoin"></use></svg></a></li>
+					<li title="Rocket Chat"><a href="https://chat.wings.ai" target="_blank"><svg width="40" height="40"><use xlink:href="#icon-hashtag"></use></svg></a></li>
 				</ul>
 			</div>
-			<!-- <video loop preload="none" class="hidden-xs">
-				<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="images/intro.mp4"></source>
-				<source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="images/intro.webm"></source>
-				<source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="images/intro.ogv"></source>
-				<script>
-					var video = document.currentScript.parentElement;
-					video.volume = 0;
-					video.playbackRate = 0.5;
-				</script>
-			</video> -->
 		</header>
 
 		<div class="block-future">
-			<div class="container">
-				<h2 id="future_title">DAOs Are The Future</h2>
+			<div class="container" name="benefitsBlock">
+				<h2 id="future_title" class="title">DAOs Are The Future</h2>
+                <!--<h3 class="subtitle">Main benefits</h3>-->
 
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
-						<ul class="nav nav-tabs" role="tablist">
+						<ul class="nav nav-tabs switcher" role="tablist">
 							<li role="presentation" class="active"><a href="#companies" aria-controls="companies" role="tab" data-toggle="tab" id="future_switcher_owner">DAO Owner</a></li>
 							<li role="presentation"><a href="#investors" aria-controls="investors" role="tab" data-toggle="tab" id="future_switcher_entrepreneur">DAO Maker</a></li>
 						</ul>
@@ -89,7 +73,7 @@
 												<span><svg width="110" height="110" class="p-center"><use xlink:href="#icon-line-chart"></use></svg></span>
 											</div>
 										</div>
-										<div class="col-sm-6 col-xs-9">
+										<div class="col-sm-6 col-xs-9 item-text">
 											<h4 id="future_item_rewards_title">Sharing The Rewards</h4>
 											<p id="future_item_rewards_text">DAO token owners are eligible to receive a portion of all revenues from future campaigns.</p>
 										</div>
@@ -104,7 +88,7 @@
 										</div>
 										<div class="col-sm-6 col-sm-pull-6 col-xs-9">
 											<h4 id="future_item_security_title">Security &amp; Transparency</h4>
-											<p id="future_item_security_text">DAO ownership tokens are secured by blockchain technologies and smart contracgs. The control of the DAO remains in the hands of the owners. The core of the Wings platform is open source with the smart contracts, commits and advancement visible on secure public ledgers such as Ethereum and Bitcoin.</p>
+											<p id="future_item_security_text">DAO ownership tokens are secured by blockchain technologies and smart contracts. The control of the DAO remains in the hands of the owners. The core of the Wings platform is open source and the smart contracts, commits and advancement are visible on secure public ledgers such as Ethereum and Bitcoin.</p>
 										</div>
 									</div>
 								</div>
@@ -116,8 +100,8 @@
 											</div>
 										</div>
 										<div class="col-sm-6 col-xs-9">
-											<h4 id="future_item_community_title">Establishing a Trusted Community</h4>
-											<p id="future_item_community_text">DAO owners are entitled to vote, according to their portion, on any new DAO submitted to the Wings platform. The decision which projecgs get listed are in the hands of the DAO community.</p>
+											<h4 id="future_item_community_title">Establish a Trusted Community</h4>
+											<p id="future_item_community_text">DAO owners are entitled to vote, according to their portion, on any new DAO submitted to the Wings platform. The decision which projects get listed are in the hands of the DAO community.</p>
 										</div>
 									</div>
 								</div>
@@ -171,7 +155,7 @@
 										</div>
 										<div class="col-sm-6 col-xs-9">
 											<h4 id="future_item_increase_title">Increasing Success Rates</h4>
-											<p id="future_item_increase_text">All DAO projects under community review before being publish gaining feedback and followers that can make for a successful DAO formation.</p>
+											<p id="future_item_increase_text">All DAO projects are subject to community review before being published thus gaining feedback and followers that can make for a successful DAO formation.</p>
 										</div>
 									</div>
 								</div>
@@ -195,16 +179,16 @@
 			</div>
 		</div>
 
-		<div class="block-interactive">
-			<div id="interactiv" class="carousel slide" data-ride="carousel" data-interval="0">
+		<div class="block-interactive" id="tryout" name="featuresBlock">
+			<div id="interactiv" class="carousel slide" data-pause="hover">
 				<div class="carousel-inner" role="listbox">
-					<div class="item i0 active">
+					<div class="item i0">
 						<div class="container">
 							<div class="row">
-								<div class="col-sm-5 text-right">
+								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
-										<h3>Control your DAOs using chatbots</h3>
-										<p>Wings brings the power to supporters. All backed projects are accessible using the web application and IM bots. Back a project, create a vote or write a review - all from the palm of your hand</p>
+										<h3 id="future_item_control_dao_title">Control DAOs With Chatbots</h3>
+										<p id="future_item_control_dao_text"class="text-justify">Wings brings the power to supporters. All backed projects are accessible using web applications, APIs, and instant messaging chatbots. Back a project, create a vote or write a review - all from the palm of your hand.</p>
 										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
 									</div>
 								</div>
@@ -220,28 +204,26 @@
 							</div>
 						</div>
 					</div>
-					<div class="item i1">
+					<div class="item i1 active">
 						<div class="container">
 							<div class="row">
-								<div class="col-sm-5 text-right">
+								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
-										<h3>Never miss out a new DAO opportunity!</h3>
-										<p>Wings enables you to set an auto-participation fund and your preffered participation strategy, thus enabling you to take part in new DAO's without the fear of missing out!</p>
+										<h3 id="future_item_never_miss_out_title">Never Miss New DAO Opportunities</h3>
+										<p id="future_item_never_miss_out_text"class="text-justify">Wings enables setting up auto-participation funds and a preffered participation strategy, thus enabling taking part in new DAOs without the fear of missing out!</p>
 										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
 									</div>
 								</div>
 								<div class="col-sm-6 col-sm-offset-1">
 									<div class="charts">
-										<h3 class="text-center text-uppercase">Moderately Aggressive</h3>
+										<h3 class="text-center text-uppercase">Moderately <span id="mode">conservative</span></h3>
 										<div class="chart-changer">
-											<a class="active"></a>
-											<a></a>
-											<a></a>
-											<a></a>
-											<a></a>
+											<a data-mode="conservative" class="active"></a>
+											<a data-mode="moderate"></a>
+											<a data-mode="aggresive"></a>
 										</div>
-										<canvas id="chart-area" width="250"></canvas>
-									</div>
+                                      <canvas id="chart" height="450" width="650"></canvas>
+                                    </div>
 								</div>
 							</div>
 						</div>
@@ -249,10 +231,10 @@
 					<div class="item i2">
 						<div class="container">
 							<div class="row">
-								<div class="col-sm-5 text-right">
+								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
-										<h3>Follow succesfull community members</h3>
-										<p>You can use Wings to follow the DAO leaders and automatically participate in same DAO's as they are thus broadening your opportunities</p>
+										<h3 id="future_item_follow_community_members_title">Follow Successful Community Members</h3>
+										<p id="future_item_follow_community_members_text"class="text-justify">Use Wings to follow other DAO owners and automatically participate in same DAOs. Broaden your opportunities and participation by leveraging people you collaborate with.</p>
 										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
 									</div>
 								</div>
@@ -278,80 +260,80 @@
 		<div class="container">
 			<a name="features"></a>
 			<div class="block-features">
-				<h2>Platform features</h2>
+				<h2 id="platform_features">Platform Features</h2>
 				<div id="features" class="carousel slide" data-ride="carousel" data-interval="0">
 					<div class="carousel-inner" role="listbox">
-						<div class="item active">
+						<div class="item active" id="features0">
 							<div class="row text-center">
 								<div class="col-sm-4">
-									<h4>Cross Blockchain EVM</h4>
+									<h4 id="platform_features_cross_bc_title">Cross Blockchain EVM</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-link"></use></svg></div>
-									<p>Wings platform supports both Ethereum and Rootstock smart contracts</p>
+									<p id="platform_features_cross_bc_text">Wings platform supports both Ethereum and Rootstock smart contracts.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>IM Chatbots Hub</h4>
+									<h4 id="platform_features_chatbots_title">Chatbots Hub</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-weixin"></use></svg></div>
-									<p>IM Bots can be used for increased DAO control</p>
+									<p id="platform_features_chatbots_text">Instant Messaging Bots can be used for better DAO control, communications and management.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>Legal Framework</h4>
+									<h4 id="platform_features_legal_title">Legal Framework</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-balance-scale"></use></svg></div>
-									<p>We've done a lot of legal homework. Use this to your advantage</p>
+									<p id="platform_features_legal_text">Our partners in the legal field have in-depth DAO comprehension and are ready to assist. Use this to your advantage.</p>
 								</div>
 							</div>
 							<div class="row text-center">
 								<div class="col-sm-4">
-									<h4>Zero Knowledge</h4>
+									<h4 id="platform_features_zero_knowledge_title">Zero Knowledge</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-graduation-cap"></use></svg></div>
-									<p>Wings platform allows setting up a DAO proposal with no previous knowledge</p>
+									<p id="platform_features_zero_knowledge_text">Wings platform allows setting up a DAO proposal with no prior knowledge of smart contacts and blockchain.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>User Rating</h4>
+									<h4 id="platform_features_user_rating_title">DAO Owner Ratings</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-thumbs-o-up"></use></svg></div>
-									<p>Increase your influence with our reputation system</p>
+									<p id="platform_features_user_rating_text">Increase your influence with the Wings platform reputation system.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>Support Backup</h4>
+									<h4 id="platform_features_support_backup_title">Decentralized Collaboration</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-user-plus"></use></svg></div>
-									<p>Find out what projects other users are backing and jump on that train</p>
+									<p "platform_features_support_backup_text">Find out what projects other DAO Owners are backing and jump on the next train together!</p>
 								</div>
 							</div>
 						</div>
-						<div class="item">
+						<div class="item" id="features1">
 							<div class="row text-center">
 								<div class="col-sm-4">
-									<h4>Safe deposit account</h4>
+									<h4 id="platform_features_safe_deposit_title">Blockchain Secured Accounts and Funds</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-lock"></use></svg></div>
-									<p>Wings allocates you a safe account for a deposit</p>
+									<p id="platform_features_safe_deposit_text">Wings allocates a blockchain secured account for crypto deposits</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>Acceptance level limit</h4>
+									<h4 id="platform_features_auto_participation_title">Automatic Participation</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-sliders"></use></svg></div>
-									<p>Set the level of acceptance you like and the Wings smart auto-participation will do the rest of the work</p>
+									<p id="platform_features_auto_participation_text">Set your preferences and participation rules and the Wings smart auto-participation feature will do the rest of the work.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>Get always notified</h4>
+									<h4 id="platform_features_event_notifications_title">Events Notifications</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-email"></use></svg></div>
-									<p>Wings will send you notification via IM regarding any new DAO opportunity taken</p>
+									<p id="platform_features_event_notifications_text">Wings will notify you regarding any new promissing DAO.</p>
 								</div>
 							</div>
 						</div>
-						<div class="item">
+						<div class="item" id="features2">
 							<div class="row text-center">
 								<div class="col-sm-4">
-									<h4>See the person record</h4>
+									<h4 id="platform_features_user_rating_system_title">DAO User Rating System</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-users"></use></svg></div>
-									<p>You can see what the DAO's the person has taken place in and his popularity</p>
+									<p id="platform_features_user_rating_system_text">Having a high rating comes with perks. The user rating system also allows you to track high rating popular users and see which DAOs they support.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>Following level limit</h4>
+									<h4 id="platform_features_cooperative_support_title">Cooperative Support</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-sort-amount-desc"></use></svg></div>
-									<p>You can set how much you would like to follow this person and Wings will make sure you always involved as much you preferred.</p>
+									<p id="platform_features_cooperative_support_text">You may configure the Wings platform to automatically support the same DAOs that specific users are backing.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4>Earn from being a leader!</h4>
+									<h4 id="platform_features_earn_from_being_a_leader_title">Rewarded Leaders</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-percent"></use></svg></div>
-									<p>Earn tokens from every participant that follows, the more you have the more you receive!</p>
+									<p id="platform_features_earn_from_being_a_leader_text">Earn tokens from every participant that follows your user; the more you have the more you receive!</p>
 								</div>
 							</div>
 						</div>
@@ -368,16 +350,16 @@
 							<svg width="48" height="48"><use xlink:href="#icon-puzzle"></use></svg>
 							<span id="how_it_works">How it works</span>
 						</h4>
-						<p id="how_it_works_text">The diagram explaining how the Wings platform will work.</p>
-						<a href="#" class="btn btn-info btn-lg" id="how_it_works_btn">Coming soon</a>
+						<p id="how_it_works_text">Check out how the Wings platform will work.</p>
+						<a class="btn btn-info btn-lg" id="how_it_works_btn">Coming soon</a>
 					</div>
 					<div class="col-sm-6 col-md-4 col-md-offset-2">
 						<h4>
 							<svg width="48" height="48"><use xlink:href="#icon-paper"></use></svg>
-							<span id=whitepaper>Whitepaper</span>
+							<span id="whitepaper" name="whitepaper">Whitepaper</span>
 						</h4>
 						<p id="whitepaper_text">Read the Wings whitepaper.</p>
-						<a href="#" class="btn btn-info btn-lg" id="whitepaper_btn">Read now</a>
+						<a class="btn btn-info btn-lg" id="whitepaper_btn">Coming soon</a>
 					</div>
 				</div>
 			</div>
@@ -385,72 +367,54 @@
 
 		<div class="container">
 			<div class="block-team">
-				<h2>Team</h2>
+				<h2 name="team">Team</h2>
 				<ul class="list-unstyled clearfix text-center">
 					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
+						<img src="images/boris.png" width="80" height="80" alt="" class="img-circle">
+						<div id="boris_name" class="name">Boris Povod</div>
+						<div id="boris_role" class="role">Co-Founder</div>
+						<p id="boris_info" class="info">Blockchain developer. Crypti Co-Founder</p>
 						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
+							<li><a href="https://www.facebook.com/MrPovod" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
+							<li><a href="https://twitter.com/mr_povod" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
+							<li><a href="https://bitcointalk.org/index.php?action=profile" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
 						</ul>
 					</li>
 					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
+						<img src="images/nikolay.png" width="80" height="80" alt="" class="img-circle">
+						<div id="nikolay_name" class="name">Nikolay</div>
+						<div id="nikolay_role" class="role">Community Manager</div>
+						<p id="nikolay_info" class="info">Community Manager EU East<br><br></p>
 						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
+							<li><a href="https://www.facebook.com/btcturbo" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
+							<li><a href="https://twitter.com/btcturbo" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
+							<li><a href="https://bitcointalk.org/index.php?action=profile;u=561585" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
 						</ul>
 					</li>
 					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
+						<img src="images/domi.png" width="80" height="80" alt="" class="img-circle">
+						<div id="domi_name" class="name">Dominik Zynis</div>
+						<div id="domi_role" class="role">Marketing & Communications</div>
+						<div id="domi_info" class="info">In the Crypto scene since 2012 and has a long background in software marketing and communitcations (Mastercoin/Omni Protocol, Siemens/eMeter, Oracle, JSON)<br><br></div>
 						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
+							<li><a href="https://twitter.com/chloregy" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
+							<li><a href="https://bitcointalk.org/index.php?action=profile;u=90917" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
 						</ul>
 					</li>
-					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
-						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
-						</ul>
-					</li>
-					<li>
-						<img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
-						<div class="name">Name</div>
-						<div class="role">Rolel</div>
-						<div class="info">Advanced info</div>
-						<ul class="list-inline">
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-facebook-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-twitter-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-hash-o"></use></svg></a></li>
-							<li><a href="#"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
-						</ul>
-					</li>
+                    <li>
+                      <img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
+                      <div class="name">Coming Soon</div>
+                      <div class="role">Co-Founder</div>
+                    </li>
+                    <li>
+                      <img src="images/tmp-face.jpg" width="80" height="80" alt="" class="img-circle">
+                      <div class="name">Coming Soon</div>
+                      <div class="role">Co-Founder</div>
+                    </li>
 				</ul>
 			</div>
 
-			<div class="block-press">
+			<!--<div class="block-press hidden">
 				<h2>Press about us</h2>
 
 				<div id="press-slider" class="carousel slide" data-ride="carousel">
@@ -529,24 +493,22 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
+
 		</div>
 
 		<footer class="site-footer text-center">
 			<div class="container">
 				<nav class="nav">
 					<ul class="list-inline text-uppercase">
-						<li><a href="#"><b>BTT</b> <span id="footer_menu_btt">Thread</span></a></li>
-						<li><a href="#" id="footer_menu_chat">Chat</a></li>
-						<li><a href="#" id="footer_menu_whitepaper">Whitepaper</a></li>
-						<li><a href="#" id="footer_menu_contact_us">Contact us</a></li>
+						<li><a href="#" target="_blank"><b>BTT</b> <span id="footer_menu_btt">Thread</span></a></li>
+						<li><a href="https://chat.wings.ai" target="_blank" id="footer_menu_chat">Chat</a></li>
+						<li><a data-anchor="whitepaper" id="footer_menu_whitepaper">Whitepaper</a></li>
+						<li><a href="mailto:support@wings.ai" id="footer_menu_contact_us">Contact us</a></li>
 					</ul>
 				</nav>
-				<div class="logo">
-					<a href="#"><svg width="160" height="70"><use xlink:href="#logo-gray"></use></svg></a>
-				</div>
 				<div class="copy" id="footer_text">
-                  A secure, simple, and transparent sharing economy.
+                  Wings &copy; 2016. All Rights Reserved.
 				</div>
 			</div>
 		</footer>
@@ -556,32 +518,35 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="daoLabel">Stay updated - We&nbsp;don't&nbsp;spam!</h4>
+						<h4 class="modal-title" id="daoLabel">Stay updated!</h4>
 					</div>
 					<div class="modal-body text-center">
 						<ul class="list-inline">
 							<li>
 								<a data-slidetoggle="subscribe-form">
 									<svg width="64" height="64"><use xlink:href="#icon-email"></use></svg>
+                                    Email
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://telegram.me/joinchat/Ab2FrghqclcDO9p9vHIQig" target="_blank">
 									<svg width="64" height="64"><use xlink:href="#icon-telegram"></use></svg>
 									Telegram
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="https://chat.wings.ai" target="_blank">
 									<svg width="64" height="64"><use xlink:href="#icon-rocket-chat"></use></svg>
 									Rocket Chat
 								</a>
 							</li>
 						</ul>
-						<form action="#" method="post" id="subscribe-form" style="display: none;">
-							<div class="alert alert-success" role="alert" id="subscribe_successful">Thanks! You subscribed.</div>
-							<input class="form-control" placeholder="Your e-mail" type="email" required>
-							<button class="btn btn-block btn-lg btn-default"><b id="subscribe_btn">Subscribe</b></button>
+						<form method="post" id="subscribe-form" style="display: none;">
+                          <div class="alert alert-success" style="display: none;" role="alert" id="subscribe_successful">Thanks! We sent you email to confirm subscription.</div>
+                          <div class="alert alert-danger" style="display: none;" role="alert" id="subscribe_error"></div>
+
+                          <input class="form-control" id="subscribe-email" placeholder="Your e-mail" type="email" required>
+							<button id="subscribe-form-btn" type="submit" class="btn btn-block btn-lg btn-default"><b id="subscribe_btn">Subscribe</b></button>
 							<div class="claim" id="subscribe_claim">We respect your privacy</div>
 						</form>
 					</div>
@@ -590,7 +555,20 @@
 		</div>
 
 		<script src="js/libs.js" type="text/javascript"></script>
-		<script src="js/jquery.wings.js" type="text/javascript"></script>
-		<script src="js/jquery.i18n.properties.min.js" type="text/javascript"></script>
-	</body>
+        <script src="js/Chart.min.js" type="text/javascript"></script>
+        <script src="js/jquery.i18n.properties.min.js" type="text/javascript"></script>
+        <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
+        <script src="js/jquery.wings.js" type="text/javascript"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-77871805-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
 </html>
