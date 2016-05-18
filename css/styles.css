@@ -206,16 +206,29 @@
 
 /* JS: Tabs */
 
-	.nav-tabs {text-align: center; margin-top: 40px;}
+	.nav-tabs {text-align: center; margin-top: 40px; border-bottom: 1px solid #154364;}
 	.nav-tabs > li {float: none; display: inline-block;}
-	.nav-tabs > li > a {font-size: 16px; border-bottom: 1px solid #ddd; background: #f7f7f7; color: #666;}
+	.nav-tabs > li > a {font-size: 16px; border-bottom: 1px solid #154364; background: #f7f7f7; color: #666;}
 	.nav-tabs > li.active > a,
 	.nav-tabs > li.active > a:focus,
-	.nav-tabs > li.active > a:hover {color: #000;}
+	.nav-tabs > li.active > a:hover {
+        color: #FFF;
+        background: #154364;
+    }
+
+    .nav-tabs > li > a:hover {
+        border-bottom: 1px solid #154364;
+    }
 
     .switcher > li.active > a {
+        color: #FFF;
+        background: #154364;
+        font-weight: bold;
+        border: 1px solid #154364;
+    }
+
+    .switcher > li > a {
         color: #154364;
-        font-weight: 500;
     }
 
 
@@ -394,6 +407,7 @@
 		.modal-body {padding: 20px 20px 30px;}
 
 		.nav-tabs > li > a {font-size: 14px}
+
 
 		.block-interactive .data h3 {padding: 0 60px;}
 		.block-interactive .item {height: auto}
