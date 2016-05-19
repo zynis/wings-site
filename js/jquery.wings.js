@@ -373,22 +373,27 @@ $(document).ready(function(){
 		changeFuture();
 	});
 
-  var lang = "en_GB";
-
-  /*
-  jQuery.i18n.properties({
-	 name: 'Content',
-	 path: 'bundle/',
-	 mode: 'both',
-	 language: lang,
-	 checkAvailableLanguages: true,
-	 async: true,
-	 callback: function() {
-		for (var i in $.i18n.map) {
-		  $("#" + i).text($.i18n.prop(i));
-		}
+  var langs = {
+	 'ru': {
+		name: 'Russian',
+		lang: 'ru_RU',
+		icon: 'images/flag-ru.png'
+	 },
+	 'en': {
+		name: 'English',
+		lang: 'en_GB',
+		icon: 'images/flag-uk.png'
+	 },
+	 'ch': {
+		name: 'China',
+		lang: 'ch_CH',
+		icon: 'images/flag-cn.png'
 	 }
-  });*/
+  };
+
+  var lang = window.navigator.userLanguage || window.navigator.language;
+  lang = langs[lang] || langs['en'];
+  changeLang(lang.name, lang.lang, lang.icon);
 
   $("#subscribe-form").submit(function (e) {
 	 e.preventDefault();
@@ -428,5 +433,33 @@ $(document).ready(function(){
 	 handler: function (direction) {
 		chatting();
 	 }
+  });
+
+  function changeLang(name, lang, icon) {
+	 $("#currentLang").text(name);
+	 $("#langIcon").attr("src", icon);
+
+
+	 jQuery.i18n.properties({
+		name: 'Content',
+		path: 'bundle/',
+		mode: 'both',
+		language: lang,
+		checkAvailableLanguages: true,
+		async: true,
+		callback: function() {
+		  for (var i in $.i18n.map) {
+			 $("#" + i).text($.i18n.prop(i));
+		  }
+		}
+	 });
+  }
+
+  $("#langs a").click(function () {
+	 var lang = $(this).data("lang");
+	 var name = $(this).text();
+	 var icon = $(this).children("img").attr("src");
+
+	 changeLang(name, lang, icon);
   });
 });
