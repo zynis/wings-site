@@ -242,56 +242,6 @@ $(document).ready(function(){
 		 });
 
 
-	/* CHAT */
-
-	var chat = [
-		{
-			'author': 'bot',
-			'avatar': 'images/bot.svg',
-			'msg': 'Hi! I am Wings DAO management bot. How may i be of service ?'
-		},
-		{
-			'author': 'user',
-			'avatar': 'images/face.png',
-			'msg': 'show me my daos'
-		},
-		{
-		  'author': 'bot',
-		  'avatar': 'images/bot.svg',
-		  'msg': 'You supported the following DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Would you like more details ?'
-		},
-		{
-		  'author': 'user',
-		  'avatar': 'images/face.png',
-		  'msg': 'yes'
-		},
-		{
-		  'author': 'bot',
-		  'avatar': 'images/bot.svg',
-		  'msg':  "You currently have:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
-		},
-		{
-		  'author': 'user',
-		  'avatar': 'images/face.png',
-		  'msg': 'manage Wnigs'
-		},
-		{
-		  'author': 'bot',
-		  'avatar': 'images/bot.svg',
-		  'msg':  "Did you mean manage Wings DAO ?"
-		},
-	  {
-		 'author': 'user',
-		 'avatar': 'images/face.png',
-		 'msg': 'yes'
-	  },
-	  {
-		 'author': 'bot',
-		 'avatar': 'images/bot.svg',
-		 'msg':  "Here are a list of options for Wings DAO:<br><br> - Create vote<br> - View status<br> - Withdraw tokens<br> - Deposit tokens<br> - More<br>"
-	  },
-	];
-
   	var chatEnabled = false;
 	function chatting() {
 	  if (chatEnabled) {
@@ -299,53 +249,57 @@ $(document).ready(function(){
 	  }
 
 	  chatEnabled = true;
-	  var i = 0;
+	  console.log("chatting");
 
-	  function postMessage(msg, cb) {
-		 if (msg.author === "bot") {
-			var timeout = 1000;
-			if (i == 0) {
-			  timeout = 0;
+	  $.getJSON("/bundle/json/chat_" + lang.lang + ".json", function (chat) {
+		 var i = 0;
+		 console.log("got data");
+
+		 function postMessage(msg, cb) {
+			if (msg.author === "bot") {
+			  var timeout = 1000;
+			  if (i == 0) {
+				 timeout = 0;
+			  }
+
+			  setTimeout(function () {
+				 $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
+				 cb();
+			  }, timeout);
+			} else {
+			  var author = msg.author;
+			  var img = msg.avatar;
+			  var msg = msg.msg;
+
+			  $('#interactive .typist')
+				 .html('')
+				 .typist({
+					speed: 40,
+					cursor: false,
+					text: msg
+				 });
+
+			  setTimeout(function () {
+				 $('#interactive .typist').html('');
+				 $('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + msg + '</div></li>');
+				 cb();
+			  }, 1000);
 			}
+		 }
 
-			setTimeout(function () {
-			  $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
-			  cb();
-			}, timeout);
-		 } else {
-			var author = msg.author;
-			var img = msg.avatar;
-			var msg = msg.msg;
+		 setTimeout(function chatLoop() {
+			if (i == chat.length) {
+			  return;
+			} else {
+			  var msg = chat[i];
 
-			$('#interactive .typist')
-			  .html('')
-			  .typist({
-				 speed: 40,
-				 cursor: false,
-				 text: msg
+			  postMessage(msg, function () {
+				 i++;
+				 setTimeout(chatLoop, 3000);
 			  });
-
-			setTimeout(function () {
-			  $('#interactive .typist').html('');
-			  $('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + msg + '</div></li>');
-			  cb();
-			}, 1000);
-		 }
-	  }
-
-	  setTimeout(function chatLoop() {
-		 if (i == chat.length) {
-			return;
-		 } else {
-			var msg = chat[i];
-
-			postMessage(msg, function () {
-			  i++;
-			  setTimeout(chatLoop, 3000);
-			});
-		 }
+			}
+		 });
 	  });
-
 	}
 
 	var defaultState = "company";
@@ -436,7 +390,6 @@ $(document).ready(function(){
   });
 
   function changeLang(name, lang, icon) {
-	 $("#currentLang").text(name);
 	 $("#langIcon").attr("src", icon);
 
 
@@ -448,7 +401,13 @@ $(document).ready(function(){
 		checkAvailableLanguages: true,
 		async: true,
 		callback: function() {
+		  $("#currentLang").text(jQuery.i18n.prop(lang));
+
 		  for (var i in $.i18n.map) {
+			 if (i == "emailPlaceholder") {
+				$("#subscribe-email").prop("placeholder", $.i18n.prop(i));
+			 }
+
 			 $("#" + i).text($.i18n.prop(i));
 		  }
 		}
