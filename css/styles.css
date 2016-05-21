@@ -160,7 +160,7 @@
 
 	.block-team {margin: 70px 0 95px;}
 	.block-team h2 {margin-bottom: 90px; color: #154364;}
-	.block-team > ul > li {float: left; width: 20%;}
+	.block-team > ul > li {float: left; width: 20%; margin-bottom: 50px;}
 	.block-team li .name {font-size: 20px; font-weight: 500; line-height: 1; margin-top: 15px;}
 	.block-team li .role {font-size: 16.5px; font-weight: 300; line-height: 1}
 	.block-team li .info {font-size: 14px; font-weight: 300; line-height: 1; margin: 20px 0 15px;}
