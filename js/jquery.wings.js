@@ -219,11 +219,14 @@ $(document).ready(function(){
 		renderPie();
 
 		 /* Mobile swipe */
-		$('#interactiv').carousel({
-		  interval:0
-		});
 
-		$('#interactiv').carousel('prev');
+  		setTimeout(function () {
+		  $('#interactiv').carousel({
+			 interval:0
+		  });
+
+		  $('#interactiv').carousel('prev');
+		}, 500);
 
 	 	$(".carousel.slide")
 		 .on("swiperight", function() {
@@ -406,6 +409,10 @@ $(document).ready(function(){
 		  for (var i in $.i18n.map) {
 			 if (i == "emailPlaceholder") {
 				$("#subscribe-email").prop("placeholder", $.i18n.prop(i));
+			 }
+
+			 if (i == "title") {
+				document.title = $.i18n.prop(i);
 			 }
 
 			 $("#" + i).text($.i18n.prop(i));
