@@ -219,11 +219,14 @@ $(document).ready(function(){
 		renderPie();
 
 		 /* Mobile swipe */
-		$('#interactiv').carousel({
-		  interval:0
-		});
 
-		$('#interactiv').carousel('prev');
+  		setTimeout(function () {
+		  $('#interactiv').carousel({
+			 interval:0
+		  });
+
+		  $('#interactiv').carousel('prev');
+		}, 500);
 
 	 	$(".carousel.slide")
 		 .on("swiperight", function() {
@@ -241,112 +244,6 @@ $(document).ready(function(){
 			 }
 		 });
 
-
-	/* CHAT */
-
-	var chat = [
-		{
-			'author': 'bot',
-			'avatar': 'images/bot.svg',
-			'msg': 'Hi! I am Wings DAO management bot. How may i be of service ?'
-		},
-		{
-			'author': 'user',
-			'avatar': 'images/face.png',
-			'msg': 'show me my daos'
-		},
-		{
-		  'author': 'bot',
-		  'avatar': 'images/bot.svg',
-		  'msg': 'You supported the following DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Would you like more details ?'
-		},
-		{
-		  'author': 'user',
-		  'avatar': 'images/face.png',
-		  'msg': 'yes'
-		},
-		{
-		  'author': 'bot',
-		  'avatar': 'images/bot.svg',
-		  'msg':  "You currently have:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
-		},
-		{
-		  'author': 'user',
-		  'avatar': 'images/face.png',
-		  'msg': 'manage Wnigs'
-		},
-		{
-		  'author': 'bot',
-		  'avatar': 'images/bot.svg',
-		  'msg':  "Did you mean manage Wings DAO ?"
-		},
-	  {
-		 'author': 'user',
-		 'avatar': 'images/face.png',
-		 'msg': 'yes'
-	  },
-	  {
-		 'author': 'bot',
-		 'avatar': 'images/bot.svg',
-		 'msg':  "Here are a list of options for Wings DAO:<br><br> - Create vote<br> - View status<br> - Withdraw tokens<br> - Deposit tokens<br> - More<br>"
-	  },
-	];
-
-  	var chatEnabled = false;
-	function chatting() {
-	  if (chatEnabled) {
-		 return;
-	  }
-
-	  chatEnabled = true;
-	  var i = 0;
-
-	  function postMessage(msg, cb) {
-		 if (msg.author === "bot") {
-			var timeout = 1000;
-			if (i == 0) {
-			  timeout = 0;
-			}
-
-			setTimeout(function () {
-			  $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
-			  cb();
-			}, timeout);
-		 } else {
-			var author = msg.author;
-			var img = msg.avatar;
-			var msg = msg.msg;
-
-			$('#interactive .typist')
-			  .html('')
-			  .typist({
-				 speed: 40,
-				 cursor: false,
-				 text: msg
-			  });
-
-			setTimeout(function () {
-			  $('#interactive .typist').html('');
-			  $('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + msg + '</div></li>');
-			  cb();
-			}, 1000);
-		 }
-	  }
-
-	  setTimeout(function chatLoop() {
-		 if (i == chat.length) {
-			return;
-		 } else {
-			var msg = chat[i];
-
-			postMessage(msg, function () {
-			  i++;
-			  setTimeout(chatLoop, 3000);
-			});
-		 }
-	  });
-
-	}
 
 	var defaultState = "company";
 	var anotherState = "investor";
@@ -373,22 +270,27 @@ $(document).ready(function(){
 		changeFuture();
 	});
 
-  var lang = "en_GB";
-
-  /*
-  jQuery.i18n.properties({
-	 name: 'Content',
-	 path: 'bundle/',
-	 mode: 'both',
-	 language: lang,
-	 checkAvailableLanguages: true,
-	 async: true,
-	 callback: function() {
-		for (var i in $.i18n.map) {
-		  $("#" + i).text($.i18n.prop(i));
-		}
+  var langs = {
+	 'ru': {
+		name: 'Russian',
+		lang: 'ru_RU',
+		icon: 'images/flag-ru.png'
+	 },
+	 'en': {
+		name: 'English',
+		lang: 'en_GB',
+		icon: 'images/flag-uk.png'
+	 },
+	 'ch': {
+		name: 'China',
+		lang: 'ch_CH',
+		icon: 'images/flag-cn.png'
 	 }
-  });*/
+  };
+
+  var lang = window.navigator.userLanguage || window.navigator.language;
+  lang = langs[lang] || langs['en'];
+  changeLang(lang.name, lang.lang, lang.icon);
 
   $("#subscribe-form").submit(function (e) {
 	 e.preventDefault();
@@ -424,9 +326,119 @@ $(document).ready(function(){
 	 })
   });
 
-  $("#tryout").waypoint({
-	 handler: function (direction) {
-		chatting();
-	 }
+  function changeLang(name, lang, icon) {
+	 $("#langIcon").attr("src", icon);
+
+
+	 jQuery.i18n.properties({
+		name: 'Content',
+		path: 'bundle/',
+		mode: 'both',
+		language: lang,
+		checkAvailableLanguages: true,
+		async: true,
+		callback: function() {
+		  $("#currentLang").text(jQuery.i18n.prop(lang));
+
+		  for (var i in $.i18n.map) {
+			 if (i == "emailPlaceholder") {
+				$("#subscribe-email").prop("placeholder", $.i18n.prop(i));
+			 }
+
+			 if (i == "title") {
+				document.title = $.i18n.prop(i);
+			 }
+
+			 $("#" + i).text($.i18n.prop(i));
+		  }
+		}
+	 });
+  }
+
+  $("#langs a").click(function () {
+	 var _lang = $(this).data("lang");
+	 var name = $(this).text();
+	 var icon = $(this).children("img").attr("src");
+	 lang = langs[_lang];
+	 console.log(_lang);
+
+	 changeLang(name, lang.lang, icon);
+	 initializeChat();
   });
+
+
+  var chatEnabled = null, postTimeout = null;
+  var chatData;
+
+  var initializeChat = function () {
+	 if (chatEnabled) {
+		clearInterval(chatEnabled);
+		chatEnabled = null;
+		clearTimeout(postTimeout);
+	 }
+
+	 $('#interactive .typist').html('');
+
+	 console.log("Initialize chat", lang.lang);
+	 $('#interactive .typist').typistStop();
+	 $('#interactive .typist')
+		.typist({
+		  speed: 40,
+		  cursor: false,
+		  text: ""
+		});
+	 $('#interactive ul').html('');
+
+	 $.getJSON("/bundle/json/chat_" + lang.lang + ".json", function (chat) {
+		// here we can enable chat
+		chatData = chat;
+
+		$("#tryout").waypoint({
+		  handler: function (direction) {
+			 chatting();
+		  }
+		});
+	 });
+  }
+
+  initializeChat();
+
+  function chatting() {
+	 if (chatEnabled) {
+		return;
+	 }
+
+	 var i = 0;
+	 function chatLoop() {
+		if (i == chatData.length) {
+		  return;
+		} else {
+		  var msg = chatData[i];
+		  i++;
+
+		  if (msg.author === "bot") {
+			 $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
+		  } else {
+			 var author = msg.author;
+			 var img = msg.avatar;
+			 var text = msg.msg
+
+			 $('#interactive .typist')
+				.typist({
+				  speed: 40,
+				  cursor: false,
+				  text: text
+				});
+
+			 postTimeout = setTimeout(function () {
+				$('#interactive .typist').html('');
+				$('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + text + '</div></li>');
+			 }, 1000);
+		  }
+		}
+	 }
+
+	 chatEnabled = setInterval(chatLoop, 3000);
+	 chatLoop();
+  }
 });

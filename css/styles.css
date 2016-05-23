@@ -42,9 +42,15 @@
 
 	.top-fixed {position: fixed; left: 0; top: 0; width: 100%; background: #fff; padding: 5px 0; z-index: 50; border-bottom: #ddd 1px solid;}
 	.top-fixed .logo {display: block; line-height: 0;}
-	.top-fixed ul {margin: 0 90px 0 0;}
-	.top-fixed ul a {color: #154364;}
-	.top-fixed ul li {line-height: 20px; padding-top: 5px; margin: 0 5px;}
+	.top-fixed .list-inline {margin: 0;}
+	.top-fixed .list-inline a {color: #154364;}
+	.top-fixed .list-inline li {line-height: 20px; padding-top: 5px; margin: 0 5px;}
+	.top-fixed .btn-group {padding-top: 5px;}
+	.top-fixed .btn-group .btn-link {text-decoration: none !important}
+	.top-fixed .btn-group img {margin-left: 5px;}
+	.top-fixed .pull-right .dropdown-menu {background: #164364; box-shadow: none; left: auto; right: -10px; text-align: right; border-radius: 0; padding: 0;}
+	.top-fixed .pull-right .dropdown-menu > li > a {padding: 8px; color: #fff;}
+	.top-fixed .pull-right .dropdown-menu > li > a:hover {background: rgba(255,255,255,0.1);}
 
 	.site-header {background: #164364 url(../images/bg.svg); position: relative; padding: 40px 0 0; color: #fff;}
 	.site-header:after {content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 15px; background: url(../images/mask1.svg) no-repeat 50% 0;}
@@ -231,6 +237,10 @@
         color: #154364;
     }
 
+    .lang {
+        width: 100px;
+    }
+
 
 /* JS: Carousel */
 
@@ -323,8 +333,8 @@
 
 	@media (max-width: 767px) {
 		.top-fixed {position: relative;}
-		.top-fixed ul {margin: 0;}
-		.top-fixed .logo {float: none !important;}
+		.top-fixed .list-inline {clear: both; margin: 0;}
+		.top-fixed .list-inline li {margin: 0;}
 		.site-header {padding: 0;}
 		.site-header > .container {min-height: auto !important; padding-bottom: 45px;}
 		.site-header > .container > .p-center {position: static; margin-top: 0; left: auto; top: auto; -webkit-transform: translateX(0) translateY(0); -moz-transform: translateX(0) translateY(0); transform: translateX(0) translateY(0); -ms-transform: translateX(0) translateY(0); -o-transform: translateX(0) translateY(0)}
