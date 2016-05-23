@@ -415,6 +415,10 @@ $(document).ready(function(){
 				document.title = $.i18n.prop(i);
 			 }
 
+			 if (i == "nikolay_info") {
+				console.log($.i18n.prop(i));
+			 }
+
 			 $("#" + i).text($.i18n.prop(i));
 		  }
 		}
