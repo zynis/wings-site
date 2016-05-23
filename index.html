@@ -23,11 +23,20 @@
 			<div class="top-fixed">
 				<div class="container text-center">
 					<a href="/" class="logo pull-left"><svg width="89" height="30"><use xlink:href="#logo"></use></svg></a>
+					<div class="btn-group pull-right lang">
+						<button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<span id="currentLang">English</span> <img id="langIcon" src="images/flag-uk.png" alt="" width="16">
+						</button>
+						<ul class="dropdown-menu" id="langs">
+							<li><a data-lang="ru_RU"><span id="ru_RU">Russian</span> <img src="images/flag-ru.png" alt="" width="16"></a></li>
+							<li><a data-lang="en_GB"><span id="en_GB">English</span> <img src="images/flag-uk.png" alt="" width="16"></a></li>
+						</ul>
+					</div>
 					<ul class="list-inline text-uppercase">
-						<li><a id="benefits" data-anchor="benefitsBlock">Benefits</a></li>
-						<li><a id="featuresMenu" data-anchor="featuresBlock">Features</a></li>
-						<li><a id="team" data-anchor="team">Team</a></li>
-						<li><a id="contact" href="mailto:support@wings.ai">Contact</a></li>
+						<li><a id="menu_benefits" data-anchor="benefitsBlock">Benefits</a></li>
+						<li><a id="menu_features" data-anchor="featuresBlock">Features</a></li>
+						<li><a id="menu_team" data-anchor="team">Team</a></li>
+						<li><a id="menu_contact" href="mailto:support@wings.ai">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -187,8 +196,8 @@
 								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
 										<h3 id="future_item_control_dao_title">Control DAOs With Chatbots</h3>
-										<p id="future_item_control_dao_text"class="text-justify">Wings brings the power to supporters. All backed projects are accessible using web applications, APIs, and instant messaging chatbots. Back a project, create a vote or write a review - all from the palm of your hand.</p>
-										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
+										<p id="future_item_control_dao_text">Wings brings the power to supporters. All backed projects are accessible using web applications, APIs, and instant messaging chatbots. Back a project, create a vote or write a review - all from the palm of your hand.</p>
+										<a data-anchor="features" class="btn btn-info btn-lg" id="featuresBtn2">Features</a>
 									</div>
 								</div>
 								<div class="col-sm-6 col-sm-offset-1">
@@ -209,8 +218,8 @@
 								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
 										<h3 id="future_item_never_miss_out_title">Never Miss New DAO Opportunities</h3>
-										<p id="future_item_never_miss_out_text"class="text-justify">Wings enables setting up auto-participation funds and a preffered participation strategy, thus enabling taking part in new DAOs without the fear of missing out!</p>
-										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
+										<p id="future_item_never_miss_out_text">Wings enables setting up auto-participation funds and a preffered participation strategy, thus enabling taking part in new DAOs without the fear of missing out!</p>
+										<a data-anchor="features" class="btn btn-info btn-lg" id="featuresBtn1">Features</a>
 									</div>
 								</div>
 								<div class="col-sm-6 col-sm-offset-1">
@@ -233,8 +242,8 @@
 								<div class="col-sm-4 col-sm-offset-1">
 									<div class="data">
 										<h3 id="future_item_follow_community_members_title">Follow Successful Community Members</h3>
-										<p id="future_item_follow_community_members_text"class="text-justify">Use Wings to follow other DAO owners and automatically participate in same DAOs. Broaden your opportunities and participation by leveraging people you collaborate with.</p>
-										<a data-anchor="features" class="btn btn-info btn-lg">Features</a>
+										<p id="future_item_follow_community_members_text">Use Wings to follow other DAO owners and automatically participate in same DAOs. Broaden your opportunities and participation by leveraging people you collaborate with.</p>
+										<a data-anchor="features" class="btn btn-info btn-lg" id="featuresBtn3">Features</a>
 									</div>
 								</div>
 								<div class="col-sm-6 col-sm-offset-1">
@@ -258,7 +267,7 @@
 
 		<div class="container">
 			<div class="block-features">
-				<h2 id="platform_features">Platform Features</h2>
+				<h2 id="platform_features" name="features">Platform Features</h2>
 				<div id="features" class="carousel slide" data-ride="carousel" data-interval="0">
 					<div class="carousel-inner" role="listbox">
 						<div class="item active" id="features0">
@@ -291,9 +300,9 @@
 									<p id="platform_features_user_rating_text">Increase your influence with the Wings platform reputation system.</p>
 								</div>
 								<div class="col-sm-4">
-									<h4 id="platform_features_support_backup_title">Decentralized Collaboration</h4>
+									<h4 id="platform_features_collaboration_title">Decentralized Collaboration</h4>
 									<div class="icon"><svg width="70" height="70" class="p-center"><use xlink:href="#icon-user-plus"></use></svg></div>
-									<p id="platform_features_support_backup_text">Find out what projects other DAO Owners are backing and jump on the next train together!</p>
+									<p id="platform_features_collaboration_text">Find out what projects other DAO Owners are backing and jump on the next train together!</p>
 								</div>
 							</div>
 						</div>
@@ -378,7 +387,6 @@
 							<li><a href="https://bitcointalk.org/index.php?action=profile;u=336778" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
 						</ul>
 					</li>
-
                   <li>
                     <img src="images/stas.png" width="80" height="80" alt="" class="img-circle">
                     <div id="stas_name" class="name">Stas Oskin</div>
@@ -419,17 +427,16 @@
                     </ul>
                   </li>
 				</ul>
-              <ul class="list-unstyled clearfix text-center">
-
-              <li>
-                <img src="images/sergei.png" width="80" height="80" alt="" class="img-circle">
-                <div class="name">Serguei Popov</div>
-                <div class="role">Scientific Advisor</div>
-                <div class="info">Brazilian mathematician of Russian origin with a Ph.D. from the Moscow State University. Currently works in the field of Stochastic Processes and is a Crypto enthusiast.<br><br></div>
-                <ul class="list-inline">
-                  <li><a href="https://bitcointalk.org/index.php?action=profile;u=168348" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
-                </ul>
-              </li>
+                <ul class="list-unstyled clearfix text-center">
+                    <li>
+                      <img src="images/sergei.png" width="80" height="80" alt="" class="img-circle">
+                      <div id="serguei_name" lass="name">Serguei Popov</div>
+                      <div id="serguei_role" class="role">Scientific Advisor</div>
+                      <div id="serguei_info" class="info">Brazilian mathematician of Russian origin with a Ph.D. from the Moscow State University. Currently works in the field of Stochastic Processes and is a Crypto enthusiast.<br><br></div>
+                      <ul class="list-inline">
+                        <li><a href="https://bitcointalk.org/index.php?action=profile;u=168348" target="_blank"><svg width="22" height="22"><use xlink:href="#icon-bitcoin-o"></use></svg></a></li>
+                      </ul>
+                    </li>
                 </ul>
 			</div>
 
