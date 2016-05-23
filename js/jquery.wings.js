@@ -245,64 +245,6 @@ $(document).ready(function(){
 		 });
 
 
-  	var chatEnabled = false;
-	function chatting() {
-	  if (chatEnabled) {
-		 return;
-	  }
-
-	  chatEnabled = true;
-
-	  $.getJSON("/bundle/json/chat_" + lang.lang + ".json", function (chat) {
-		 var i = 0;
-
-		 function postMessage(msg, cb) {
-			if (msg.author === "bot") {
-			  var timeout = 1000;
-			  if (i == 0) {
-				 timeout = 0;
-			  }
-
-			  setTimeout(function () {
-				 $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
-				 cb();
-			  }, timeout);
-			} else {
-			  var author = msg.author;
-			  var img = msg.avatar;
-			  var msg = msg.msg;
-
-			  $('#interactive .typist')
-				 .html('')
-				 .typist({
-					speed: 40,
-					cursor: false,
-					text: msg
-				 });
-
-			  setTimeout(function () {
-				 $('#interactive .typist').html('');
-				 $('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + msg + '</div></li>');
-				 cb();
-			  }, 1000);
-			}
-		 }
-
-		 setTimeout(function chatLoop() {
-			if (i == chat.length) {
-			  return;
-			} else {
-			  var msg = chat[i];
-
-			  postMessage(msg, function () {
-				 i++;
-				 setTimeout(chatLoop, 3000);
-			  });
-			}
-		 });
-	  });
-	}
-
 	var defaultState = "company";
 	var anotherState = "investor";
 	var futureBlock = "future-block";
@@ -384,12 +326,6 @@ $(document).ready(function(){
 	 })
   });
 
-  $("#tryout").waypoint({
-	 handler: function (direction) {
-		chatting();
-	 }
-  });
-
   function changeLang(name, lang, icon) {
 	 $("#langIcon").attr("src", icon);
 
@@ -420,10 +356,89 @@ $(document).ready(function(){
   }
 
   $("#langs a").click(function () {
-	 var lang = $(this).data("lang");
+	 var _lang = $(this).data("lang");
 	 var name = $(this).text();
 	 var icon = $(this).children("img").attr("src");
+	 lang = langs[_lang];
+	 console.log(_lang);
 
-	 changeLang(name, lang, icon);
+	 changeLang(name, lang.lang, icon);
+	 initializeChat();
   });
+
+
+  var chatEnabled = null, postTimeout = null;
+  var chatData;
+
+  var initializeChat = function () {
+	 if (chatEnabled) {
+		clearInterval(chatEnabled);
+		chatEnabled = null;
+		clearTimeout(postTimeout);
+	 }
+
+	 $('#interactive .typist').html('');
+
+	 console.log("Initialize chat", lang.lang);
+	 $('#interactive .typist').typistStop();
+	 $('#interactive .typist')
+		.typist({
+		  speed: 40,
+		  cursor: false,
+		  text: ""
+		});
+	 $('#interactive ul').html('');
+
+	 $.getJSON("/bundle/json/chat_" + lang.lang + ".json", function (chat) {
+		// here we can enable chat
+		chatData = chat;
+
+		$("#tryout").waypoint({
+		  handler: function (direction) {
+			 chatting();
+		  }
+		});
+	 });
+  }
+
+  initializeChat();
+
+  function chatting() {
+	 if (chatEnabled) {
+		return;
+	 }
+
+	 var i = 0;
+	 function chatLoop() {
+		if (i == chatData.length) {
+		  return;
+		} else {
+		  var msg = chatData[i];
+		  i++;
+
+		  if (msg.author === "bot") {
+			 $('#interactive ul').append('<li class="' + msg.author + '"><img src="' + msg.avatar + '"><div class="msg">' + msg.msg + '</div></li>');
+		  } else {
+			 var author = msg.author;
+			 var img = msg.avatar;
+			 var text = msg.msg
+
+			 $('#interactive .typist')
+				.typist({
+				  speed: 40,
+				  cursor: false,
+				  text: text
+				});
+
+			 postTimeout = setTimeout(function () {
+				$('#interactive .typist').html('');
+				$('#interactive ul').append('<li class="' + author + '"><img src="' + img + '"><div class="msg">' + text + '</div></li>');
+			 }, 1000);
+		  }
+		}
+	 }
+
+	 chatEnabled = setInterval(chatLoop, 3000);
+	 chatLoop();
+  }
 });
