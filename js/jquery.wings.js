@@ -252,11 +252,9 @@ $(document).ready(function(){
 	  }
 
 	  chatEnabled = true;
-	  console.log("chatting");
 
 	  $.getJSON("/bundle/json/chat_" + lang.lang + ".json", function (chat) {
 		 var i = 0;
-		 console.log("got data");
 
 		 function postMessage(msg, cb) {
 			if (msg.author === "bot") {
@@ -413,10 +411,6 @@ $(document).ready(function(){
 
 			 if (i == "title") {
 				document.title = $.i18n.prop(i);
-			 }
-
-			 if (i == "nikolay_info") {
-				console.log($.i18n.prop(i));
 			 }
 
 			 $("#" + i).text($.i18n.prop(i));
