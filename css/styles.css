@@ -47,7 +47,7 @@
 	.top-fixed .list-inline li {line-height: 20px; padding-top: 5px; margin: 0 5px;}
 	.top-fixed .btn-group {padding-top: 5px;}
 	.top-fixed .btn-group .btn-link {text-decoration: none !important}
-	.top-fixed .btn-group img {margin-left: 5px;}
+	.top-fixed .btn-group img {margin-right: 5px;}
 	.top-fixed .pull-right .dropdown-menu {background: #164364; box-shadow: none; left: auto; right: -10px; text-align: right; border-radius: 0; padding: 0;}
 	.top-fixed .pull-right .dropdown-menu > li > a {padding: 8px; color: #fff;}
 	.top-fixed .pull-right .dropdown-menu > li > a:hover {background: rgba(255,255,255,0.1);}
