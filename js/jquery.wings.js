@@ -28,7 +28,7 @@ $(document).ready(function(){
 
   $(window).on('load resize', function(){
 		// Header 100% height fix
-	   var windowHeight = ($(window).height() - 25) * 0.8;
+	   var windowHeight = $(window).height() -5;
 		$('.site-header > .container').css({'min-height': windowHeight});
 
 		// if ( $('.site-header video').length ) {
@@ -295,24 +295,24 @@ $(document).ready(function(){
   $("#subscribe-form").submit(function (e) {
 	 e.preventDefault();
 	 $("#subscribe_error").hide();
-	 $("#subscribe_successful").hide();
 
 	 var email = $("#subscribe-email").val();
 	 $("#subscribe-form-btn").prop('disabled', true);
-	 $("#subscribe_btn").text("Wait...");
+	 $("#subscribe_btn").text($.i18n.prop("header_button_subscribe_wait"));
 
 	 $.ajax({
 		type: "POST",
-		url: "/api/subscribe",
+		url: "http://localhost:3030/api/subscribe",
 		data: JSON.stringify({
 		  email: email
 		}),
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
 		success: function () {
-		  $("#subscribe_successful").show();
-		  $("#subscribe-form-btn").prop('disabled', false);
-		  $("#subscribe_btn").text("Subscribe");
+		  $("#dao").modal();
+		  $("#subscribe-form-btn").hide();
+		  $("#subscribe_btn").hide();
+		  $("#subscribe_email").hide();
 		},
 		error: function (resp) {
 		  var defaultError = "Something went wrong, contact us: support@wings.ai";
@@ -321,7 +321,7 @@ $(document).ready(function(){
 		  $("#subscribe_error").text(error);
 		  $("#subscribe_error").show();
 		  $("#subscribe-form-btn").prop('disabled', false);
-		  $("#subscribe_btn").text("Subscribe");
+		  $("#subscribe_btn").text($.i18n.prop("header_button_subscribe"));
 		}
 	 })
   });

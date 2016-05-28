@@ -72,6 +72,14 @@
 	.site-header .btn-group {vertical-align: baseline;}
 	.site-header .btn-group > .btn {padding: 0; margin: 0; border: none !important; border-radius: 0; background: none !important}
 
+    .site-header .sub-header form {
+        width: 250px;
+        display: inline-block;
+    }
+
+    .site-header .sub-header form button {
+        margin-top: 20px;
+    }
 
 /* Block: DAOs are future */
 
@@ -201,10 +209,16 @@
 	.modal-header {border-bottom: none; padding: 40px 30px 20px;}
 	.modal-body {padding: 20px 30px 40px;}
 
+    #dao .modal-body .list-inline { margin-top: 20px; }
 	#dao .modal-body .list-inline a {display: block; padding: 0 25px; color: #2b474b; font-weight: 500; font-size: 16px;}
 	#dao .modal-body .list-inline svg {display: block; margin: 0 auto 10px; fill: #9aa4a6;}
 	#dao .modal-body .list-inline a:hover {color: #3f92d3; text-decoration: none}
 	#dao .modal-body .list-inline a:hover svg {fill: #3f92d3;}
+    #dao .modal-body .chatLabel {
+        font-size: 16px;
+        color: #154364;
+        margin-bottom: 10px;
+    }
 	#dao #subscribe-form {display: block; max-width: 300px; margin: 40px auto 0; position: relative;}
 	#dao #subscribe-form .form-control {margin-bottom: 10px;}
 	#dao .claim {margin-top: 20px; color: #999; font-weight: 400;}
