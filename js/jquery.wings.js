@@ -312,7 +312,7 @@ $(document).ready(function(){
 		  $("#dao").modal();
 		  $("#subscribe-form-btn").hide();
 		  $("#subscribe_btn").hide();
-		  $("#subscribe_email").hide();
+		  $("#subscribe-email").hide();
 		},
 		error: function (resp) {
 		  var defaultError = "Something went wrong, contact us: support@wings.ai";
