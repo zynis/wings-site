@@ -349,6 +349,14 @@ $(document).ready(function(){
 				document.title = $.i18n.prop(i);
 			 }
 
+			 if (i == "blogLink") {
+				$("#menu_blog").prop("href", $.i18n.prop(i));
+			 }
+
+			 if (i == "chatLink") {
+				$("#menu_chat").prop("href", $.i18n.prop(i));
+			 }
+
 			 $("#" + i).text($.i18n.prop(i));
 		  }
 		}
