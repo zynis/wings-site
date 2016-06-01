@@ -355,6 +355,7 @@ $(document).ready(function(){
 
 			 if (i == "chatLink") {
 				$("#menu_chat").prop("href", $.i18n.prop(i));
+				$("#footer_menu_chat").prop("href", $.i18n.prop(i));
 			 }
 
 			 $("#" + i).text($.i18n.prop(i));
