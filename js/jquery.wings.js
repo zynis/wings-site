@@ -1,3 +1,18 @@
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+	 sURLVariables = sPageURL.split('&'),
+	 sParameterName,
+	 i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+	 sParameterName = sURLVariables[i].split('=');
+
+	 if (sParameterName[0] === sParam) {
+		return sParameterName[1] === undefined ? true : sParameterName[1];
+	 }
+  }
+};
+
 /* Preload SVG */
 	if (document.getElementById('svgsprite') == null) {
 		var ajax = new XMLHttpRequest(); 
@@ -300,11 +315,14 @@ $(document).ready(function(){
 	 $("#subscribe-form-btn").prop('disabled', true);
 	 $("#subscribe_btn").text($.i18n.prop("header_button_subscribe_wait"));
 
+	 var ref = getUrlParameter("ref");
+
 	 $.ajax({
 		type: "POST",
 		url: "/api/subscribe",
 		data: JSON.stringify({
-		  email: email
+		  email: email,
+		  ref: ref
 		}),
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
