@@ -4,9 +4,9 @@ Official Wings Site repository. Based on Bootstrap/HTML5/CSS.
 
 ## Launch
 
-It shows how to launch local version of site with `http-server` nodejs module.
+The following shows how to launch a local version of the site with `http-server` nodejs module.
 
-This method requires `nodejs` and `npm` installed.
+The method requires `nodejs` and `npm` to be installed.
 
 ```sh
 npm install -g http-server
@@ -14,9 +14,11 @@ cd <site-folder>
 http-server
 ```
 
-## Contribution 
+## Contribution & Compensation
 
-We are ready for any contribution and ready to pay bounties for it.
+We are ready for any contribution and ready to pay bounties for it.  In general bounties are 125 Eggs per file/article, however if the word count exceeds 500, there is an additional payment of 125 per 500 words.  Please see https://blog.wings.ai/wings-content-and-translation-bounties-1f8e075dd50a for more information.
+
+To make a claim, you must set up an account at https://bounty.wings.ai and pick a username.  In the file which you are editing on the first line you must make a comment and insert the username you registered with. Once your pull request is approved, go pack to https://bounty.wings.ai and make a "claim" for translations and insert the URL of your approved pull request.
 
 Only one important note: we are using git flow to manage branches. Read more in [gitflow tutorial](http://danielkummer.github.io/git-flow-cheatsheet/) to follow our repo rules.
 
@@ -29,9 +31,9 @@ This tutorial explains how to add translation.
 Fork this repository by clicking on next button:
 
 
-### Create new brunch
+### Create new branch
 
-Create new brunch in your version of repository, call it: `feature/<lang>` 
+Create new branch in your version of repository, call it: `feature/<lang>` 
 
 Replace `lang` with name of your language translation.
 
@@ -71,6 +73,13 @@ Where is `<add here>` place for you lang code.
 Open `bundle/json` folder and create same file for chat animation translation (see pic).
 Format of file name: `chat_<langCode>.json`. You need to replace <langCode> with **your** lang code.
 
+At the beginning of the your file you must also add your Eggs username which you picked when registering with https://bounty.wings.ai.
+
+```
+eggs_username=<username>
+```
+
+
 ### Start translations (Site)
 
 Open 'bundle/Content_en_GB.properties` file with english translation and see format of this file:
@@ -100,6 +109,7 @@ title=Wings - Децентрализованная платформа для с�
 Do same for you language in your lang file.
 
 
+
 ### Start translations (Chat)
 
 To translate chat, open created file `bundle/json/chat_<langCode>.json` and copy to this file content from `bundle/json/chat_en_GB.json`.
@@ -116,12 +126,21 @@ One element of array:
 }
 ```
 
+You need to insert a new data field called `translator` and set the value to your Eggs username, like so:
+
+```json
+{
+	"author": "bot",
+	"translator": "Bob",
+	"avatar": "images/bot.svg",
+	"msg": "Hi! I am Wings DAO management bot. How may i be of service ?"
+}
+```
+
 You need to translate `msg` field in each element of array to make translation of chat.
 
 ### Make pull request of your translation
 
 Commit your changes and make pull request from your branch to our repository.
 
-## Copyrights
-
-© 2016 ChainLab
+## Copyright © 2016 ChainLab
