@@ -375,6 +375,10 @@ $(document).ready(function(){
 				$("#menu_chat").prop("href", $.i18n.prop(i));
 				$("#footer_menu_chat").prop("href", $.i18n.prop(i));
 			 }
+			 
+			if (i == "faqLink") {
+				$("#menu_faq").prop("href", $.i18n.prop(i));
+			 }
 
 			 $("#" + i).text($.i18n.prop(i));
 		  }
