@@ -1,6 +1,8 @@
+eggs_username=mxnsch
 {
 	"languages": [
 		"en_GB",
-		"ru_RU"
+		"ru_RU",
+		"de_DE"		
 	]
 }
