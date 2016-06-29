@@ -1,1 +1,53 @@
 
+[
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": "Mabuhay! Ako po ang tagapangasiwa ng Wings DAO  bot. Paano ko po kayo paglilingkuran ?"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "ipakita ang aking mga daos"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": "Sumuporta po kayo sa mga sumusunod na DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Kailangan nyo po ba ng mas detalyeng impormasyon ?"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "opo"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "Sa kasalukuyan, meron po kayong:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "tagapangasiwa ng Wings"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "Ang ibig nyo po bang sabihin Tagapangasiwa ng Wings DAO ?"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "opo"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "Narito na po ang listahan ng pagpipilian para sa Wings DAO:<br><br> - Paglikha ng boto<br> - Malaman ang Estado<br> - Pag-withdraw ng mga tokens<br> - Pag-deposit ng mga tokens<br> - Atbp<br>"
+	}
+]
+
+    Status API Training Shop Blog About 
+
+    © 2016 GitHub, Inc. Terms Privacy Security Contact Help 
+
