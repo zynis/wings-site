@@ -3,6 +3,7 @@ eggs_username=jwiz168
 [
 	{
 		"author": "bot",
+		"translator": "jwiz168",
 		"avatar": "images/bot.svg",
 		"msg": "Mabuhay! Ako po ang tagapangasiwa ng Wings DAO  bot. Paano ko po kayo paglilingkuran ?"
 	},
