@@ -3,11 +3,13 @@ eggs_username=<c4>
 [
 	{
 		"author": "bot",
+		"translator": "c4",
 		"avatar": "images/bot.svg",
 		"msg": "Hi! I am Wings DAO management bot. How may i be of service ?"
 	},
 	{
 		"author": "user",
+		"translator": "c4",
 		"avatar": "images/face.png",
 		"msg": "show me my daos"
 	},
