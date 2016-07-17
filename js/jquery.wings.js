@@ -305,6 +305,11 @@ $(document).ready(function(){
 		name: 'Dutch',
 		lang: 'nl_NL',
 		icon: 'images/flag-nl.png'
+	 },
+	 'sv': {
+		name: 'Swedish',
+		lang: 'sv_SE',
+		icon: 'images/flag-sv.png'
 	 }
   };
 
