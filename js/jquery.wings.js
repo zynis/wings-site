@@ -310,6 +310,11 @@ $(document).ready(function(){
 		name: 'Swedish',
 		lang: 'sv_SE',
 		icon: 'images/flag-sv.png'
+	 },
+	 'tl': {
+		name: 'Filipino',
+		lang: 'tl_PH',
+		icon: 'images/flag-tl.png'
 	 }
   };
 
