@@ -1,0 +1,48 @@
+eggs_username=Ra
+[
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": "Hallo! Ik ben de Wings DAO management bot. Hoe kan ik u van dienst zijn ?"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": “laat me mijn DAOs zien”
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": “Je steunde support de volgende DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Zou je meer details willen ?"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": “ja”
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  “Momenteel heb je:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "manage Wnigs”
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  “Bedoelde je manage WINGS DAO ?"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": “ja”
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  “Hier is een lijst met opties voor WINGS DAO:<br><br> - Create vote<br> - View status<br> - Withdraw tokens<br> - Deposit tokens<br> - More<br>"
+	}
+]
