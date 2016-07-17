@@ -1,6 +1,10 @@
 {
 	"languages": [
 		"en_GB",
-		"ru_RU"
+		"ru_RU",
+		"de_DE",
+		"nl_NL",
+		"sv_SE",
+		"tl_PH"
 	]
 }
