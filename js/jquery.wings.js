@@ -300,6 +300,11 @@ $(document).ready(function(){
 		name: 'Germany',
 		lang: 'de_DE',
 		icon: 'images/flag-de.png'
+	 },
+	 'nl': {
+		name: 'Dutch',
+		lang: 'nl_NL',
+		icon: 'images/flag-nl.png'
 	 }
   };
 
