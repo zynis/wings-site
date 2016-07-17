@@ -296,10 +296,10 @@ $(document).ready(function(){
 		lang: 'en_GB',
 		icon: 'images/flag-uk.png'
 	 },
-	 'ch': {
-		name: 'China',
-		lang: 'ch_CH',
-		icon: 'images/flag-cn.png'
+	 'de': {
+		name: 'Germany',
+		lang: 'de_DE',
+		icon: 'images/flag-de.png'
 	 }
   };
 
@@ -347,7 +347,6 @@ $(document).ready(function(){
   function changeLang(name, lang, icon) {
 	 $("#langIcon").attr("src", icon);
 
-
 	 jQuery.i18n.properties({
 		name: 'Content',
 		path: 'bundle/',
@@ -391,7 +390,6 @@ $(document).ready(function(){
 	 var name = $(this).text();
 	 var icon = $(this).children("img").attr("src");
 	 lang = langs[_lang];
-	 console.log(_lang);
 
 	 changeLang(name, lang.lang, icon);
 	 initializeChat();
