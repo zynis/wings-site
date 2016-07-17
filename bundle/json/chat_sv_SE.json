@@ -1,0 +1,60 @@
+
+eggs_username=c4
+[
+	{
+		"author": "bot",
+		"translator": "c4",
+		"avatar": "images/bot.svg",
+		"msg": "Hej! Jag är Wings bot för att hantera DAO. Hur kan jag hjälpa dig ?"
+	},
+	{
+		"author": "user",
+		"translator": "c4",
+		"avatar": "images/face.png",
+		"msg": "visa mig mina DAOs"
+	},
+	{
+		"author": "bot",
+		"translator": "c4",
+		"avatar": "images/bot.svg",
+		"msg": "Du stödjer följande DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Vill du ha mera information ?"
+	},
+	{
+		"author": "user",
+		"translator": "c4",
+		"avatar": "images/face.png",
+		"msg": "ja"
+	},
+	{
+		"author": "bot",
+		"translator": "c4",
+		"avatar": "images/bot.svg",
+		"msg":  "Du har just nu::<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+	},
+	{
+		"author": "user",
+		"translator": "c4",
+		"avatar": "images/face.png",
+		"msg": "hantera Wings"
+	},
+	{
+		"author": "bot",
+		"translator": "c4",
+		"avatar": "images/bot.svg",
+		"msg":  "Menade du hantera Wings DAO ?"
+	},
+	{
+		"author": "user",
+		"translator": "c4",
+		"avatar": "images/face.png",
+		"msg": "ja"
+	},
+	{
+		"author": "bot",
+		"translator": "c4",
+		"avatar": "images/bot.svg",
+		"msg":  "Här är en lista med val för Wings DAO:<br><br> - Rösta<br> - Se status<br> - Uttag av tokens<br> - Insättning av tokens<br> - Mer<br>"
+	}
+]
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
