@@ -315,6 +315,11 @@ $(document).ready(function(){
 		name: 'Filipino',
 		lang: 'tl_PH',
 		icon: 'images/flag-tl.png'
+	 },
+	 'pt': {
+		name: 'Portuguese',
+		lang: 'pt_PT',
+		icon: 'images/flag-pt.png'
 	 }
   };
 
