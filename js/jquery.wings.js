@@ -334,6 +334,8 @@ $(document).ready(function(){
 	 var email = $("#subscribe-email").val();
 	 $("#subscribe-form-btn").prop('disabled', true);
 	 $("#subscribe_btn").text($.i18n.prop("header_button_subscribe_wait"));
+	 $("#subscribe_successful").show();
+	 $("#daoLabel").text($.i18n.prop("daoLabel"));
 
 	 var ref = getUrlParameter("ref");
 
@@ -496,7 +498,7 @@ $(document).ready(function(){
   $("#menu_chat").click(function (e) {
 	 $("#dao").modal();
 	 var text = $("#daoLabel").text();
-	 $("#daoLabel").text("Join our chat!");
+	 $("#daoLabel").text($.i18n.prop("chatHeader") || "Join our chat!");
 	 $("#subscribe_successful").hide();
 
 	 e.preventDefault();
