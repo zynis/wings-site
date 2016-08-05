@@ -391,8 +391,8 @@ $(document).ready(function(){
 			 }
 
 			 if (i == "chatLink") {
-				$("#menu_chat").prop("href", $.i18n.prop(i));
-				$("#footer_menu_chat").prop("href", $.i18n.prop(i));
+				//$("#menu_chat").prop("href", $.i18n.prop(i));
+				//$("#footer_menu_chat").prop("href", $.i18n.prop(i));
 			 }
 			 
 			if (i == "faqLink") {
@@ -487,7 +487,28 @@ $(document).ready(function(){
 		}
 	 }
 
+
 	 chatEnabled = setInterval(chatLoop, 3000);
 	 chatLoop();
   }
+
+
+  $("#menu_chat").click(function (e) {
+	 $("#dao").modal();
+	 var text = $("#daoLabel").text();
+	 $("#daoLabel").text("Join our chat!");
+	 $("#subscribe_successful").hide();
+
+	 e.preventDefault();
+	 return false;
+  });
+
+  $("#slackBtn")
+	 .mouseover(function() {
+		$("#slackBtn img").attr("src", "/images/slack_hl.svg");
+	 })
+	 .mouseout(function() {
+		$("#slackBtn img").attr("src", "/images/slack.svg");
+	 });
+
 });
