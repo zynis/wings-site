@@ -315,6 +315,11 @@ $(document).ready(function(){
 		name: 'Filipino',
 		lang: 'tl_PH',
 		icon: 'images/flag-tl.png'
+	 },
+	 'pt': {
+		name: 'Portuguese',
+		lang: 'pt_PT',
+		icon: 'images/flag-pt.png'
 	 }
   };
 
@@ -329,6 +334,8 @@ $(document).ready(function(){
 	 var email = $("#subscribe-email").val();
 	 $("#subscribe-form-btn").prop('disabled', true);
 	 $("#subscribe_btn").text($.i18n.prop("header_button_subscribe_wait"));
+	 $("#subscribe_successful").show();
+	 $("#daoLabel").text($.i18n.prop("daoLabel"));
 
 	 var ref = getUrlParameter("ref");
 
@@ -386,8 +393,8 @@ $(document).ready(function(){
 			 }
 
 			 if (i == "chatLink") {
-				$("#menu_chat").prop("href", $.i18n.prop(i));
-				$("#footer_menu_chat").prop("href", $.i18n.prop(i));
+				//$("#menu_chat").prop("href", $.i18n.prop(i));
+				//$("#footer_menu_chat").prop("href", $.i18n.prop(i));
 			 }
 			 
 			if (i == "faqLink") {
@@ -482,7 +489,28 @@ $(document).ready(function(){
 		}
 	 }
 
+
 	 chatEnabled = setInterval(chatLoop, 3000);
 	 chatLoop();
   }
+
+
+  $("#menu_chat").click(function (e) {
+	 $("#dao").modal();
+	 var text = $("#daoLabel").text();
+	 $("#daoLabel").text($.i18n.prop("chatHeader") || "Join our chat!");
+	 $("#subscribe_successful").hide();
+
+	 e.preventDefault();
+	 return false;
+  });
+
+  $("#slackBtn")
+	 .mouseover(function() {
+		$("#slackBtn img").attr("src", "/images/slack_hl.svg");
+	 })
+	 .mouseout(function() {
+		$("#slackBtn img").attr("src", "/images/slack.svg");
+	 });
+
 });
