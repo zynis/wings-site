@@ -1,4 +1,3 @@
-eggs_username=Lebowski
 [
 	{
 		"author": "bot",
@@ -8,43 +7,36 @@ eggs_username=Lebowski
 	},
 	{
 		"author": "user",
-		"translator": "Lebowski",
 		"avatar": "images/face.png",
 		"msg": "покажи мені мої DAO"
 	},
 	{
 		"author": "bot",
-		"translator": "Lebowski",
 		"avatar": "images/bot.svg",
 		"msg": "Ви підтримуєте наступні DAO:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Чи бажаєте побачите більше детальну інформацію  ?"
 	},
 	{
 		"author": "user",
-		"translator": "Lebowski",
 		"avatar": "images/face.png",
 		"msg": "так"
 	},
 	{
 		"author": "bot",
-		"translator": "Lebowski",
 		"avatar": "images/bot.svg",
 		"msg":  "Ви маєте:<br><br> Wings DAO - 350000 Токенів (3.5%)<br> Genesis DAO - 10000 Токенів (0.01%)<br> Helio DAO - 1000 Токенів (1%)"
 	},
 	{
 		"author": "user",
-		"translator": "Lebowski",
 		"avatar": "images/face.png",
 		"msg": "управляти Wnigs"
 	},
 	{
 		"author": "bot",
-		"translator": "Lebowski",
 		"avatar": "images/bot.svg",
 		"msg":  "Ви мали на увазі управляти Wings DAO ?"
 	},
 	{
 		"author": "user",
-		"translator": "Lebowski",
 		"avatar": "images/face.png",
 		"msg": "так"
 	},
