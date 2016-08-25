@@ -320,11 +320,22 @@ $(document).ready(function(){
 		name: 'Portuguese',
 		lang: 'pt_PT',
 		icon: 'images/flag-pt.png'
+	 },
+	 'zh': {
+	 	name: 'Chinese',
+		lang: 'zh_CN',
+		icon: 'images/flag-zh.png'
 	 }
   };
 
   var lang = window.navigator.userLanguage || window.navigator.language;
+
+  if (lang.indexOf('-') >= 0) {
+  	lang = lang.split('-')[0];
+  }
+
   lang = langs[lang] || langs['en'];
+
   changeLang(lang.name, lang.lang, lang.icon);
 
   $("#subscribe-form").submit(function (e) {
