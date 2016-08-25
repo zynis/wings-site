@@ -1,0 +1,47 @@
+[
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": "你好！我是Wings DAO管理机器人。有什么能帮到您的吗？"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "显示我的dao"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": "您支持了以下DAO：<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> 您想获得更多详情吗？"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "是"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "您当前拥有：<br><br> Wings DAO - 350000点（3.5%）<br> Genesis DAO - 10000点（0.01%）<br> Helio DAO - 1000点（1%）"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "管理Wnigs"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "您指的是管理Wings DAO吗？"
+	},
+	{
+		"author": "user",
+		"avatar": "images/face.png",
+		"msg": "是"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "这里有一些Wings DAO的选项列表：<br><br> - 创建投票<br> - 查看状态<br> - 撤回点数<br> - 存入点数<br> - 更多<br>"
+	}
+]
