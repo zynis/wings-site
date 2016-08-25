@@ -325,6 +325,11 @@ $(document).ready(function(){
 	 	name: 'Chinese',
 		lang: 'zh_CN',
 		icon: 'images/flag-zh.png'
+	 },
+	 'uk': {
+	 	name: 'Ukrainian',
+		lang: 'uk_UA',
+		icon: 'images/flag-uk.png'
 	 }
   };
 
