@@ -320,11 +320,37 @@ $(document).ready(function(){
 		name: 'Portuguese',
 		lang: 'pt_PT',
 		icon: 'images/flag-pt.png'
+	 },
+	 'zh': {
+	 	name: 'Chinese',
+		lang: 'zh_CN',
+		icon: 'images/flag-zh.png'
+	 },
+	 'uk': {
+	 	name: 'Ukrainian',
+		lang: 'uk_UA',
+		icon: 'images/flag-uk.png'
+	 },
+	 'ro': {
+		name: 'Romanian',
+		lang: 'ro_RO',
+		icon: 'images/flag-ro.png'
+	 },
+	 'id': {
+		name: 'Indonesian',
+		lang: 'id_ID',
+		icon: 'images/flag-id.png'
 	 }
   };
 
   var lang = window.navigator.userLanguage || window.navigator.language;
+
+  if (lang.indexOf('-') >= 0) {
+  	lang = lang.split('-')[0];
+  }
+
   lang = langs[lang] || langs['en'];
+
   changeLang(lang.name, lang.lang, lang.icon);
 
   $("#subscribe-form").submit(function (e) {
