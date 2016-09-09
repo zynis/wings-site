@@ -330,6 +330,16 @@ $(document).ready(function(){
 	 	name: 'Ukrainian',
 		lang: 'uk_UA',
 		icon: 'images/flag-uk.png'
+	 },
+	 'ro': {
+		name: 'Romanian',
+		lang: 'ro_RO',
+		icon: 'images/flag-ro.png'
+	 },
+	 'id': {
+		name: 'Indonesian',
+		lang: 'id_ID',
+		icon: 'images/flag-id.png'
 	 }
   };
 
