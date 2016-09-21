@@ -81,6 +81,10 @@
         margin-top: 20px;
     }
 
+    .site-header .whitepaper-block img {
+        padding: 0px 40px;
+    }
+
 /* Block: DAOs are future */
 
 	.block-future {margin: 75px 0 90px;}
