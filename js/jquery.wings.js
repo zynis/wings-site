@@ -365,6 +365,7 @@ $(document).ready(function(){
 
 	 var ref = getUrlParameter("ref");
 
+
 	 $.ajax({
 		type: "POST",
 		url: "/api/subscribe",
@@ -376,9 +377,8 @@ $(document).ready(function(){
 		dataType: "json",
 		success: function () {
 		  $("#dao").modal();
-		  $("#subscribe-form-btn").hide();
-		  $("#subscribe_btn").hide();
-		  $("#subscribe-email").hide();
+		  $("#subscribe_btn").text($.i18n.prop("header_button_subscribe"));
+		  $("#subscribe-form-btn").prop('disabled', false);
 		},
 		error: function (resp) {
 		  var defaultError = "Something went wrong, contact us: support@wings.ai";
