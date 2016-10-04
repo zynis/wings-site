@@ -368,7 +368,7 @@ $(document).ready(function(){
 
 	 $.ajax({
 		type: "POST",
-		url: "http://localhost:3030/api/subscribe",
+		url: "/api/subscribe",
 		data: JSON.stringify({
 		  email: email,
 		  ref: ref,
