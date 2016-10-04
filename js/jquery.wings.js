@@ -368,10 +368,11 @@ $(document).ready(function(){
 
 	 $.ajax({
 		type: "POST",
-		url: "/api/subscribe",
+		url: "http://localhost:3030/api/subscribe",
 		data: JSON.stringify({
 		  email: email,
-		  ref: ref
+		  ref: ref,
+		  lang: lang.lang.split('_')[0]
 		}),
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
