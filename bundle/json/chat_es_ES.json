@@ -1,47 +1,56 @@
 [
 	{
 		"author": "bot",
+		"translator": "johnlu",
 		"avatar": "images/bot.svg",
-		"msg": "Hi! I am Wings DAO management bot. How may i be of service ?"
+		"msg": "¡Hola! Soy el bot de administración de Wings DAO. ¿Cómo puedo ayudarte?"
 	},
 	{
 		"author": "user",
+		"translator": "johnlu",
 		"avatar": "images/face.png",
-		"msg": "show me my daos"
+		"msg": "Muestra mis daos"
 	},
 	{
 		"author": "bot",
+		"translator": "johnlu",
 		"avatar": "images/bot.svg",
-		"msg": "You supported the following DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Would you like more details ?"
+		"msg": "Eres patrono de las siguientes DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> ¿Quieres más detalles?"
 	},
 	{
 		"author": "user",
+		"translator": "johnlu",
 		"avatar": "images/face.png",
-		"msg": "yes"
+		"msg": "sí"
 	},
 	{
 		"author": "bot",
+		"translator": "johnlu",
 		"avatar": "images/bot.svg",
-		"msg":  "You currently have:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+		"msg":  "Tienes actualmente:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
 	},
 	{
 		"author": "user",
+		"translator": "johnlu",
 		"avatar": "images/face.png",
-		"msg": "manage Wnigs"
+		"msg": "administrar Wnigs"
 	},
 	{
 		"author": "bot",
+		"translator": "johnlu",
 		"avatar": "images/bot.svg",
-		"msg":  "Did you mean manage Wings DAO ?"
+		"msg":  "¿Quisiste decir Wings DAO?"
 	},
 	{
 		"author": "user",
+		"translator": "johnlu",
 		"avatar": "images/face.png",
-		"msg": "yes"
+		"msg": "sí"
 	},
 	{
 		"author": "bot",
+		"translator": "johnlu",
 		"avatar": "images/bot.svg",
-		"msg":  "Here are a list of options for Wings DAO:<br><br> - Create vote<br> - View status<br> - Withdraw tokens<br> - Deposit tokens<br> - More<br>"
+		"msg":  "Aquí tienes una lista de las opciones para Wings DAO:<br><br> - Generar voto<br> - Revisar estado<br> - Retirar tokens<br> - Depositar tokens<br> - Más<br>"
 	}
 ]
