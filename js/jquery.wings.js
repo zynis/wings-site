@@ -340,6 +340,11 @@ $(document).ready(function(){
 		name: 'Indonesian',
 		lang: 'id_ID',
 		icon: 'images/flag-id.png'
+	 },
+	 'es': {
+		name: 'Spanish',
+		lang: 'es_ES',
+		icon: 'images/flag-es.png'
 	 }
   };
 
@@ -465,6 +470,7 @@ $(document).ready(function(){
 		  cursor: false,
 		  text: ""
 		});
+
 	 $('#interactive ul').html('');
 
 	 $.getJSON("/bundle/json/chat_" + lang.lang + ".json", function (chat) {
