@@ -10,7 +10,6 @@ app.controller('indexController', function ($scope, pressFactory, whitepaperFact
 		return i.value === currentLanguage;
 	 }).pop() || languageFactory[0];
   
-  
   $scope.openChat = function () {
 	 return remodal({
 		templateUrl: '/assets/app/templates/modals/chat.html'
