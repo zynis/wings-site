@@ -39,6 +39,7 @@ gulp.task('concat', function() {
 	 'bower_components/humanize-duration/humanize-duration.js',
 	 'bower_components/moment/min/moment.min.js',
 	 'bower_components/remodal/dist/remodal.js',
+	 'bower_components/spin.js/spin.js',
     'bower_components/slick-carousel/slick/slick.js',
     'bower_components/wow/dist/wow.js',
     'bower_components/Tabslet/jquery.tabslet.js',
@@ -53,6 +54,8 @@ gulp.task('concat', function() {
 	 'bower_components/angular-touch/angular-touch.min.js',
 	 'bower_components/angular-scroll/angular-scroll.min.js',
 	 'bower_components/fn-remodal/remodal.js',
+	 'bower_components/angular-spinner/angular-spinner.min.js',
+	 'bower_components/angular-animate/angular-animate.min.js'
   	])
     .pipe(concat('production.js'))
     .pipe(gulp.dest('assets/js/'));

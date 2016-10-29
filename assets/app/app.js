@@ -7,13 +7,16 @@ var app = angular.module('wings-site', [
   'remodal',
   'ui.router',
   'ngTouch',
-  'duScroll'
+  'duScroll',
+  'angularSpinner',
+  'ngAnimate'
 ]);
 
 var availableLangs = ['en', 'de', 'es', 'id', 'nl', 'pt', 'ro', 'ru', 'sv', 'tl', 'uk', 'zh']
 
-app.config(function ($locationProvider, $stateProvider, $translateProvider) {
+app.config(function ($locationProvider, $stateProvider, usSpinnerConfigProvider, $translateProvider) {
   $locationProvider.html5Mode(true);
+  usSpinnerConfigProvider.setDefaults({color: '#2e7da0'});
   
   $stateProvider.state({
 	 name: 'index',
@@ -31,8 +34,10 @@ app.config(function ($locationProvider, $stateProvider, $translateProvider) {
 		lang = 'en'
 	 };
 	 
+  
 	 return lang;
   });
+  
   $translateProvider.useSanitizeValueStrategy(null);
 });
 

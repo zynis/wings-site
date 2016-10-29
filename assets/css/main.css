@@ -2417,7 +2417,9 @@ html.remodal-is-locked {
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100%; }
 
 .container {
   width: 1000px;
@@ -3278,7 +3280,8 @@ strong {
   .chat-item-left.phone {
     float: left;
     width: 300px;
-    padding-top: 150px; }
+    padding-top: 150px;
+    padding-bottom: 0px; }
   .chat-item-dialog {
     left: 180px;
     top: 200px; }
@@ -3305,6 +3308,16 @@ strong {
 @media screen and (max-width: 600px) {
   .chat-item--4 {
     background-position: -70px 0; }
+  .chat-item-left {
+    width: 90%;
+    margin: auto;
+    float: none;
+    z-index: 9999;
+    text-align: center;
+    position: relative;
+    padding-left: 0;
+    padding-top: 365px;
+    padding-bottom: 100px; }
   .chat-item-dialog {
     left: 90px;
     top: 200px; } }
@@ -3345,6 +3358,8 @@ strong {
       width: 250px;
       font-weight: 300;
       min-height: 60px; }
+      .info-item-desc a {
+        color: #ffffff; }
     .info-item-button a {
       display: inline-block;
       padding: 14px 30px;
@@ -4127,3 +4142,14 @@ strong {
             color: #fff; }
         .remodal-buttons-item--blue:hover {
           background-color: #12c3eb; }
+
+.loader-block {
+  background: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; }
+  .loader-block.sample-show-hide {
+    transition: all linear 0.5s; }
+  .loader-block.sample-show-hide.ng-hide {
+    opacity: 0; }

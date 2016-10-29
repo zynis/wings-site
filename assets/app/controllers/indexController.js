@@ -1,14 +1,27 @@
-app.controller('indexController', function ($scope, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
+app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
   $log.info("Index controller");
+  
+  var title = $window.document.title;
+  
   $scope.endTime = config.deadline;
   $scope.languages = languageFactory;
   $scope.team = teamFactory;
   $scope.responsive =  responsiveFactory;
+  $scope.loadTranslations = true;
+  
+  $timeout(function () {
+	 $scope.loadTranslations = false;
+	 
+  }, 1500);
   
   var currentLanguage = $translate.use();
   $scope.choosenLanguage = languageFactory.filter(function (i) {
 		return i.value === currentLanguage;
 	 }).pop() || languageFactory[0];
+  
+  $translate(title).then(function (r) {
+	 $window.document.title = r;
+  })
   
   $scope.openChat = function () {
 	 return remodal({
@@ -61,9 +74,12 @@ app.controller('indexController', function ($scope, pressFactory, whitepaperFact
   $scope.whitepaper = whitepaperFactory.getWP();
   
   $rootScope.$on('$translateChangeSuccess', function () {
-	 console.log('language changed');
 	 $scope.whitepaper = whitepaperFactory.getWP();
 	 $scope.getData();
+  
+	 $translate(title).then(function (r) {
+		$window.document.title = r;
+	 })
   });
   
   $scope.goTo = function (blockName) {
