@@ -6,7 +6,8 @@ var app = angular.module('wings-site', [
   'slick',
   'remodal',
   'ui.router',
-  'ngTouch'
+  'ngTouch',
+  'duScroll'
 ]);
 
 app.config(function ($locationProvider, $stateProvider, $translateProvider) {

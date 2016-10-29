@@ -2915,6 +2915,8 @@ strong {
       padding-top: 20px; }
     .future-item--4 .future-item-title {
       padding-top: 10px; }
+    .future-item--5 .future-item-title {
+      padding-top: 40px; }
     .future-item-image {
       width: 210px;
       text-align: center; }
@@ -3028,6 +3030,8 @@ strong {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap; }
   .platform-item {
+    height: 200px;
+    padding: 10px;
     display: inline-block;
     flex: auto;
     -webkit-flex: auto;
@@ -3044,10 +3048,18 @@ strong {
     min-height: 625px;
     position: relative; }
     .chat-item-dialog {
-      padding-top: 160px;
+      top: 130px;
       padding-left: 70px;
       position: absolute;
-      bottom: 0; }
+      overflow: hidden;
+      height: 480px;
+      width: 310px; }
+      .chat-item-dialog ul {
+        position: absolute;
+        bottom: 0px;
+        width: 100%; }
+        .chat-item-dialog ul li {
+          display: block; }
       .chat-item-dialog-block {
         clear: both;
         width: 285px;
@@ -3061,6 +3073,9 @@ strong {
             position: absolute;
             bottom: 0px;
             left: 0; }
+            .chat-item-dialog-block.left .chat-item-dialog-photo img {
+              width: 38px;
+              height: 38px; }
           .chat-item-dialog-block.left .chat-item-dialog-message {
             display: inline-block;
             text-align: left;
@@ -3196,7 +3211,8 @@ strong {
   .chat-text {
     line-height: 28px;
     font-size: 18px;
-    font-weight: 300; }
+    font-weight: 300;
+    height: 190px; }
   .chat-button {
     margin-top: 20px; }
     .chat-button a {
@@ -3212,7 +3228,7 @@ strong {
         background-color: #da6f57; }
   .chat .slick-dots {
     position: absolute;
-    bottom: 120px;
+    bottom: 30px;
     left: 85px;
     margin-right: 0; }
     .chat .slick-dots button {
@@ -3220,7 +3236,10 @@ strong {
 
 @media screen and (max-width: 1000px) {
   .chat-item-left {
-    padding-left: 25px; } }
+    padding-left: 25px; }
+  .chat-item-dialog {
+    left: 520px;
+    top: 150px; } }
 
 @media screen and (max-width: 900px) {
   .chat-item--1 {
@@ -3243,7 +3262,9 @@ strong {
     width: 90%;
     margin: auto;
     float: none;
+    z-index: 9999;
     text-align: center;
+    position: relative;
     padding-left: 0;
     padding-top: 365px;
     padding-bottom: 100px; }
@@ -3252,13 +3273,24 @@ strong {
     top: -56px;
     left: 0px;
     right: 0px;
-    margin: auto; }
+    margin: auto;
+    padding-top: 150px; }
+  .chat-item-left.phone {
+    float: left;
+    width: 300px;
+    padding-top: 150px; }
+  .chat-item-dialog {
+    left: 180px;
+    top: 200px; }
   .chat .slick-dots {
     bottom: 30px;
     left: 0px;
     right: 0px; } }
 
 @media screen and (max-width: 700px) {
+  .chat-item-dialog {
+    left: 120px;
+    top: 200px; }
   .chat-item--3 {
     background-image: url(../assets/images/diagramm_3_m.png);
     background-repeat: no-repeat;
@@ -3272,7 +3304,10 @@ strong {
 
 @media screen and (max-width: 600px) {
   .chat-item--4 {
-    background-position: -70px 0; } }
+    background-position: -70px 0; }
+  .chat-item-dialog {
+    left: 90px;
+    top: 200px; } }
 
 @media screen and (max-width: 500px) {
   .chat-item {

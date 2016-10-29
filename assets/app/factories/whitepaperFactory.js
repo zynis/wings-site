@@ -1,5 +1,5 @@
 app.factory('whitepaperFactory', function ($translate, config) {
-  var langs = ['en', 'ru'];
+  var langs = ['en', 'ru', 'zh'];
   
   function getWP() {
 	 var lang = $translate.use();

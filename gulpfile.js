@@ -51,6 +51,7 @@ gulp.task('concat', function() {
 	 'bower_components/angular-slick/dist/slick.js',
 	 'bower_components/angular-ui-router/release/angular-ui-router.min.js',
 	 'bower_components/angular-touch/angular-touch.min.js',
+	 'bower_components/angular-scroll/angular-scroll.min.js',
 	 'bower_components/fn-remodal/remodal.js',
   	])
     .pipe(concat('production.js'))

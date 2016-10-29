@@ -32,6 +32,7 @@
     "ngSmoothScroll": "~2.0.0",
     "angular-slick": "~0.2.1",
     "fn-remodal": "FireNeslo/ng-remodal",
-    "angular-touch": "~1.5.8"
+    "angular-touch": "~1.5.8",
+    "angular-scroll": "~1.0.0"
   }
 }

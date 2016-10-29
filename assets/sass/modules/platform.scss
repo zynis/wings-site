@@ -66,6 +66,8 @@
 	    flex-flow: row wrap;
 	}
 	&-item {
+        height: 200px;
+        padding: 10px;
 		display: inline-block;
 		  flex: auto;
    		 -webkit-flex: auto;
