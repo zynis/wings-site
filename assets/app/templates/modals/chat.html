@@ -1,0 +1,31 @@
+<div class="remodal">
+  <div class="remodal-logo">
+    <img src="assets/images/logo.png" alt="">
+  </div>
+  <div data-remodal-action="close" class="remodal-close"></div>
+  <div class="remodal-title" ng-if="subscribe">{{'Thanks for subscription!' | translate}}</div>
+  <div class="remodal-title" ng-if="!subscribe">{{'Join our chat' | translate}}!</div>
+
+  <div class="remodal-text text-center">
+    <br>
+    <p class="text-center" ng-if="subscribe">{{'We\'ve sent your email with subscribe confirmation' | translate}}.</p>
+    <p class="text-center" ng-if="!subscribe">{{'Join our chat in Telegram or Slack' | translate}}.</p>
+    <br>
+    <div class="remodal-chats">
+      <ul>
+        <li>
+          <a href="https://telegram.me/wingschat" target="_blank"><img src="/assets/images/telegram-logo.png" alt="Telegram"></a>
+        </li>
+        <li>
+          <a href="https://hi.wings.ai" target="_blank"><img src="/assets/images/slack-logo.png" alt="Slack"></a>
+        </li>
+      </ul>
+
+    </div>
+    <br>
+    <p class="text-center" ng-if="subscribe">{{'Join our chat in Telegram or Slack' | translate}}</p>
+    <br>
+    <br>
+
+  </div>
+</div>
