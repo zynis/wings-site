@@ -18,8 +18,7 @@ app.config(function ($locationProvider, $stateProvider, $translateProvider) {
 	 url: '/?ref'
   });
   
-  $translateProvider.preferredLanguage('en');
-  //$translateProvider.determinePreferredLanguage();
+  $translateProvider.determinePreferredLanguage();
   $translateProvider.useSanitizeValueStrategy(null);
 });
 
