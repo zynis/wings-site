@@ -41,7 +41,7 @@ gulp.task('concat', function() {
 	 'bower_components/remodal/dist/remodal.js',
     'bower_components/slick-carousel/slick/slick.js',
     'bower_components/wow/dist/wow.js',
-    'bower_components/tabslet/jquery.tabslet.js',
+    'bower_components/Tabslet/jquery.tabslet.js',
     'bower_components/select2/dist/js/select2.full.js',
 	 'bower_components/angular/angular.min.js',
 	 'bower_components/angular-timer/dist/angular-timer.min.js',
