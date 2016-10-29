@@ -4,6 +4,7 @@ app.config(function ($translateProvider) {
 	 "Benefits": "Manfaat",
 	 "Features": "Fitur-Fitur",
 	 "Team": "Tim",
+	 "Our Team": "Tim",
 	 "Contact": "Kontak",
 	 "Chat": "Obrolan",
 	 "Blog": "Blog",

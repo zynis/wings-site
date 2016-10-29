@@ -4,6 +4,7 @@ app.config(function ($translateProvider) {
 	 "Benefits": "优势",
 	 "Features": "特点",
 	 "Team": "团队",
+	 "Our Team": "团队",
 	 "Contact": "联系",
 	 "Chat": "聊天",
 	 "Blog": "博客",
@@ -129,6 +130,10 @@ app.config(function ($translateProvider) {
 	 "Your e-mail": "您的电子邮件",
 	 "https://medium.com/wings-ai": "https://medium.com/wings-ai",
 	 "https://telegram.me/wingschat": "https://telegram.me/wingschat",
-	 "https://wings.zendesk.com/hc/en-us": "https://wings.zendesk.com/hc/en-us"
+	 "https://wings.zendesk.com/hc/en-us": "https://wings.zendesk.com/hc/en-us",
+	 "H": "小时",
+	 "D": "天",
+	 "M": "分钟",
+	 "S": "秒"
   });
 });
