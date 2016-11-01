@@ -134,6 +134,7 @@ app.config(function ($translateProvider) {
 	 "H": "小时",
 	 "D": "天",
 	 "M": "分钟",
-	 "S": "秒"
+	 "S": "秒",
+	 "Starting in": "倒计时"
   });
 });

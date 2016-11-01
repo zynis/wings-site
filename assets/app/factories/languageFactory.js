@@ -5,12 +5,12 @@ app.factory('languageFactory', function () {
 		value: "en"
 	 },
 	 {
-		text: "Русский",
-		value: "ru"
-	 },
-	 {
 		text: '中文',
 		value: 'zh'
+	 },
+	 {
+		text: "Русский",
+		value: "ru"
 	 },
 	 {
 		text: 'Deutsch',
