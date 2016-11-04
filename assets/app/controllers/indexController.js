@@ -96,6 +96,14 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
 		$scope.team = results[1];
 	 });
   }
+
+  $timeout(function () {
+  
+	 if ($stateParams.whitepaper) {
+		$scope.goTo('whitepaper');
+	 }
+	 
+  }, 100);
   
   $scope.getData();
 });
