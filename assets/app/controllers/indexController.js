@@ -11,7 +11,8 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   
   $timeout(function () {
 	 $scope.loadTranslations = false;
-	 
+	 $scope.bizRef = $stateParams.bizRef;
+	 $scope.ref = $stateParams.ref;
   }, 1500);
   
   var currentLanguage = $translate.use();
@@ -48,7 +49,8 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
 	 var opts = {
 		email: $scope.email,
 		ref: $stateParams.ref,
-		lang: $translate.use()
+		lang: $translate.use(),
+		bizRef: $stateParams.bizRef
 	 }
   
 	 $scope.loading = true;

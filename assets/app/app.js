@@ -20,7 +20,7 @@ app.config(function ($locationProvider, $stateProvider, usSpinnerConfigProvider,
   
   $stateProvider.state({
 	 name: 'index',
-	 url: '/?ref&whitepaper'
+	 url: '/?ref&bizRef&whitepaper'
   });
   
   $translateProvider.determinePreferredLanguage(function () {
