@@ -1,47 +1,48 @@
 [
 	{
 		"author": "bot",
+		"translator": "golfhuso",
 		"avatar": "images/bot.svg",
-		"msg": "Hi! I am Wings DAO management bot. How may i be of service ?"
+		"msg": "สวัสดี! ฉันคือWingsบอท เพื่อการจัดการDAO มีอะไรให้ฉันช่วยไหม?"
 	},
 	{
 		"author": "user",
 		"avatar": "images/face.png",
-		"msg": "show me my daos"
+		"msg": "แสดงdaoของฉัน"
 	},
 	{
 		"author": "bot",
 		"avatar": "images/bot.svg",
-		"msg": "You supported the following DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Would you like more details ?"
+		"msg": "นี่คือรายการ DAO ที่คุณสนับสนุน:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> คุณต้องการรายละเอียดเพิ่มเติมไหม?"
 	},
 	{
 		"author": "user",
 		"avatar": "images/face.png",
-		"msg": "yes"
+		"msg": "ใช่"
 	},
 	{
 		"author": "bot",
 		"avatar": "images/bot.svg",
-		"msg":  "You currently have:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+		"msg":  "ในขณะนี้คุณมี:<br><br> Wings DAO - 350000 เหรียญ (3.5%)<br> Genesis DAO - 10000 เหรียญ (0.01%)<br> Helio DAO - 1000 เหรียญ (1%)"
 	},
 	{
 		"author": "user",
 		"avatar": "images/face.png",
-		"msg": "manage Wnigs"
+		"msg": "จัดการ Wnigs"
 	},
 	{
 		"author": "bot",
 		"avatar": "images/bot.svg",
-		"msg":  "Did you mean manage Wings DAO ?"
+		"msg":  "คุณหมายถึงจัดการ Wings DAO หรือไม่?"
 	},
 	{
 		"author": "user",
 		"avatar": "images/face.png",
-		"msg": "yes"
+		"msg": "ใช่"
 	},
 	{
 		"author": "bot",
 		"avatar": "images/bot.svg",
-		"msg":  "Here are a list of options for Wings DAO:<br><br> - Create vote<br> - View status<br> - Withdraw tokens<br> - Deposit tokens<br> - More<br>"
+		"msg":  "นี่คือรายการทางเลือกสำหรับ Wings DAO:<br><br> - สร้างการโหวท<br> - ดูสถานะ<br> -ถอนเหรียญ<br> - ฝากเหรียญ<br> - เพิ่มเติม<br>"
 	}
 ]
