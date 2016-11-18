@@ -9,6 +9,21 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   $scope.responsive =  responsiveFactory;
   $scope.loadTranslations = true;
   
+  $scope.start = function () {
+	 var bizRef = $stateParams.bizRef;
+	 var ref = $stateParams.ref;
+  
+	 var params = "";
+	 
+	 if (bizRef) {
+		params += "?bizRef=" + bizRef;
+	 } else if (ref) {
+		params += "?ref=" + ref;
+	 }
+	 
+	 $window.open('https://fly.wings.ai/#/' + params, '_blank');
+  }
+  
   $timeout(function () {
 	 $scope.loadTranslations = false;
 	 $scope.bizRef = $stateParams.bizRef;

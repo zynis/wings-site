@@ -170,6 +170,9 @@
 }
 
 @media screen and (max-width:761px) {
+    .main-form {
+      width: 100%;
+    }
 	.press {
 		&-list {
 			width: 500px;
