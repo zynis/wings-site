@@ -81,9 +81,10 @@
         </div>-->
         <div class="main-content">
           <div class="main-content-title">{{'Kickstarting DAOs' | translate}}</div>
-          <div class="main-content-subtitle" timer end-time="endTime"><strong>{{'Starting in' | translate}}:</strong> {{days}}<strong>{{'D' | translate}}</strong> {{hours}}<strong>{{'H' | translate}}</strong> {{minutes}}<strong>{{'M' | translate}}</strong> {{seconds}}<strong>{{'S' | translate}}</strong></div>
           <div class="main-content-text">
             <p>{{'A decentralized platform to create, join and manage DAOs' | translate}}</p>
+            <p style="font-size: 20px;"><strong>{{'Campaign Live' | translate}}, 15% {{'Bonus' | translate}}</strong></p>
+            <p style="font-size: 20px;"><strong>{{'Collected So Far' | translate}}: {{btc}} BTC</strong></p>
             <div class="main-form">
               <div class="form">
                 <form ng-submit="subscribe()">
@@ -345,7 +346,7 @@
 	<div class="press">
 		<div class="container">
 			<div class="title title--light">{{'Press about us' | translate}}</div>
-			<div class="press-list" slick slides-to-show=3 slides-to-scroll=3 arrows="false" dots="true" adaptiveHeight="true" infinite="true" responsive="responsive.pressResponsive">
+          <div class="press-list" slick slides-to-show=3 slides-to-scroll=3 arrows="false" dots="true"  infinite="true" responsive="responsive.pressResponsive">
 				<div class="press-item" ng-repeat="p in press">
 					<div class="press-text">{{p.text}}</div>
 					<div class="press-logo"><a ng-href="{{p.link}}" target="_blank"><img ng-src="{{p.logo}}" alt="{{p.name}}"></a></div>

@@ -113,6 +113,7 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
 		$scope.team = results[1];
 	 });
   }
+  
 
   $timeout(function () {
   
@@ -123,4 +124,7 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   }, 100);
   
   $scope.getData();
+  apiFactory.getBTC().then(function (btc) {
+	 $scope.btc = btc;
+  });
 });
