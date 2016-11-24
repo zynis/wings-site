@@ -1,6 +1,6 @@
 app.config(function ($translateProvider) {
   $translateProvider.translations('nl', {
-	 "Wings - A decentralized platform to create, join and manage DAOs": "Wings - Een decentralized platform om te creëren, sluit je aan en manage DAOs",
+	 "A decentralized platform to create, join and manage projects": "Wings - Een decentralized platform om te creëren, sluit je aan en manage DAOs",
 	 "Benefits": "Voordelen",
 	 "Features": "Features",
 	 "Team": "Team",
@@ -15,7 +15,7 @@ app.config(function ($translateProvider) {
 	 "LET'S DO THIS": "LATEN WE DIT DOEN! ",
 	 "Please wait...": "Wacht…",
 	 "Join our Chat": "Sluit je aan bij onze Chat",
-	 "DAOs Are The Future": "DAOs Zijn De Toekomst",
+	 "PROJECT DAOS ARE THE FUTURE": "DAOs Zijn De Toekomst",
 	 "DAO Member": "DAO Member",
 	 "DAO Creator": "DAO Creator",
 	 "Sharing The Rewards": "Delen Van De Beloningen",

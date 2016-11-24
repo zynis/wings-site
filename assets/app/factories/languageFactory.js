@@ -21,7 +21,7 @@ app.factory('languageFactory', function () {
 		value: 'nl'
 	 },
 	 {
-		text: 'Svensk',
+		text: 'Svenska',
 		value: 'sv'
 	 },
 	 {

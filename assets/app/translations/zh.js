@@ -1,6 +1,6 @@
 app.config(function ($translateProvider) {
   $translateProvider.translations('zh', {
-	 "Wings - A decentralized platform to create, join and manage DAOs": "Wings - 一个创建、加入和管理DAO的去中心化的平台",
+	 "A decentralized platform to create, join and manage projects": "Wings - 一个创建、加入和管理DAO的去中心化的平台",
 	 "Benefits": "优势",
 	 "Features": "特点",
 	 "Team": "团队",
@@ -16,7 +16,7 @@ app.config(function ($translateProvider) {
 	 "Please wait...": "请稍等……",
 	 "Join our Chat": "加入我们的聊天",
 	 "Get the WINGS White Paper": "获取WINGS白皮书",
-	 "DAOs Are The Future": "DAO就是未来",
+	 "PROJECT DAOS ARE THE FUTURE": "DAO就是未来",
 	 "DAO Member": "DAO成员",
 	 "DAO Creator": "DAO创建者",
 	 "Sharing The Rewards": "分享奖励",
