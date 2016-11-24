@@ -150,6 +150,6 @@ app.config(function ($translateProvider) {
 	 'Ending In': 'Заканчивается через',
 	 'Campaign Live': 'Компания Активна',
 	 'Bonus': 'Бонус',
-	 'Go to the WINGS Backing Campaign': 'Участвовать'
+	 'DONATE TO THE WINGS CROWDFUND': 'Участвовать'
   });
 });
