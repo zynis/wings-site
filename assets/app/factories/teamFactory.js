@@ -1,6 +1,16 @@
 app.factory('teamFactory', function ($translate, $q) {
   var team = [
 	 {
+		name: 'Serguei Popov',
+		title: 'Scientific Advisor',
+		pic: 'serg',
+		bio: 'Brazilian mathematician of Russian origin with a Ph.D. from the Moscow State University. Currently works in the field of Stochastic Processes and is a Crypto enthusiast. Part of IOTA team.',
+		social: [{
+		  name: 'btt',
+		  link: 'https://bitcointalk.org/index.php?action=profile;u=168348'
+		}]
+	 },
+	 {
 		name: 'Boris Povod',
 		pic: 'boris',
 		title: 'Blockchain Developer',
@@ -60,16 +70,6 @@ app.factory('teamFactory', function ($translate, $q) {
 		}, {
 		  name: 'btt',
 		  link: 'https://bitcointalk.org/index.php?action=profile;u=90917'
-		}]
-	 },
-	 {
-		name: 'Serguei Popov',
-		title: 'Scientific Advisor',
-		pic: 'serg',
-		bio: 'Brazilian mathematician of Russian origin with a Ph.D. from the Moscow State University. Currently works in the field of Stochastic Processes and is a Crypto enthusiast. Part of IOTA team.',
-		social: [{
-		  name: 'btt',
-		  link: 'https://bitcointalk.org/index.php?action=profile;u=168348'
 		}]
 	 },
 	 {
