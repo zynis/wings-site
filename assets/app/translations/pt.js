@@ -1,9 +1,11 @@
 app.config(function ($translateProvider) {
   $translateProvider.translations('pt', {
+	 "Our Partners And Sponsors": "NOSSOS PARCEIROS E PATROCINADORES",
 	 "Wings - A decentralized platform to create, join and manage projects": "Wings - A plataforma decentralizada para criar, gerir, e se juntar a DAOs",
 	 "Benefits": "Benefícios",
 	 "Features": "Características",
 	 "Team": "Equipe",
+	 "Our Team": "NOSSA EQUIPE",
 	 "Contact": "Contato",
 	 "Chat": "Chat",
 	 "Blog": "Blog",
@@ -128,6 +130,7 @@ app.config(function ($translateProvider) {
 	 "https://medium.com/wings-ai": "https://medium.com/wings-ai",
 	 "https://telegram.me/wingschat": "https://telegram.me/wingschat",
 	 "https://wings.zendesk.com/hc/en-us": "https://wings.zendesk.com/hc/en-us",
-	 "PROJECT DAOS ARE THE FUTURE": "O FUTURO SÃO PROJETOS DAO"
+	 "PROJECT DAOS ARE THE FUTURE": "O FUTURO SÃO PROJETOS DAO",
+	 'Press about us': 'IMPRENSA'
   });
 });

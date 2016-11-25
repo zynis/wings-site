@@ -1,55 +1,47 @@
 [
 	{
 		"author": "bot",
-		"translator": "kanopt",
 		"avatar": "images/bot.svg",
-		"msg": "Olá! Eu sou o bot de gestão Wings DAO. Como posso ajudarv?"
+		"msg": "Olá! Eu sou bot-gerente de Wings DAO. Como posso ajudar ?"
 	},
 	{
-		"author": "user",
+		"author": "usuário",
 		"avatar": "images/face.png",
-		"msg": "mostra-me os meus daos"
+		"msg": "me mestre os meus daos"
 	},
 	{
 		"author": "bot",
-		"translator": "kanopt",
 		"avatar": "images/bot.svg",
-		"msg": "Apoiaste os seguintes DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Gostaria de saber mais detalhes?"
+		"msg": "Você apoiou os seguintes DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Gostaria de ver mais detalhes ?"
 	},
 	{
-		"author": "user",
-		"translator": "kanopt",
+		"author": "usuário",
 		"avatar": "images/face.png",
 		"msg": "sim"
 	},
 	{
 		"author": "bot",
-		"translator": "kanopt",
 		"avatar": "images/bot.svg",
-		"msg":  "Actualmente tens:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+		"msg":  "Você possui atualmente:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
 	},
 	{
-		"author": "user",
-		"translator": "kanopt",
+		"author": "usuário",
 		"avatar": "images/face.png",
-		"msg": "gerir Wings"
+		"msg": "gerenciar Wnigs"
 	},
 	{
 		"author": "bot",
-		"translator": "kanopt",
 		"avatar": "images/bot.svg",
-		"msg":  "Que dizer gerir Wnigs DAO?"
+		"msg":  "Você quis dizer, gerenciar Wings DAO ?"
 	},
 	{
-		"author": "user",
-		"translator": "kanopt",
+		"author": "usuário",
 		"avatar": "images/face.png",
 		"msg": "sim"
 	},
 	{
 		"author": "bot",
-		"translator": "kanopt",
 		"avatar": "images/bot.svg",
-		"msg":  "Aqui está uma lista de opções para Wings DAO:<br><br> - Criar votação<br> - View status<br> - Levantar tokens<br> - Depositar tokens<br> - Mais<br>"
+		"msg":  "Aqui está a lista de opções para Wings DAO:<br><br> - Criar voto<br> - Ver status<br> - Retirar tokens<br> - Depositar tokens<br> - Mais<br>"
 	}
 ]
