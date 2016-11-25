@@ -127,6 +127,7 @@ app.config(function ($translateProvider) {
 	 "Your e-mail": "O seu e-mail",
 	 "https://medium.com/wings-ai": "https://medium.com/wings-ai",
 	 "https://telegram.me/wingschat": "https://telegram.me/wingschat",
-	 "https://wings.zendesk.com/hc/en-us": "https://wings.zendesk.com/hc/en-us"
+	 "https://wings.zendesk.com/hc/en-us": "https://wings.zendesk.com/hc/en-us",
+	 "PROJECT DAOS ARE THE FUTURE": "O FUTURO SÃO PROJETOS DAO"
   });
 });
