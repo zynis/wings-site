@@ -146,7 +146,7 @@ app.config(function ($translateProvider) {
 	 'Want to kickstart a DAO? Send email to': 'Хотите начать DAO? Отправьте e-mail на',
 	 'Source code on GitHub': 'Исходный код на Github',
 	 'Our Partners And Sponsors': 'Наши Партнеры И Спонсоры',
-	 'Collected So Far': 'Собрано На Данный Момент',
+	 'Donated So Far': 'Собрано На Данный Момент',
 	 'Ending In': 'Заканчивается через',
 	 'Campaign Live': 'Компания Активна',
 	 'Bonus': 'Бонус',
