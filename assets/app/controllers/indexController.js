@@ -127,4 +127,11 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   apiFactory.getBTC().then(function (btc) {
 	 $scope.btc = btc;
   });
+  
+  var bonusChange = 1480399200;
+  if (bonusChange > Math.floor(new Date().getTime() / 1000)) {
+	 $scope.bonus = 25;
+  } else {
+	 $scope.bonus = 20;
+  }
 });
