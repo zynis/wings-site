@@ -148,8 +148,9 @@ app.config(function ($translateProvider) {
 	 'Our Partners And Sponsors': 'Наши Партнеры И Спонсоры',
 	 'Donated So Far': 'Собрано На Данный Момент',
 	 'Ending In': 'Заканчивается через',
-	 'Campaign Live': 'Компания Активна',
+	 'Campaign Live': 'Кампания Активна',
 	 'Bonus': 'Бонус',
-	 'Participate': 'Участвовать'
+	 'Participate': 'Участвовать',
+	 'Collected So Far': 'Собрано'
   });
 });
