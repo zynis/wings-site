@@ -1,5 +1,11 @@
 app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
   $log.info("Index controller");
+  var bonusChange = 1480399200;
+  if (bonusChange > Math.floor(new Date().getTime() / 1000)) {
+	 $scope.bonus = 25;
+  } else {
+	 $scope.bonus = 20;
+  }
   
   var title = $window.document.title;
   
