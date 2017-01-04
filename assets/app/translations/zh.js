@@ -108,7 +108,7 @@ app.config(function ($translateProvider) {
 	 "Alex Sazonov": "Alex Sazonov",
 	 "Developer with over 10 years of experience of software development, including 6 years of experience in the banking sector. Interested in machine learning, big data and blockchain technology. Alex has a bachelor's degree in Information systems.": "拥有逾10年软件开发经验的开发者，其中有6年银行业的经历。对机器学习、大数据和区块链科技感兴趣。Alex拥有信息系统的一个学士学位。",
 	 "Forum": "论坛",
-	 "ChainLab © 2016. All Rights Reserved.": "ChainLab © 2016. 保留所有权利。",
+	 "Wings Stiftung © 2016. All Rights Reserved.": "Wings Stiftung © 2016. 保留所有权利。",
 	 "Join our chat in Telegram or Slack": "加入我们在Telegram或Slack上的聊天",
 	 "Thanks for subscription!": "感谢订阅！",
 	 "Join our chat!": "加入我们的聊天！",
