@@ -91,6 +91,8 @@
               <input type="text" ng-model="email" class="form-text" placeholder="Email">
               <p class="form-error" ng-show="subscribeError">{{subscribeError}}</p>
               <input type="submit" ng-disabled="loading" class="form-button main-button" value="{{'Subscribe To Our Newsletter' | translate}}">
+              <br><br>
+              <input type="button" ng-click="start()" ng-disabled="loading" class="form-button main-button" value="{{'Campaign Dashboard' | translate}}">
             </form>
           </div>
         </div>
