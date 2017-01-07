@@ -83,11 +83,14 @@
       <div class="main-content-title">{{'Kickstarting Projects' | translate}}</div>
       <div class="main-content-text">
         <p>{{'A decentralized platform to create, join and manage projects' | translate}}</p>
-		<p style="font-size: 20px;"><strong>{{'Campaign Live' | translate}}! {{'Collected So Far' | translate}}: {{btc}} BTC</strong></p>
+		<p style="font-size: 20px;"><strong>{{'Campaign Is Over' | translate}}! {{'Collected' | translate}}: {{btc}} BTC</strong></p>
+
         <div class="main-form">
           <div class="form">
             <form ng-submit="subscribe()">
-              <input type="button" ng-click="start()" ng-disabled="loading" class="form-button main-button" value="{{'Participate' | translate}}">
+              <input type="text" ng-model="email" class="form-text" placeholder="Email">
+              <p class="form-error" ng-show="subscribeError">{{subscribeError}}</p>
+              <input type="submit" ng-disabled="loading" class="form-button main-button" value="{{'Subscribe To Our Newsletter' | translate}}">
             </form>
           </div>
         </div>
