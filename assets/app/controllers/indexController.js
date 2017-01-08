@@ -26,8 +26,8 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
 	 } else if (ref) {
 		params += "?ref=" + ref;
 	 }
-	 
-	 $window.open('https://fly.wings.ai/#/' + params, '_blank');
+
+	 $window.open('https://fly.wings.ai/#/' + params, '_self');
   }
   
   $timeout(function () {
