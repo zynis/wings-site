@@ -38,10 +38,30 @@ app.factory('teamFactory', function ($translate, $q) {
 		}]
 	 },
 	 {
-		name: 'Pavel Nekrasov',
-		title: 'Senior Developer',
-		pic: 'pavel',
-		bio: 'Experienced developer with a focus on Internet of Things devices, high profile projects, and blockchain development. Pavel was one of the Crypti core developers and holds a graduate degree in Finance.',
+		name: 'Alexey Kopievsky',
+		title: 'Senior Frontend Developer',
+		pic: 'alexey',
+		bio: 'Alex is a developer with deep knowledge and passion of frontend technologies. He is hard working and always eager to learn something new.',
+		social: [{
+		  name: 'fb',
+		  link: 'https://www.facebook.com/profile.php?id=100008332484706'
+		}, {
+		  name: 'in',
+		  link: 'https://ru.linkedin.com/in/alexey-kopievskiy-a472a0102'
+		}]
+	 },
+	 {
+		name: 'Harsh Vakharia',
+		pic: 'harsh',
+		title: 'Full Stack Developer',
+		bio: 'Passioned engineer. Loves to create new solutions and admires simplicity. Harsh likes to experiment and has built applications based on technologies such as C, Node.js, Docker, IPFS, Android and Ethereum.',
+		social: [{
+		  name: 'fb',
+		  link: 'https://www.facebook.com/whyrusleeping'
+		}, {
+		  name: 'in',
+		  link: 'https://www.linkedin.com/in/harshjv'
+		}]
 	 },
 	 {
 		name: 'Sebastian Stupurac',
@@ -52,12 +72,6 @@ app.factory('teamFactory', function ($translate, $q) {
 		  name: 'fb',
 		  link: 'https://www.facebook.com/sebastian.stupurac'
 		}]
-	 },
-	 {
-		name: 'Alex Sazonov',
-		title: 'Senior Developer',
-		pic: 'alex',
-		bio: "Developer with over 10 years of experience of software development, including 6 years of experience in the banking sector. Interested in machine learning, big data and blockchain technology. Alex has a bachelor's degree in Information systems."
 	 },
 	 {
 		name: 'Dominik Zynis',
