@@ -1,16 +1,19 @@
 # Wings Site
 
-Official Wings Site repository. Based on Bootstrap/HTML5/CSS.
+Official Wings Site repository. Based on HTML5/CSS/AngularJs.
 
 ## Launch
 
 The following shows how to launch a local version of the site with `http-server` nodejs module.
 
-The method requires `nodejs` and `npm` to be installed.
+The method requires `nodejs`, `npm`, `bower` and `gulp` to be installed.
 
 ```sh
 npm install -g http-server
 cd <site-folder>
+npm install
+bower install
+gulp
 http-server
 ```
 
