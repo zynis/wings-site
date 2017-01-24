@@ -143,4 +143,4 @@ You need to translate `msg` field in each element of array to make translation o
 
 Commit your changes and make pull request from your branch to our repository.
 
-## Copyright © 2016 Wings Stiftung
+## Copyright © 2016 Wings Siftung
