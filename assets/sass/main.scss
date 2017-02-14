@@ -1,0 +1,29 @@
+@import 'core/reset';
+@import 'core/variables';
+
+/* bower */
+@import '../../bower_components/slick-carousel/slick/slick.scss';
+@import '../../bower_components/wow/css/libs/animate';
+@import '../../bower_components/remodal/dist/remodal';
+@import '../../bower_components/remodal/dist/remodal-default-theme';
+
+/* modules */
+
+@import 'modules/base';
+@import 'modules/form';
+@import 'modules/main';
+@import 'modules/top';
+@import 'modules/partners';
+@import 'modules/select2';
+@import 'modules/future';
+@import 'modules/tabs';
+@import 'modules/platform';
+@import 'modules/chat';
+@import 'modules/info';
+@import 'modules/team';
+@import 'modules/slick';
+@import 'modules/press';
+@import 'modules/footer';
+@import 'modules/media';
+@import 'modules/remodal';
+@import "modules/loader";

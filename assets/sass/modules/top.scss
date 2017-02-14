@@ -1,0 +1,103 @@
+.top {
+	position: relative;
+	z-index: 100;
+	&-logo {
+		padding-top: 40px;
+		padding-left: 0px;
+		margin-right: 83px;
+		float: left;
+		&-image {
+			float: left;
+		}
+		&-text {
+			font-size: 16px;
+			color: #fff;
+			font-weight: 300;
+			float: left;
+			padding-top: 19px;
+			letter-spacing: 2px;
+			&_bold {
+				font-weight: bold;
+			}
+		}
+	}
+	&-menu {
+		float: left;
+		padding-top:58px;
+		li {
+			display: inline-block;
+			margin-right: 20px;
+			a {
+				text-transform: uppercase;
+				color: #96edff;
+				font-size: 14px;
+				text-decoration: none;
+				&:hover {
+					color: #fff;
+				}
+			}
+			&.active {
+				a {
+					color: #fff;
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+	&-userbar {
+		float: right;
+		padding-top: 50px;
+		&_item {
+			display: inline-block;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+		a {
+			text-transform: uppercase;
+			color: #96edff;
+			font-size: 14px;
+			text-decoration: none;
+			padding-left: 3px;
+			padding-right: 3px;
+			&:hover {
+				color: #fff;
+			}
+		}
+		&_signup {
+			padding-left: 10px;
+			border-left: 1px solid #96edff;
+		}
+		&_signin {
+			padding-right: 5px;
+		}
+		&_language {
+			padding-top: 0px;
+			padding-bottom: 0;
+			padding-right: 15px;
+			a {
+				padding: 5px 14px;
+				padding-bottom: 7px;
+				border-bottom: 1px solid #96edff;
+				/*border-radius: 20px;*/
+				span {
+					border-bottom: 1px dashed #96edff;
+				}
+				&:hover {
+					color: #fff;
+					border-color: #fff;
+					span {
+						border-color: #fff;
+					}
+				}
+			}
+			&-item {
+				&--2 {
+					display: none;
+					position: absolute;
+					margin-top: 10px;
+					border: none!important;
+				}
+			}
+		}
+	}
+}
