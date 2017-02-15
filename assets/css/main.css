@@ -2580,6 +2580,40 @@ strong {
   background-size: 100% 100%;
   position: relative;
   overflow: hidden; }
+  .main-video {
+    clear: both;
+    margin-top: 35px; }
+  .main-video_video {
+    width: 642px;
+    height: 464px;
+    margin: auto; }
+  .main-video_content {
+    cursor: pointer;
+    width: 642px;
+    height: 464px;
+    margin: auto;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    /*background-color: rgba(255,255,255,0.26);*/
+    border-radius: 10px; }
+  .main-video_button {
+    width: 92px;
+    height: 92px;
+    background-image: url("http://127.0.0.1:3000/assets/images/play_button.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+    position: relative; }
+  .main-video_title {
+    text-align: center;
+    padding-top: 47px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000; }
   .main-down {
     width: 53px;
     height: 53px;
