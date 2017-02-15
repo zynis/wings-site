@@ -9,7 +9,8 @@ var app = angular.module('wings-site', [
   'ngTouch',
   'duScroll',
   'angularSpinner',
-  'ngAnimate'
+  'ngAnimate',
+  'videosharing-embed'
 ]);
 
 var availableLangs = ['en', 'de', 'es', 'id', 'nl', 'pt', 'ro', 'ru', 'sv', 'tl', 'uk', 'zh']
