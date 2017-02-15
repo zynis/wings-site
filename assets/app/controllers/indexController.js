@@ -6,11 +6,17 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   } else {
 	 $scope.bonus = 20;
   }
+
+  $scope.playingVideo = false;
+  $scope.playVideo = function () {
+    $scope.playingVideo = true;
+  }
   
   var title = $window.document.title;
   
   $scope.endTime = config.deadline;
   $scope.languages = languageFactory;
+
   $scope.team = teamFactory;
   $scope.responsive =  responsiveFactory;
   $scope.loadTranslations = true;
@@ -40,6 +46,12 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   $scope.choosenLanguage = languageFactory.filter(function (i) {
 		return i.value === currentLanguage;
 	 }).pop() || languageFactory[0];
+
+	if (currentLanguage == 'zh') {
+	 $scope.isChina = true;
+	 } else {
+	 $scope.isChina = false;
+	 }
   
   $translate(title).then(function (r) {
 	 $window.document.title = r;

@@ -7,6 +7,48 @@
 	background-size: 100% 100%;
 	position: relative;
 	overflow: hidden;
+	&-video {
+		clear: both;
+		margin-top: 35px;
+		&_video {
+			width: 432px;
+			height: 253px;
+			margin: auto;
+		}
+		&_content {
+			cursor: pointer;
+			width: 432px;
+			height: 253px;
+			margin: auto;
+			display: flex;
+            border: 1px solid #FFF!important;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+            background: url('../assets/images/video-placeholder.png');
+			background-position: center!important;
+            background-size: cover;
+			/*background-color: rgba(255,255,255,0.26);*/
+			border-radius: 10px;
+		}
+		&_button {
+			width: 70px;
+			height: 70px;
+			background-image: url("../assets/images/play_button.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			cursor: pointer;
+			margin: auto;
+			position: relative;
+		}
+		&_title {
+			text-align: center;
+			padding-top: 47px;
+			font-size: 16px;
+			font-weight: 300;
+			color: #000;
+		}
+	}
 	&-down {
 		width: 53px;
 		height: 53px;
@@ -77,7 +119,7 @@
 		width: 500px;
         height: 439px;
 		margin: auto;
-        margin-top: 160px;
+        margin-top: 60px;
 		color: #fff;
 
 		&-title {

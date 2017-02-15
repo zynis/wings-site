@@ -32,7 +32,6 @@ table {
   position: relative;
   display: block;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -97,6 +96,9 @@ table {
     display: block;
     height: auto;
     border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -2578,6 +2580,40 @@ strong {
   background-size: 100% 100%;
   position: relative;
   overflow: hidden; }
+  .main-video {
+    clear: both;
+    margin-top: 35px; }
+  .main-video_video {
+    width: 642px;
+    height: 464px;
+    margin: auto; }
+  .main-video_content {
+    cursor: pointer;
+    width: 642px;
+    height: 464px;
+    margin: auto;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    /*background-color: rgba(255,255,255,0.26);*/
+    border-radius: 10px; }
+  .main-video_button {
+    width: 92px;
+    height: 92px;
+    background-image: url("http://127.0.0.1:3000/assets/images/play_button.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+    position: relative; }
+  .main-video_title {
+    text-align: center;
+    padding-top: 47px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000; }
   .main-down {
     width: 53px;
     height: 53px;
@@ -2662,7 +2698,7 @@ strong {
         margin-bottom: 20px; }
   .main-form {
     margin: 0 auto;
-    width: 50%; }
+    width: 65%; }
     .main-form .form-text {
       margin-bottom: 5px;
       background: none; }
@@ -2859,6 +2895,7 @@ strong {
     margin-top: 20px;
     margin-bottom: 80px; }
     .future-content:after {
+      display: none;
       bottom: 100%;
       left: 41%;
       border: solid transparent;
@@ -2872,6 +2909,7 @@ strong {
       border-width: 17px;
       margin-left: -17px; }
     .future-content:before {
+      display: none;
       bottom: 100%;
       left: 41%;
       border: solid transparent;
@@ -2936,6 +2974,11 @@ strong {
       font-size: 16px;
       font-weight: 300;
       line-height: 23px; }
+  .future-title {
+    padding-bottom: 20px !important; }
+  .future-subtitle {
+    font-size: 16px;
+    text-align: center; }
 
 #tab2:after {
   left: 60% !important; }
@@ -3781,6 +3824,8 @@ strong {
         width: 100%; } }
 
 @media screen and (max-width: 761px) {
+  .main-form {
+    width: 100%; }
   .press-list {
     width: 500px; }
   .press-name {
