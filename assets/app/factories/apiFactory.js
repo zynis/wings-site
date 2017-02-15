@@ -10,7 +10,7 @@ app.factory('apiFactory', function ($http, config) {
 		})
 	 },
 	 
-	 getBTC: function () {
+	 /*getBTC: function () {
 		return $http.get(config.api + '/btc').then(function (resp) {
 		  console.log('got btc', resp.data);
 		  if (resp.data.error) {
@@ -19,6 +19,6 @@ app.factory('apiFactory', function ($http, config) {
 		  
 		  return resp.data.balance;
 		});
-	 }
+	 }*/
   }
 });
