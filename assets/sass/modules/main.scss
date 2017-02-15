@@ -12,7 +12,7 @@
 		margin-top: 35px;
 		&_video {
 			width: 432px;
-			height: 253px;
+			height: 453px;
 			margin: auto;
 		}
 		&_content {
@@ -21,10 +21,11 @@
 			height: 253px;
 			margin: auto;
 			display: flex;
-			background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid #FFF!important;
 			-webkit-border-radius: 10px;
 			-moz-border-radius: 10px;
-
+            background: url('../assets/images/video-placeholder.png');
+            background-size: cover;
 			/*background-color: rgba(255,255,255,0.26);*/
 			border-radius: 10px;
 		}
