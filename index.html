@@ -85,19 +85,16 @@
 
                 <div class="main-video">
 
-                  <div class="main-video_content" ng-show="!playingVideo" ng-click="playVideo()" ng-style="{background: 'assets/images/video-placeholder.png'}">
-                    <div class="main-video_button" ng-show="!playingVideo">
-                      <embed-video href="https://www.youtube.com/watch?v=9wvov6zXi54" height=253 width=432 [options]></embed-video>
-                    </div>
-                    <div class="main-video_title" ng-show="!playingVideo">{{ 'WINGS in 90 seconds' | translate }}</div>
-                  </div>
+                        <div class="main-video_content" ng-show="!playingVideo" ng-click="playVideo()">
+                            <div class="main-video_button" ng-show="!playingVideo"></div>
+                        </div>
+                        <div class="main-video_video" ng-if="playingVideo && !isChina">
+                            <embed-video autoplay="1" href="https://www.youtube.com/watch?v=jjOvpr1gyDc&feature=youtu.be" height="253" width="432"></embed-video>
+                        </div>
+                        <div class="main-video_video" ng-if="playingVideo && isChina">
+                            <embed src='https://players.youku.com/player.php/sid/XMTgyMDI3OTA2OA==/v.swf' autoPlay="true" isAutoPlay="true" autoplay="true" allowFullScreen='true' quality='high'  height="253" width="432" align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+                        </div>
 
-                  <div class="main-video_video" ng-if="playingVideo && !isChina">
-                    <embed-video autoplay="1" href="https://www.youtube.com/watch?v=9wvov6zXi54" height="253" width="432"></embed-video>
-                  </div>
-                  <div class="main-video_video" ng-if="playingVideo && isChina">
-                    <embed src='https://players.youku.com/player.php/sid/XMTgyMDI3OTA2OA==/v.swf' autoPlay="true" isAutoPlay="true" autoplay="true" allowFullScreen='true' quality='high'  height="253" width="432" align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
-                  </div>
                 </div>
 
 
