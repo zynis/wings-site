@@ -11,15 +11,16 @@
 
 @media screen and (max-height:800px) {
 	.main {
-		height: auto;
-		padding-bottom: 120px;
+		height: 905px;
 	}
 } 
 
 @media screen and (max-width:1000px) {
 	.main {
-		height: auto;
-		padding-bottom: 120px;
+		height: 905px;
+		&-content {
+			margin: 100px auto auto;
+		}
 	}
 	.top {
 		&-logo {
@@ -170,8 +171,11 @@
 }
 
 @media screen and (max-width:761px) {
+	.main {
+		height: 990px!important;
+	}
     .main-form {
-      width: 100%;
+      width: 400px;
     }
 	.press {
 		&-list {
@@ -257,6 +261,9 @@
 }
 
 @media screen and (max-width:510px) {
+	.main {
+		height: 1075px!important;
+	}
 	.top {
 		&-menu {
 			width: 100%;
@@ -278,6 +285,9 @@
 }
 
 @media screen and (max-width:350px) {
+	.main {
+		height: 1110px!important;
+	}
 	.top {
 		&-menu {
 			width: 260px;
