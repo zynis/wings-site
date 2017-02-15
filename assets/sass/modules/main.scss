@@ -25,13 +25,14 @@
 			-webkit-border-radius: 10px;
 			-moz-border-radius: 10px;
             background: url('../assets/images/video-placeholder.png');
+			background-position: center!important;
             background-size: cover;
 			/*background-color: rgba(255,255,255,0.26);*/
 			border-radius: 10px;
 		}
 		&_button {
-			width: 82px;
-			height: 82px;
+			width: 70px;
+			height: 70px;
 			background-image: url("../assets/images/play_button.svg");
 			background-repeat: no-repeat;
 			background-size: cover;
