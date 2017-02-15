@@ -79,12 +79,20 @@
                         <div class="main-video_content" ng-show="!playingVideo" ng-click="playVideo()" >
                             <div class="main-video_button" ng-show="!playingVideo"></div>
                         </div>
-                        <div class="main-video_video" ng-if="playingVideo && !isChina">
+                        <div class="main-video_video" ng-if="playingVideo && !isChina && (mediaSM || mediaMD || mediaLG)">
                             <embed-video autoplay="1" href="https://www.youtube.com/watch?v=9wvov6zXi54" height="253" width="432"></embed-video>
                         </div>
-                        <div class="main-video_video" ng-if="playingVideo && isChina">
+                        <div class="main-video_video" ng-if="playingVideo && isChina && (mediaSM || mediaMD || mediaLG)">
                             <embed src='https://players.youku.com/player.php/sid/XMTgyMDI3OTA2OA==/v.swf' autoPlay="true" isAutoPlay="true" autoplay="true" allowFullScreen='true' quality='high'  height="253" width="432" align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
                         </div>
+
+                  <!-- MOBILE BLOCK 320px START -->
+                  <div class="main-video_video--mobile flex-content flex-content-justify--center" ng-if="playingVideo && !isChina && mediaXS">
+                    <embed-video autoplay="1" href="https://www.youtube.com/watch?v=9wvov6zXi54" width="290" height="170"></embed-video>
+                  </div>
+                  <div class="main-video_video--mobile flex-content flex-content-justify--center" ng-if="playingVideo && isChina && mediaXS">
+                    <embed src='https://players.youku.com/player.php/sid/XMTgyMDI3OTA2OA==/v.swf' autoPlay="true" isAutoPlay="true" autoplay="true" allowFullScreen='true' quality='high'  height="170" width="290" align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+                  </div>
                 </div>
 
         <br/><br/>

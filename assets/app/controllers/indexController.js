@@ -1,4 +1,4 @@
-app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
+app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, sizeFactory, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
   $log.info("Index controller");
   var bonusChange = 1480399200;
   if (bonusChange > Math.floor(new Date().getTime() / 1000)) {
@@ -6,6 +6,26 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   } else {
 	 $scope.bonus = 20;
   }
+
+  $scope.mediaXS = false;
+  $scope.mediaSM = false;
+  $scope.mediaMD = false;
+  $scope.mediaLG = false;
+
+  if(sizeFactory >= 320 && sizeFactory < 480)
+    $scope.mediaXS = true;
+  else if(sizeFactory >= 480 && sizeFactory < 640)
+    $scope.mediaSM = true;
+  else if(sizeFactory >= 640 && sizeFactory < 768)
+    $scope.mediaMD = true;
+  else {
+  	$scope.mediaLG = true;
+	}
+
+
+  console.log($scope.mediaXS, 'XS')
+  console.log($scope.mediaSM, 'SM')
+  console.log($scope.mediaMD, 'MD')
 
   $scope.playingVideo = false;
   $scope.playVideo = function () {
