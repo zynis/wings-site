@@ -1,4 +1,4 @@
-app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
+app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, sizeFactory, videoFactory, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
   $log.info("Index controller");
   var bonusChange = 1480399200;
   if (bonusChange > Math.floor(new Date().getTime() / 1000)) {
@@ -6,6 +6,26 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   } else {
 	 $scope.bonus = 20;
   }
+
+  $scope.mediaXS = false;
+  $scope.mediaSM = false;
+  $scope.mediaMD = false;
+  $scope.mediaLG = false;
+
+  if(sizeFactory >= 320 && sizeFactory < 480)
+    $scope.mediaXS = true;
+  else if(sizeFactory >= 480 && sizeFactory < 640)
+    $scope.mediaSM = true;
+  else if(sizeFactory >= 640 && sizeFactory < 768)
+    $scope.mediaMD = true;
+  else {
+  	$scope.mediaLG = true;
+	}
+
+
+  console.log($scope.mediaXS, 'XS')
+  console.log($scope.mediaSM, 'SM')
+  console.log($scope.mediaMD, 'MD')
 
   $scope.playingVideo = false;
   $scope.playVideo = function () {
@@ -47,11 +67,23 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
 		return i.value === currentLanguage;
 	 }).pop() || languageFactory[0];
 
-	if (currentLanguage == 'zh') {
+	/*if (currentLanguage == 'zh') {
 	 $scope.isChina = true;
 	 } else {
 	 $scope.isChina = false;
-	 }
+	 }*/
+
+  $scope.updateVideo = function (lang) {
+    var video = videoFactory.getVideo(lang);
+    $scope.videoPlaceholder = "url('assets/images/" + video.placeholder + "') no-repeat no-repeat";
+    $scope.video = video.video;
+
+    if (lang == 'zh') {
+      $scope.isChina = true;
+    } else {
+      $scope.isChina = false;
+    }
+  }
   
   $translate(title).then(function (r) {
 	 $window.document.title = r;
@@ -65,6 +97,7 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   
   $scope.changeLang = function (lang) {
 	 $translate.use(lang.value);
+	 $scope.updateVideo(lang.value);
   }
   
   $scope.subscribe = function () {
@@ -145,6 +178,8 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   /*apiFactory.getBTC().then(function (btc) {
 	 $scope.btc = btc;
   });*/
+
+  $scope.updateVideo(currentLanguage);
   
   var bonusChange = 1480399200;
   if (bonusChange > Math.floor(new Date().getTime() / 1000)) {

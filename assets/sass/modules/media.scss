@@ -11,15 +11,16 @@
 
 @media screen and (max-height:800px) {
 	.main {
-		height: auto;
-		padding-bottom: 120px;
+		height: 905px;
 	}
 } 
 
 @media screen and (max-width:1000px) {
 	.main {
-		height: auto;
-		padding-bottom: 120px;
+		height: 905px;
+		&-content {
+			margin: 100px auto auto;
+		}
 	}
 	.top {
 		&-logo {
@@ -171,8 +172,11 @@
 
 @media screen and (max-width:761px) {
     .main-form {
-      width: 100%;
+      width: 400px;
     }
+	.main-content {
+		margin-top: 50px;
+	}
 	.press {
 		&-list {
 			width: 500px;
@@ -202,13 +206,7 @@
 	}
 	.top {
 		&-menu {
-			width: 400px;
-			margin: auto;
-			left: 0;
-			right: 0;
-			li {
-				margin-bottom: 20px;
-			}
+			display: none;
 		}
 	}
 	.main {
@@ -257,9 +255,17 @@
 }
 
 @media screen and (max-width:510px) {
+	.main {
+		&-form {
+			width: 300px;
+		}
+		&-content {
+			margin-top: 50px;
+		}
+	}
 	.top {
 		&-menu {
-			width: 100%;
+			display: none;
 		}
 		&-userbar {
 			padding-right: 20px;
@@ -278,9 +284,17 @@
 }
 
 @media screen and (max-width:350px) {
+	.main {
+		&-form {
+			width: 300px;
+		}
+		&-content {
+			margin-top: 50px;
+		}
+	}
 	.top {
 		&-menu {
-			width: 260px;
+			display: none;
 		}
 	}
 	.main {
@@ -302,5 +316,53 @@
 		img {
 			max-width: 100%;
 		}
+	}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+	.main {
+		height: 990px !important;
+	}
+	.top-menu__mobile{
+		display: none;
+	}
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+	.main {
+		height: 775px !important;
+	}
+	.top-userbar_language {
+		padding-right: 65px;
+	}
+	.top-menu__mobile{
+		display: flex;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+	.main {
+		height: 870px !important;
+	}
+	.top-userbar_language {
+		padding-right: 48px;
+	}
+	.top-menu__mobile{
+		display: flex;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+	.main-video_content {
+		width: 290px;
+		height: 170px;
+	}
+	.main {
+		height: 820px!important;
+	}
+	.top-userbar_language {
+		padding-right: 48px;
+	}
+	.top-menu__mobile{
+		display: flex;
 	}
 }
