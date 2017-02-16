@@ -1,4 +1,4 @@
-app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, sizeFactory, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
+app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, sizeFactory, videoFactory, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
   $log.info("Index controller");
   var bonusChange = 1480399200;
   if (bonusChange > Math.floor(new Date().getTime() / 1000)) {
@@ -67,11 +67,23 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
 		return i.value === currentLanguage;
 	 }).pop() || languageFactory[0];
 
-	if (currentLanguage == 'zh') {
+	/*if (currentLanguage == 'zh') {
 	 $scope.isChina = true;
 	 } else {
 	 $scope.isChina = false;
-	 }
+	 }*/
+
+  $scope.updateVideo = function (lang) {
+    var video = videoFactory.getVideo(lang);
+    $scope.videoPlaceholder = "url('assets/images/" + video.placeholder + "') no-repeat no-repeat";
+    $scope.video = video.video;
+
+    if (lang == 'zh') {
+      $scope.isChina = true;
+    } else {
+      $scope.isChina = false;
+    }
+  }
   
   $translate(title).then(function (r) {
 	 $window.document.title = r;
@@ -85,6 +97,7 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   
   $scope.changeLang = function (lang) {
 	 $translate.use(lang.value);
+	 $scope.updateVideo(lang.value);
   }
   
   $scope.subscribe = function () {
@@ -165,6 +178,8 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   /*apiFactory.getBTC().then(function (btc) {
 	 $scope.btc = btc;
   });*/
+
+  $scope.updateVideo(currentLanguage);
   
   var bonusChange = 1480399200;
   if (bonusChange > Math.floor(new Date().getTime() / 1000)) {

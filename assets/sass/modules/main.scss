@@ -24,16 +24,26 @@
             border: 1px solid #FFF!important;
 			-webkit-border-radius: 10px;
 			-moz-border-radius: 10px;
-            background: url('../assets/images/video-placeholder.png');
 			background-position: center!important;
-            background-size: cover;
+            background-size: cover!important;
 			/*background-color: rgba(255,255,255,0.26);*/
 			border-radius: 10px;
 		}
-		&_button {
+		&_button--light {
 			width: 60px;
 			height: 60px;
-			background-image: url("../assets/images/play_button.svg");
+			background-image: url("https://cdn.fly.wings.ai/assets/images/play_button.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			cursor: pointer;
+			margin: auto;
+			position: relative;
+		}
+		&_button--dark {
+			width: 60px;
+			height: 60px;
+			background-image: url("../assets/images/play.png");
 			background-repeat: no-repeat;
 			background-size: cover;
 			border-radius: 50%;
@@ -179,3 +189,113 @@
 		}
 	}
 }
+
+.top-menu {
+	&__mobile{
+		display: none;
+	}
+	&__ul {
+		padding-left: 15px;
+		margin-top: 30px;
+		&-item {
+			margin-top: 30px;
+			position: relative;
+			padding-left: 30px;
+			cursor: pointer;
+			font-size: 17px;
+			a {
+				color: #213870;
+				text-decoration: none;
+				&:hover,
+				&:focus,
+				&:active {
+					color: #213870;
+				}
+			}
+		}
+	}
+	&__block {
+		display: block;
+		width: 200px;
+		background-color: #fff;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 300;
+		padding: 15px;
+		overflow-y: scroll;
+	}
+	&__container {
+		display: none;
+		&--open {
+			height: 100%;
+			display: block;
+			position: fixed;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.4);
+			top: 0;
+			z-index: 999;
+		}
+	}
+	&__mobile{
+		width: 34px;
+		height: 34px;
+		border: 2px solid rgba(255, 255, 255, 0.5);
+		-webkit-border-radius: 34px;
+		-moz-border-radius: 34px;
+		border-radius: 34px;
+		display: flex;
+		position: fixed;
+		right: 15px;
+		top: 15px;
+		z-index: 1100;
+
+		&--blue {
+			width: 34px;
+			height: 34px;
+			border: 2px solid #213870;
+			-webkit-border-radius: 34px;
+			-moz-border-radius: 34px;
+			border-radius: 34px;
+			display: flex;
+			position: fixed;
+			right: 15px;
+			top: 15px;
+			&:after {
+				background: url("../assets/images/icons/menu-media--blue.svg")no-repeat;
+				width: 14px;
+				height: 14px;
+				display: block;
+				margin: auto;
+				content: '';
+				background-size: cover;
+			}
+		}
+
+		&-open{
+			background: transparent;
+			&:after {
+				background: url("../assets/images/icons/menu-media.svg")no-repeat;
+				width: 14px;
+				height: 14px;
+				display: block;
+				margin: auto;
+				content: '';
+			}
+		}
+
+		&-close{
+			background: #fff;
+			&:after {
+				background: url("../assets/images/icons/menu-media-close.svg")no-repeat;
+				width: 10px;
+				height: 10px;
+				display: block;
+				margin: auto;
+				content: '';
+			}
+		}
+	}
+}
+
