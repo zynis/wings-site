@@ -3885,6 +3885,8 @@ strong {
     padding: 5%; } }
 
 @media screen and (max-width: 510px) {
+   .main-content-subtext{
+    display:none;}
   .top-menu {
     width: 100%; }
   .top-userbar {
@@ -3895,6 +3897,8 @@ strong {
     background-size: cover; } }
 
 @media screen and (max-width: 350px) {
+  .main-content-subtext{
+    display:none;}
   .top-menu {
     width: 260px; }
   .main-book {
