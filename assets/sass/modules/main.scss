@@ -24,16 +24,26 @@
             border: 1px solid #FFF!important;
 			-webkit-border-radius: 10px;
 			-moz-border-radius: 10px;
-            background: url('../assets/images/video-placeholder.png');
 			background-position: center!important;
-            background-size: cover;
+            background-size: cover!important;
 			/*background-color: rgba(255,255,255,0.26);*/
 			border-radius: 10px;
 		}
-		&_button {
+		&_button--light {
 			width: 60px;
 			height: 60px;
-			background-image: url("../assets/images/play_button.svg");
+			background-image: url("https://cdn.fly.wings.ai/assets/images/play_button.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			cursor: pointer;
+			margin: auto;
+			position: relative;
+		}
+		&_button--dark {
+			width: 60px;
+			height: 60px;
+			background-image: url("../assets/images/play.png");
 			background-repeat: no-repeat;
 			background-size: cover;
 			border-radius: 50%;
