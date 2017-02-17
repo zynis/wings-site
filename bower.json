@@ -36,6 +36,7 @@
     "angular-scroll": "~1.0.0",
     "angular-spinner": "~0.8.1",
     "angular-animate": "~1.5.8",
-    "ng-videosharing-embed": "^0.3.7"
+    "ng-videosharing-embed": "^0.3.7",
+    "bootstrap-sass": "^3.3.7"
   }
 }

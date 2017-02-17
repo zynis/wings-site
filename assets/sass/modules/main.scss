@@ -198,11 +198,7 @@
 		padding-left: 15px;
 		margin-top: 30px;
 		&-item {
-			margin-top: 30px;
-			position: relative;
-			padding-left: 30px;
-			cursor: pointer;
-			font-size: 17px;
+
 			a {
 				color: #213870;
 				text-decoration: none;
@@ -297,5 +293,25 @@
 			}
 		}
 	}
+}
+
+.main-menu {
+	position: absolute;
+	width: 100%;
+	background: rgb(255, 255, 255);
+	z-index: 1000;
+}
+
+.logo-text {
+	color: #213870!important;
+}
+
+.navbar-nav {
+	margin-top: 90px;
+}
+
+.navbar-nav > li > a {
+	padding: 10px 15px;
+	border-bottom: #efefef 1px solid;
 }
 
