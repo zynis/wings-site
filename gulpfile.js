@@ -56,7 +56,8 @@ gulp.task('concat', function() {
 	 'bower_components/fn-remodal/remodal.js',
 	 'bower_components/angular-spinner/angular-spinner.min.js',
 	 'bower_components/angular-animate/angular-animate.min.js',
-		'bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js'
+		'bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js',
+		'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
   	])
     .pipe(concat('production.js'))
     .pipe(gulp.dest('assets/js/'));
