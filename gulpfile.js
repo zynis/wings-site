@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var bower = require('gulp-bower');
+var gulpsync = require('gulp-sync')(gulp)
  
 gulp.task('sass', function () {
   return gulp.src('./assets/sass/main.scss')
@@ -79,6 +80,4 @@ gulp.task('watch', function () {
   gulp.watch('./assets/app/**/*.js', ['concat-app']);
 });
 
-gulp.task('default', function() {
-  gulp.start('concat-app', 'sass', 'cssmin', 'concat', 'cssconcat', 'compress', 'watch');
-});
+gulp.task('default', gulpsync.sync(['concat-app', 'sass', 'cssmin', 'concat', 'cssconcat', 'compress', 'watch']))
