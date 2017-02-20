@@ -1,0 +1,56 @@
+[
+	{
+		"author": "bot",
+		"translator": "johnlu",
+		"avatar": "images/bot.svg",
+		"msg": "¡Hola! Soy el bot de administración de Wings DAO. ¿Cómo puedo ayudarte?"
+	},
+	{
+		"author": "user",
+		"translator": "johnlu",
+		"avatar": "images/face.png",
+		"msg": "Muestra mis daos"
+	},
+	{
+		"author": "bot",
+		"translator": "johnlu",
+		"avatar": "images/bot.svg",
+		"msg": "Eres patrono de las siguientes DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> ¿Quieres más detalles?"
+	},
+	{
+		"author": "user",
+		"translator": "johnlu",
+		"avatar": "images/face.png",
+		"msg": "sí"
+	},
+	{
+		"author": "bot",
+		"translator": "johnlu",
+		"avatar": "images/bot.svg",
+		"msg":  "Tienes actualmente:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+	},
+	{
+		"author": "user",
+		"translator": "johnlu",
+		"avatar": "images/face.png",
+		"msg": "administrar Wnigs"
+	},
+	{
+		"author": "bot",
+		"translator": "johnlu",
+		"avatar": "images/bot.svg",
+		"msg":  "¿Quisiste decir Wings DAO?"
+	},
+	{
+		"author": "user",
+		"translator": "johnlu",
+		"avatar": "images/face.png",
+		"msg": "sí"
+	},
+	{
+		"author": "bot",
+		"translator": "johnlu",
+		"avatar": "images/bot.svg",
+		"msg":  "Aquí tienes una lista de las opciones para Wings DAO:<br><br> - Generar voto<br> - Revisar estado<br> - Retirar tokens<br> - Depositar tokens<br> - Más<br>"
+	}
+]

@@ -1,0 +1,65 @@
+.press {
+	&-text {
+		width: 270px;
+		border: 1px solid lightgray;
+		background-color: #fff;
+		padding: 30px 15px;
+		position: relative;
+		border-radius: 15px;
+		border-bottom-left-radius: 0px;
+		color: #191d77;
+		font-size: 16px;
+		min-height: 60px;
+		font-weight: 300;
+		line-height: 24px;
+		&:after {
+			content: "";
+			width: 0;
+			height: 0;
+			border: 0 solid transparent;
+			border-left-width: 0px;
+			border-right-width: 36px;
+			border-top: 24px solid lightgray;
+			position: absolute;
+			bottom: -24px;
+			left: -1px;
+			z-index: 20;
+		}
+		&:before {
+			content: "";
+			width: 0;
+			height: 0;
+			border: 0 solid transparent;
+			border-left-width: 0px;
+			border-right-width: 33px;
+			border-top: 22px solid white;
+			position: absolute;
+			bottom: -22px;
+			left: 0px;
+			z-index: 22;
+		}
+	}
+	&-logo {
+		margin-top: 30px;
+	}
+	&-name {
+		color: #191d77;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		padding-top: 5px;
+	}
+	&-download {
+		float: right;
+		margin-top: -70px;
+		a {
+			color: #191d77;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 24px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+.footer {
+	background-image: url(../assets/images/bg-main.jpg);
+	color: #fff;
+	margin-top: 30px;
+	&-menu {
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #fff;
+		li {
+			display: inline-block;
+			a {
+				color: #fff;
+				margin-left: 24px;
+				margin-right: 24px;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 36px;
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+		}
+	}
+	&-column {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 28px;
+		padding-bottom: 50px;
+		p {
+			opacity: 0.7;
+		}
+		a {
+			color: #fff;
+		}
+		&-item {
+			float: left;
+		}
+		&--left {
+			float: left;
+			width: 60%;
+		}
+		&--right {
+			float: right;
+			width: 40%;
+		}
+		&-title {
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 36px;
+			padding-bottom: 20px;
+		}
+		&-button {
+			a {
+				display: inline-block;
+				border: 2px solid #f4705a;
+				text-decoration: none;
+				color: #fff;
+				text-transform: uppercase;
+				font-weight: 300;
+				font-size: 16px;
+				border-radius: 10px;
+				margin-top: 10px;
+				padding: 25px 60px;
+				margin-bottom: 10px;
+				&:hover {
+					background-color: #f4705a;
+				}
+			}
+		}
+		&-social {
+			&--fb {
+				width: 24px;
+				height: 24px;
+				background-image: url(../assets/images/facebook.png);
+				background-repeat: no-repeat;
+				display: inline-block;
+				margin-right: 5px;
+			}
+			&--tw {
+				width: 24px;
+				height: 24px;
+				background-image: url(../assets/images/twitter.png);
+				background-repeat: no-repeat;
+				display: inline-block;
+				margin-right: 5px;
+			}
+			&--in {
+				width: 24px;
+				height: 24px;
+				background-image: url(../assets/images/in2.png);
+				background-repeat: no-repeat;
+				display: inline-block;
+				margin-right: 5px;
+			}
+		}
+	}
+}

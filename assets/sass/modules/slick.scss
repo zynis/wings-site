@@ -1,0 +1,76 @@
+.slick {
+	&-prev {
+		position: absolute;
+		left: -50px;
+		width: 38px;
+		height: 0px;
+		padding-top: 80px;
+		overflow: hidden;
+		background: none;
+		border: none;
+		cursor: pointer;
+		top: 7px;
+		background-image: url(../assets/images/prev-arrow.png);
+		background-repeat: no-repeat;
+		outline: none;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&-next {
+		position: absolute;
+		right: -50px;
+		width: 40px;
+		height: 0px;
+		padding-top: 80px;
+		overflow: hidden;
+		background: none;
+		border: none;
+		cursor: pointer;
+		top: 7px;
+		outline: none;
+		background-image: url(../assets/images/next-arrow.png);
+		background-repeat: no-repeat;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	&-slide {
+		outline: none;
+	}
+	&-dots {
+		display: block;
+		margin-right: 15px;
+		text-align: center;
+		button {
+			display: inline-block;
+			width: 11px;
+			padding-left: 0;
+			padding-right: 0;
+			height: 0px;
+			padding-top: 9px;
+			padding-bottom: 0;
+			outline: none;
+			overflow: hidden;
+			background: none;
+			border: none;
+			border: 1px solid #24276e;
+			background-color: #24276e;
+			cursor: pointer;
+			opacity: 0.3;
+			border-radius: 50%;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		li {
+			display: inline-block;
+			margin-right: 13px;
+		}
+		li.slick-active {
+			button {
+				opacity: 1;
+			}
+		}
+	}
+}
