@@ -17,6 +17,7 @@
 		&-menu {
 			top: 0px;
 		}
+	}
 }
 
 @media screen and (max-height:800px) {
@@ -421,11 +422,11 @@
 	.top-userbar_language {
 		padding-right: 48px;
 	}
-	.top-menu__mobile{
+	.top-menu__mobile {
 		display: flex;
 	}
 	.top-logo {
-		z-index: 2000!important;
+		z-index: 2000 !important;
 		position: relative;
 	}
 	.top {
@@ -433,3 +434,4 @@
 		z-index: initial;
 	}
 }
+
