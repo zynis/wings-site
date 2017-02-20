@@ -7,7 +7,19 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var bower = require('gulp-bower');
- 
+var rev = require("gulp-rev");
+var revReplace = require("gulp-rev-replace");
+var gulpsync = require('gulp-sync')(gulp);
+var del = require('del')
+
+gulp.task('clean-dist', function () {
+  return del.sync(['./dist', './index.html'])
+})
+
+gulp.task('clean-rev', function () {
+  return del.sync(['./dist/rev'])
+})
+
 gulp.task('sass', function () {
   return gulp.src('./assets/sass/main.scss')
     .pipe(sass().on('error', sass.logError))
@@ -79,6 +91,31 @@ gulp.task('watch', function () {
   gulp.watch('./assets/app/**/*.js', ['concat-app']);
 });
 
-gulp.task('default', function() {
-  gulp.start('concat-app', 'sass', 'cssmin', 'concat', 'cssconcat', 'compress', 'watch');
+gulp.task("revision", function(){
+  return gulp.src(["./dist/*.css", "./dist/*.js"])
+    .pipe(rev())
+    .pipe(gulp.dest('./dist/rev'))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('./dist/rev'))
+})
+
+gulp.task("revreplace", function(){
+  var manifest = gulp.src("./dist/rev/rev-manifest.json");
+
+  return gulp.src("./index.static.html")
+    .pipe(gulp.dest("./"))
+    .pipe(rename("index.html"))
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest("./"));
 });
+
+gulp.task("copy", function(){
+  return gulp.src(["./assets/images/*"])
+    .pipe(gulp.dest('./dist/assets/images'))
+})
+
+gulp.task('default',
+	gulpsync.sync(
+		['clean-dist', 'concat-app', 'sass', 'cssmin', 'concat', 'cssconcat', 'compress', 'revision', 'revreplace', 'copy', 'watch']
+	)
+);
