@@ -194,11 +194,10 @@
 		&-content {
 			margin-top: 4vh;
 			&-title {
-				white-space: nowrap;
+				font-size: 6vmin;
 			}
 			&-subtext {
 				font-size: 3vmin;
-				white-space: nowrap;
 			}
 		}
 	}
@@ -296,7 +295,7 @@
 			display: none;
 		}
 		&-userbar {
-			padding-right: 20px;
+			padding-right: 0px;
 		}
 	}
 	.tabs {
