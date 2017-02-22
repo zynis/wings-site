@@ -10,7 +10,7 @@ var bower = require('gulp-bower');
 var rev = require("gulp-rev");
 var revReplace = require("gulp-rev-replace");
 var gulpsync = require('gulp-sync')(gulp);
-var del = require('del')
+var del = require('del');
 
 gulp.task('clean-dist', function () {
   return del.sync(['./dist', './index.html'])
@@ -23,20 +23,15 @@ gulp.task('clean-rev', function () {
 gulp.task('sass', function () {
   return gulp.src('./assets/sass/main.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./assets/css'));
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('cssconcat', function () {
   return gulp.src(
     ['bower_components/angular-dropdowns/dist/angular-dropdowns.min.css']
   ).pipe(concat('libs.css')).pipe(gulp.dest('dist'));
-});
-
-gulp.task('cssmin', function () {
-	gulp.src(['assets/css/*.css'])
-		.pipe(cssmin())
-		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('concat-app', function () {
@@ -83,12 +78,9 @@ gulp.task('compress', function() {
 });
  
 gulp.task('watch', function () {
-  setTimeout(function(){
-  	gulp.watch('assets/sass/**/*.scss', ['sass']);
-  }, 1000);
-  gulp.watch('./assets/css/*.css', ['cssmin']);
-  gulp.watch('./assets/js/production.js', ['compress']);
-  gulp.watch('./assets/app/**/*.js', ['concat-app']);
+	gulp.watch('assets/sass/**/*.scss', gulpsync.sync(['clean-rev', 'sass', 'revision', 'revreplace']));
+  gulp.watch('./assets/js/production.js', gulpsync.sync(['clean-rev', 'compress', 'revision', 'revreplace']));
+  gulp.watch('./assets/app/**/*.js', gulpsync.sync(['clean-rev', 'concat-app', 'revision', 'revreplace']));
 });
 
 gulp.task("revision", function(){
@@ -116,6 +108,6 @@ gulp.task("copy", function(){
 
 gulp.task('default',
 	gulpsync.sync(
-		['clean-dist', 'concat-app', 'sass', 'cssmin', 'concat', 'cssconcat', 'compress', 'revision', 'revreplace', 'copy', 'watch']
+		['clean-dist', 'concat-app', 'sass', 'concat', 'cssconcat', 'compress', 'revision', 'revreplace', 'copy', 'watch']
 	)
 );

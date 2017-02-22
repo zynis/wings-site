@@ -22,11 +22,6 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   	$scope.mediaLG = true;
 	}
 
-
-  console.log($scope.mediaXS, 'XS')
-  console.log($scope.mediaSM, 'SM')
-  console.log($scope.mediaMD, 'MD')
-
   $scope.playingVideo = false;
   $scope.playVideo = function () {
     $scope.playingVideo = true;
@@ -66,12 +61,6 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   $scope.choosenLanguage = languageFactory.filter(function (i) {
 		return i.value === currentLanguage;
 	 }).pop() || languageFactory[0];
-
-	/*if (currentLanguage == 'zh') {
-	 $scope.isChina = true;
-	 } else {
-	 $scope.isChina = false;
-	 }*/
 
   $scope.updateVideo = function (lang) {
     var video = videoFactory.getVideo(lang);
