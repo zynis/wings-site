@@ -1,0 +1,6 @@
+.idea/
+dist/
+assets/css/
+assets/js/
+bower_components/
+node_modules/

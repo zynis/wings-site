@@ -1,0 +1,318 @@
+
+
+.main {
+	width: 100%;
+	height: 100%;
+	background-image: url(../assets/images/bg-main.jpg);
+	background-size: 100% 100%;
+	position: relative;
+	overflow: hidden;
+	&-video {
+		clear: both;
+		margin-top: 35px;
+		&_video {
+			width: 432px;
+			height: 253px;
+			margin: auto;
+		}
+		&_content {
+			cursor: pointer;
+			width: 432px;
+			height: 253px;
+			margin: auto;
+			display: flex;
+            border: 1px solid #FFF!important;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			background-position: center!important;
+            background-size: cover!important;
+			/*background-color: rgba(255,255,255,0.26);*/
+			border-radius: 10px;
+		}
+		&_button--light {
+			width: 60px;
+			height: 60px;
+			background-image: url("https://cdn.fly.wings.ai/assets/images/play_button.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			cursor: pointer;
+			margin: auto;
+			position: relative;
+		}
+		&_button--dark {
+			width: 60px;
+			height: 60px;
+			background-image: url("../assets/images/play.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			cursor: pointer;
+			margin: auto;
+			position: relative;
+		}
+		&_title {
+			text-align: center;
+			padding-top: 47px;
+			font-size: 16px;
+			font-weight: 300;
+			color: #000;
+		}
+	}
+	&-down {
+		width: 53px;
+		height: 53px;
+		border: 2px solid #fff;
+		margin: auto;
+		background-image: url(../assets/images/down.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		border-radius: 50%;
+		position: absolute;
+		bottom: 25px;
+		left: 0;
+		right: 0;
+		cursor: pointer;
+		display:none;
+	}
+	&-figure {
+		width: 429px;
+		height: 546px;
+		position: absolute;
+		right: 0px;
+		bottom: -165px;
+		text-indent: -99999px;
+		background-image: url(../assets/images/main-figure.png);
+	}
+	&-book {
+		width: 303px;
+		height: 439px;
+		padding-top: 30px;
+		padding-left: 174px;
+		background-position: 112px 0;
+		background-image: url(../assets/images/book.png);
+		background-repeat: no-repeat;
+		text-align: center;
+		margin-top: 160px;
+		color: #fff;
+		float: left;
+		margin-right: 45px;
+		&-head {
+			font-size: 16px;
+			text-transform: uppercase;
+			padding-bottom: 50px;
+			span {font-weight: bold;}
+		}
+		&-title {
+			font-weight: 500;
+			font-size: 30px;
+			letter-spacing: 3px;
+			padding-bottom: 20px;
+			text-transform: uppercase;
+		}
+
+		&-text {
+			font-weight: 300;
+			font-size: 19px;
+			line-height: 30px;
+			width: 200px;
+			margin: auto;
+		}
+	}
+    &-countdown {
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+	&-content {
+		width: 500px;
+		margin: auto;
+        margin-top: 60px;
+		color: #fff;
+
+		&-title {
+			font-weight: bold;
+			font-size: 32px;
+			padding-bottom: 20px;
+            text-align: center;
+		}
+
+        &-subtitle {
+          font-weight: 300;
+          font-size: 25px;
+          padding-bottom: 20px;
+          text-align: center;
+        }
+
+		&-text {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 28px;
+			p {
+                text-align: center;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&-form {
+        margin: 5vmin auto 5vmin auto;
+        width: 65%;
+
+		.form-text {
+            		margin-bottom: 5px;
+			background: none;
+		}
+	}
+	&-button {
+		background-color: #da6f57;
+		&:hover {
+			background-color: #da4f30;
+		}
+	}
+}
+.flex {
+	&-content{
+		display: flex!important;
+
+		&--row {
+			flex-direction: row;
+		}
+
+		&-justify {
+			&--center {
+				justify-content: center;
+			}
+			&--between{
+				justify-content: space-between;
+			}
+		}
+	}
+}
+
+.top-menu {
+	&__mobile{
+		display: none;
+	}
+	&__ul {
+		padding-left: 15px;
+		margin-top: 30px;
+		&-item {
+
+			a {
+				color: #213870;
+				text-decoration: none;
+				&:hover,
+				&:focus,
+				&:active {
+					color: #213870;
+				}
+			}
+		}
+	}
+	&__block {
+		display: block;
+		width: 200px;
+		background-color: #fff;
+		height: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 300;
+		padding: 15px;
+		overflow-y: scroll;
+	}
+	&__container {
+		display: none;
+		&--open {
+			height: 100%;
+			display: block;
+			position: fixed;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.4);
+			top: 0;
+			z-index: 999;
+		}
+	}
+	&__mobile{
+		width: 34px;
+		height: 34px;
+		border: 2px solid rgba(255, 255, 255, 0.5);
+		-webkit-border-radius: 34px;
+		-moz-border-radius: 34px;
+		border-radius: 34px;
+		display: flex;
+		position: fixed;
+		right: 15px;
+		top: 15px;
+		z-index: 1100;
+
+		&--blue {
+			width: 34px;
+			height: 34px;
+			border: 2px solid #213870;
+			-webkit-border-radius: 34px;
+			-moz-border-radius: 34px;
+			border-radius: 34px;
+			display: flex;
+			position: fixed;
+			right: 15px;
+			top: 15px;
+			&:after {
+				background: url("../assets/images/icons/menu-media--blue.svg")no-repeat;
+				width: 14px;
+				height: 14px;
+				display: block;
+				margin: auto;
+				content: '';
+				background-size: cover;
+			}
+		}
+
+		&-open{
+			background: transparent;
+			&:after {
+				background: url("../assets/images/icons/menu-media.svg")no-repeat;
+				width: 14px;
+				height: 14px;
+				display: block;
+				margin: auto;
+				content: '';
+			}
+		}
+
+		&-close{
+			background: #fff;
+			&:after {
+				background: url("../assets/images/icons/menu-media-close.svg")no-repeat;
+				width: 10px;
+				height: 10px;
+				display: block;
+				margin: auto;
+				content: '';
+			}
+		}
+	}
+}
+
+.main-menu {
+	position: absolute;
+	width: 100%;
+	background: rgb(255, 255, 255);
+	z-index: 1000;
+}
+
+.logo-text {
+	color: #213870!important;
+}
+
+.navbar-nav {
+	margin-top: 90px;
+}
+
+.navbar-nav > li > a {
+	padding: 10px 15px;
+	border-bottom: #efefef 1px solid;
+}
+

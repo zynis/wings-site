@@ -1,0 +1,76 @@
+.platform {
+	padding-bottom: 40px;
+	&-icon {
+		display: inline-block;
+		width: 47px;
+		height: 47px;
+		position: relative;
+		border: 1px solid #24276e;
+		border-radius: 50%;
+		float: left;
+		margin-bottom: 14px;
+		margin-right: 14px;
+		&--plus {
+			&:after {
+				content: "+";
+				text-align: center;
+				display: block;
+				width: 15px;
+				height: 15px;
+				line-height: 15px;
+				color: #24276e;
+				border: 1px solid #24276e;
+				border-radius: 50%;
+				font-weight: 300;
+				font-size: 16px;
+				position: absolute;
+				right: -5px;
+				background-color: #fff;
+			}
+		}
+		img {
+			max-width: 90%;
+			height: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			margin: auto;
+		}
+	}
+	&-name {
+		color: #54549b;
+		font-weight: bold;
+		font-size: 18px;
+		padding-top: 14px;
+		&-item {
+			padding-top: 14px;
+			display: block;
+		}
+	}
+	&-text {
+		clear: both;
+		width: 300px;
+		margin-bottom: 30px;
+		color: #191d77;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 23px;
+	}
+	&-list {
+		display: table;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-flow: row wrap;
+	    flex-flow: row wrap;
+	}
+	&-item {
+        height: 200px;
+        padding: 10px;
+		display: inline-block;
+		  flex: auto;
+   		 -webkit-flex: auto;
+   		 vertical-align: middle;
+	}
+}

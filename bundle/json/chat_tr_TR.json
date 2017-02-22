@@ -1,0 +1,56 @@
+[
+	{
+		"author": "bot",
+    "translator": "beyinsi",
+		"avatar": "images/bot.svg",
+		"msg": "Selam! Ben Wings DAO yönetim robotuyum. Size nasıl yardımcı olabilirim ?"
+	},
+	{
+		"author": "user",
+    "translator": "beyinsi",
+		"avatar": "images/face.png",
+		"msg": "daolarımı göster"
+	},
+	{
+		"author": "bot",
+    "translator": "beyinsi",
+		"avatar": "images/bot.svg",
+		"msg": "Desteklediğiniz DAO'lar:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Daha fazla detay istiyor musunuz ?"
+	},
+	{
+		"author": "user",
+    "translator": "beyinsi",
+		"avatar": "images/face.png",
+		"msg": "evet"
+	},
+	{
+		"author": "bot",
+    "translator": "beyinsi",
+		"avatar": "images/bot.svg",
+		"msg":  "Sahip oldukların:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+	},
+	{
+		"author": "user",
+    "translator": "beyinsi",
+		"avatar": "images/face.png",
+		"msg": "Wnigs yönet"
+	},
+	{
+		"author": "bot",
+    "translator": "beyinsi",
+		"avatar": "images/bot.svg",
+		"msg":  "Wings DAO yönet mi demek istedin ?"
+	},
+	{
+		"author": "user",
+    "translator": "beyinsi",
+		"avatar": "images/face.png",
+		"msg": "evet"
+	},
+	{
+		"author": "bot",
+    "translator": "beyinsi",
+		"avatar": "images/bot.svg",
+		"msg":  "Wings DAO için seçeneklerin:<br><br> - Oylama Aç<br> - Durumunu Gör<br> - Tokenlerini çek<br> - Token yatır<br> - Fazlası<br>"
+	}
+]

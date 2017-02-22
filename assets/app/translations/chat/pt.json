@@ -1,0 +1,47 @@
+[
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": "Olá! Eu sou bot-gerente de Wings DAO. Como posso ajudar ?"
+	},
+	{
+		"author": "usuário",
+		"avatar": "images/face.png",
+		"msg": "me mestre os meus daos"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg": "Você apoiou os seguintes DAOs:<br><br> - Wings DAO<br> - Genesis DAO<br> - Helio DAO<br><br> Gostaria de ver mais detalhes ?"
+	},
+	{
+		"author": "usuário",
+		"avatar": "images/face.png",
+		"msg": "sim"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "Você possui atualmente:<br><br> Wings DAO - 350000 Tokens (3.5%)<br> Genesis DAO - 10000 Tokens (0.01%)<br> Helio DAO - 1000 Tokens (1%)"
+	},
+	{
+		"author": "usuário",
+		"avatar": "images/face.png",
+		"msg": "gerenciar Wnigs"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "Você quis dizer, gerenciar Wings DAO ?"
+	},
+	{
+		"author": "usuário",
+		"avatar": "images/face.png",
+		"msg": "sim"
+	},
+	{
+		"author": "bot",
+		"avatar": "images/bot.svg",
+		"msg":  "Aqui está a lista de opções para Wings DAO:<br><br> - Criar voto<br> - Ver status<br> - Retirar tokens<br> - Depositar tokens<br> - Mais<br>"
+	}
+]
