@@ -1,0 +1,102 @@
+.team {
+	&-list {
+		display: table;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-flow: row wrap;
+	    flex-flow: row wrap;
+	}
+	&-item {
+		width: 30%;
+		  flex: auto;
+   		 -webkit-flex: auto;
+   		 display: inline-block;
+   		 vertical-align: top;
+		margin-left: 30px;
+		&-image {
+			float: left;
+			margin-right: 10px;
+			img {
+				width: 46px;
+				height: 46px;
+				border-radius: 50%;
+			}
+		}
+		&-name {
+			padding-top: 8px;
+			color: #191d77;
+			font-size: 14px;
+			font-weight: 700;
+			padding-bottom: 4px;
+		}
+		&-job {
+			color: #191d77;
+			font-size: 13px;
+			font-weight: 300;
+			line-height: 23px;
+		}
+		&-desc {
+			color: #191d77;
+			font-size: 13px;
+			font-weight: 300;
+			line-height: 18px;
+			padding-top: 10px;
+			margin-bottom: 20px;
+		}
+		&-social {
+			padding-bottom: 30px;
+			position: relative;
+			margin-bottom: 35px;
+			&:after {
+				content: "";
+				display: block;
+				width: 40px;
+				height: 2px;
+				background-color: #4dc0d8;
+				position: absolute;
+				bottom: 0;
+			}
+			&-icon {
+				display: inline-block;
+				margin-right: 5px;
+				a {
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+				}
+				&--fb {
+					a {
+						background-image: url(../assets/images/facebook.png);
+						background-repeat: no-repeat;
+						background-size: 100%;
+						border-radius: 50%;
+					}
+				}
+				&--tw {
+					a {
+						background-image: url(../assets/images/twitter.png);
+						background-repeat: no-repeat;
+						background-size: 100%;
+						border-radius: 50%;
+					}
+				}
+				&--bc {
+					a {
+						background-image: url(../assets/images/bitcoin.png);
+						background-repeat: no-repeat;
+						background-size: 100%;
+						border-radius: 50%;
+					}
+				}
+				&--in {
+					a {
+						background-image: url(../assets/images/in.png);
+						background-repeat: no-repeat;
+						background-size: 100%;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+}

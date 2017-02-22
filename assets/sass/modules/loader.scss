@@ -1,0 +1,21 @@
+.loader {
+
+  &-block {
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    &.sample-show-hide {
+      transition: all linear 0.5s;
+    }
+
+    &.sample-show-hide.ng-hide {
+      opacity: 0;
+    }
+  }
+
+
+}
+
