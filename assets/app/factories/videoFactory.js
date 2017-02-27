@@ -10,7 +10,7 @@ app.factory('videoFactory', function () {
     },
     zh: {
       placeholder: 'video-placeholder-zh.png',
-      video: 'http://player.youku.com/player.php/sid/XMjUxNzYzNTQ3Mg==/v.swf'
+      video: 'https://player.youku.com/player.php/sid/XMjUxNzYzNTQ3Mg==/v.swf'
     },
     'de': {
       placeholder: 'video-placeholder.png',
