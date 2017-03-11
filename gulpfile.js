@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var bower = require('gulp-bower');
+var gulpsync = require('gulp-sync')(gulp)
  
 gulp.task('sass', function () {
   return gulp.src('./assets/sass/main.scss')
@@ -56,7 +57,8 @@ gulp.task('concat', function() {
 	 'bower_components/fn-remodal/remodal.js',
 	 'bower_components/angular-spinner/angular-spinner.min.js',
 	 'bower_components/angular-animate/angular-animate.min.js',
-		'bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js'
+		'bower_components/ng-videosharing-embed/build/ng-videosharing-embed.min.js',
+		'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
   	])
     .pipe(concat('production.js'))
     .pipe(gulp.dest('assets/js/'));
@@ -78,6 +80,4 @@ gulp.task('watch', function () {
   gulp.watch('./assets/app/**/*.js', ['concat-app']);
 });
 
-gulp.task('default', function() {
-  gulp.start('concat-app', 'sass', 'cssmin', 'concat', 'cssconcat', 'compress', 'watch');
-});
+gulp.task('default', gulpsync.sync(['concat-app', 'sass', 'cssmin', 'concat', 'cssconcat', 'compress', 'watch']))

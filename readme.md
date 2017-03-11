@@ -46,7 +46,7 @@ Replace `<langCode>` with lang that you going to translate.
 
 For example:
 
-* en - Grate Britain English.
+* en - Great Britain English.
 * ru - Russian.
 
 See full list of codes on this [page](http://www.lingoes.net/en/translator/langcode.htm) (**Important**: use '_' instead of '-' in file name).
