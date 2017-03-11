@@ -22,7 +22,6 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   	$scope.mediaLG = true;
 	}
 
-
   $scope.playingVideo = false;
   $scope.playVideo = function () {
     $scope.playingVideo = true;
@@ -62,7 +61,6 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   $scope.choosenLanguage = languageFactory.filter(function (i) {
 		return i.value === currentLanguage;
 	 }).pop() || languageFactory[0];
-
 
   $scope.updateVideo = function (lang) {
     var video = videoFactory.getVideo(lang);
@@ -168,11 +166,4 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   $scope.getData();
 
   $scope.updateVideo(currentLanguage);
-  
-  var bonusChange = 1480399200;
-  if (bonusChange > Math.floor(new Date().getTime() / 1000)) {
-	 $scope.bonus = 25;
-  } else {
-	 $scope.bonus = 20;
-  }
 });
