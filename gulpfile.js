@@ -103,7 +103,7 @@ gulp.task("revreplace", function(){
 });
 
 gulp.task("copy", function(){
-  return gulp.src(["./assets/images/*"])
+  return gulp.src(["./assets/images/**/*"])
     .pipe(gulp.dest('./dist/assets/images'))
 })
 
