@@ -51,7 +51,7 @@ app.factory('teamFactory', function ($translate, $q) {
 		}]
 	 },
     {
-      name: 'Alexey Kopievsky',
+      name: 'Anton Bilyk',
       title: 'Frontend Developer',
       pic: 'anton',
       bio: 'Alex is a developer with deep knowledge and passion of frontend technologies. He is hard working and always eager to learn something new.',
