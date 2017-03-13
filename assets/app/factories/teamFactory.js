@@ -50,6 +50,19 @@ app.factory('teamFactory', function ($translate, $q) {
 		  link: 'https://ru.linkedin.com/in/alexey-kopievskiy-a472a0102'
 		}]
 	 },
+    {
+      name: 'Alexey Kopievsky',
+      title: 'Frontend Developer',
+      pic: 'anton',
+      bio: 'Alex is a developer with deep knowledge and passion of frontend technologies. He is hard working and always eager to learn something new.',
+      social: [{
+        name: 'fb',
+        link: 'https://www.facebook.com/profile.php?id=100008332484706'
+      }, {
+        name: 'in',
+        link: 'https://ru.linkedin.com/in/alexey-kopievskiy-a472a0102'
+      }]
+    },
 	 {
 		name: 'Harsh Vakharia',
 		pic: 'harsh',
@@ -131,7 +144,8 @@ app.factory('teamFactory', function ($translate, $q) {
 		title: 'Strategic Advisor',
 		pic: 'matt',
 		bio: 'A legal and subject matter expert in Bitcoin, cryptocurrency, and decentralized technologies. In 2011, wrote about the legal considerations of pseudonymous Bitcoin/e-cash. I advise and consult with entrepreneurs, technologists, and policy makers at Nomos Labs LLC., formerly; Counterparty, Mastercoin/Omni Protocol, FCC (Federal Communication Commission).'
-	 }
+	 },
+    {},{}
   ];
   
   function getTeam() {
