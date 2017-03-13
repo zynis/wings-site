@@ -170,5 +170,4 @@ app.controller('indexController', function ($scope, $window, linkFactory, usSpin
 
   $scope.updateVideo(currentLanguage);
   $scope.links = currentLanguage== 'en' || currentLanguage == 'ru' || currentLanguage == 'uk' ? linkFactory.getLink(currentLanguage) : linkFactory.getLink('en')
-  //$scope.links = linkFactory.getLink(currentLanguage)
 });
