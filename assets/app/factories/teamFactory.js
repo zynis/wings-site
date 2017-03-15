@@ -54,13 +54,23 @@ app.factory('teamFactory', function ($translate, $q) {
       name: 'Anton Bilyk',
       title: 'Frontend Developer',
       pic: 'anton',
-      bio: 'Alex is a developer with deep knowledge and passion of frontend technologies. He is hard working and always eager to learn something new.',
+      bio: 'По образованию инженер-радиотехник, программированием занимаюсь с 6 лет, пережил несколько поколений компьютеров и языков программирования. JavaScript-евангелист, fullstack разработчик, UX/UI специалист с преждним опытом разработки на Java, C++ и assembler.',
       social: [{
         name: 'fb',
-        link: 'https://www.facebook.com/profile.php?id=100008332484706'
+        link: 'https://facebook.com/anton.v.bilyk'
       }, {
         name: 'in',
-        link: 'https://ru.linkedin.com/in/alexey-kopievskiy-a472a0102'
+        link: 'https://www.linkedin.com/in/antonbilyk/'
+      }]
+    },
+    {
+      name: 'Artem Gorbachev',
+      title: 'Math Model Developer',
+      pic: 'gorbachev',
+      bio: 'Artem Gorbachev, PhD in Engineering, who recently left the Moscow Exchange to focus on Blockchain and Smart Contracts projects, is working on our forecasting rewards math models with our Scientific Advisor Serguei Popov, PhD in Math and Full Professor in Unicamp.',
+      social: [{
+        name: 'in',
+        link: 'https://linkedin.com/in/artem-gorbachev-91479b72'
       }]
     },
 	 {
@@ -145,22 +155,22 @@ app.factory('teamFactory', function ($translate, $q) {
 		pic: 'matt',
 		bio: 'A legal and subject matter expert in Bitcoin, cryptocurrency, and decentralized technologies. In 2011, wrote about the legal considerations of pseudonymous Bitcoin/e-cash. I advise and consult with entrepreneurs, technologists, and policy makers at Nomos Labs LLC., formerly; Counterparty, Mastercoin/Omni Protocol, FCC (Federal Communication Commission).'
 	 },
-    {},{}
+    {}
   ];
-  
+
   function getTeam() {
 	 var bios = [];
 	 var names = [];
 	 var titles = [];
-	 
+
 	 var realTeam = angular.copy(team);
-	
+
 	 angular.forEach(realTeam, function (t) {
 		bios.push(t.bio);
 		names.push(t.name);
 		titles.push(t.title);
 	 });
-	 
+
 	 return $q.all([
 	   $translate(bios),
 		$translate(names),
@@ -169,17 +179,17 @@ app.factory('teamFactory', function ($translate, $q) {
 		bios = result[0];
 		names = result[1];
 		titles = result[2];
-		
+
 		angular.forEach(realTeam, function (t) {
 		  t.bio = bios[t.bio];
 		  t.title = titles[t.title];
 		  t.name = names[t.name];
 		});
-		
+
 		return realTeam;
 	 });
   }
-  
+
   return {
 	 getTeam: getTeam
   };
