@@ -38,5 +38,10 @@
     "angular-animate": "~1.5.8",
     "ng-videosharing-embed": "^0.3.7",
     "bootstrap-sass": "^3.3.7"
+  },
+  "resolutions": {
+    "remodal": "~1.1.0",
+    "slick-carousel": "^1.6.0",
+    "angular": "1.5.11"
   }
 }

@@ -51,22 +51,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		}]
 	 },
     {
-      name: 'Anton Bilyk',
-      title: 'Frontend Developer',
-      pic: 'anton',
-      bio: 'По образованию инженер-радиотехник, программированием занимаюсь с 6 лет, пережил несколько поколений компьютеров и языков программирования. JavaScript-евангелист, fullstack разработчик, UX/UI специалист с преждним опытом разработки на Java, C++ и assembler.',
-      social: [{
-        name: 'fb',
-        link: 'https://facebook.com/anton.v.bilyk'
-      }, {
-        name: 'in',
-        link: 'https://www.linkedin.com/in/antonbilyk/'
-      }]
-    },
-    {
       name: 'Artem Gorbachev',
       title: 'Math Model Developer',
-      pic: 'gorbachev',
+      pic: 'artem',
       bio: 'Artem Gorbachev, PhD in Engineering, who recently left the Moscow Exchange to focus on Blockchain and Smart Contracts projects, is working on our forecasting rewards math models with our Scientific Advisor Serguei Popov, PhD in Math and Full Professor in Unicamp.',
       social: [{
         name: 'in',
@@ -155,7 +142,7 @@ app.factory('teamFactory', function ($translate, $q) {
 		pic: 'matt',
 		bio: 'A legal and subject matter expert in Bitcoin, cryptocurrency, and decentralized technologies. In 2011, wrote about the legal considerations of pseudonymous Bitcoin/e-cash. I advise and consult with entrepreneurs, technologists, and policy makers at Nomos Labs LLC., formerly; Counterparty, Mastercoin/Omni Protocol, FCC (Federal Communication Commission).'
 	 },
-    {}
+    {}, {}
   ];
 
   function getTeam() {
