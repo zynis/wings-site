@@ -64,13 +64,16 @@ app.factory('teamFactory', function ($translate, $q) {
 		name: 'Harsh Vakharia',
 		pic: 'harsh',
 		title: 'Full Stack Developer',
-		bio: 'Passioned engineer. Loves to create new solutions and admires simplicity. Harsh likes to experiment and has built applications based on technologies such as C, Node.js, Docker, IPFS, Android and Ethereum.',
+		bio: 'Passionate engineer. Loves to create something people want, and admires simplicity. Harsh likes to experiment with Node.js, Docker, and Ethereum. He develops FOSS and enjoys contributing back to open community.',
 		social: [{
 		  name: 'fb',
-		  link: 'https://www.facebook.com/whyrusleeping'
+		  link: 'https://www.facebook.com/profile.php?id=1684195558'
 		}, {
 		  name: 'in',
 		  link: 'https://www.linkedin.com/in/harshjv'
+		}, {
+		  name: 'tw',
+		  link: 'https://twitter.com/harshjv'
 		}]
 	 },
 	 {
