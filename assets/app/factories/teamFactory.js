@@ -8,6 +8,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'btt',
 		  link: 'https://bitcointalk.org/index.php?action=profile;u=168348'
+		}, {
+		  name: 'in',
+		  link: 'https://br.linkedin.com/in/serguei-popov-631bb762'
 		}]
 	 },
 	 {
@@ -25,6 +28,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		}, {
 		  name: 'tw',
 		  link: 'https://twitter.com/mr_povod'
+		}, {
+		  name: 'in',
+		  link: 'https://ru.linkedin.com/in/boris-povod-361a1b79/'
 		}]
 	 },
 	 {
@@ -35,6 +41,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'btt',
 		  link: 'https://bitcointalk.org/index.php?action=profile;u=20214'
+		}, {
+		  name: 'in',
+		  link: 'https://il.linkedin.com/in/stasoskin'
 		}]
 	 },
 	 {
@@ -84,6 +93,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'fb',
 		  link: 'https://www.facebook.com/sebastian.stupurac'
+		}, {
+		  name: 'in',
+		  link: 'https://il.linkedin.com/in/sebastian-stupurac-6bbb1712'
 		}]
 	 },
    {
