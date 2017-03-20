@@ -86,6 +86,16 @@ app.factory('teamFactory', function ($translate, $q) {
 		  link: 'https://www.facebook.com/sebastian.stupurac'
 		}]
 	 },
+   {
+     name: 'Chandler Guo',
+     title: 'Strategic Adviser',
+     pic: 'chandler',
+     bio: 'Angel investor in Bitcoin and Ethereum Classic startups Bitangel including Btc123.com Bitbank.com Jua.com Bw.com Bitfund.pe Richfund.pe etcchain.com',
+     social: [{
+       name: 'in',
+       link: 'https://www.linkedin.com/in/chandler-guo-151681b7'
+     }]
+   },
 	 {
 		name: 'Dominik Zynis',
 		title: 'Marketing & Communications',
