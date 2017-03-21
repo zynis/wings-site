@@ -8,6 +8,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'btt',
 		  link: 'https://bitcointalk.org/index.php?action=profile;u=168348'
+		}, {
+		  name: 'in',
+		  link: 'https://br.linkedin.com/in/serguei-popov-631bb762'
 		}]
 	 },
 	 {
@@ -25,6 +28,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		}, {
 		  name: 'tw',
 		  link: 'https://twitter.com/mr_povod'
+		}, {
+		  name: 'in',
+		  link: 'https://ru.linkedin.com/in/boris-povod-361a1b79/'
 		}]
 	 },
 	 {
@@ -35,6 +41,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'btt',
 		  link: 'https://bitcointalk.org/index.php?action=profile;u=20214'
+		}, {
+		  name: 'in',
+		  link: 'https://il.linkedin.com/in/stasoskin'
 		}]
 	 },
 	 {
@@ -50,17 +59,30 @@ app.factory('teamFactory', function ($translate, $q) {
 		  link: 'https://ru.linkedin.com/in/alexey-kopievskiy-a472a0102'
 		}]
 	 },
+    {
+      name: 'Artem Gorbachev',
+      title: 'Math Model Developer',
+      pic: 'artem',
+      bio: 'Artem Gorbachev, PhD in Engineering, who recently left the Moscow Exchange to focus on Blockchain and Smart Contracts projects, is working on our forecasting rewards math models with our Scientific Advisor Serguei Popov, PhD in Math and Full Professor in Unicamp.',
+      social: [{
+        name: 'in',
+        link: 'https://linkedin.com/in/artem-gorbachev-91479b72'
+      }]
+    },
 	 {
 		name: 'Harsh Vakharia',
 		pic: 'harsh',
 		title: 'Full Stack Developer',
-		bio: 'Passioned engineer. Loves to create new solutions and admires simplicity. Harsh likes to experiment and has built applications based on technologies such as C, Node.js, Docker, IPFS, Android and Ethereum.',
+		bio: 'Passionate engineer. Loves to create something people want, and admires simplicity. Harsh likes to experiment with Node.js, Docker, and Ethereum. He develops FOSS and enjoys contributing back to open community.',
 		social: [{
 		  name: 'fb',
-		  link: 'https://www.facebook.com/whyrusleeping'
+		  link: 'https://www.facebook.com/profile.php?id=1684195558'
 		}, {
 		  name: 'in',
 		  link: 'https://www.linkedin.com/in/harshjv'
+		}, {
+		  name: 'tw',
+		  link: 'https://twitter.com/harshjv'
 		}]
 	 },
 	 {
@@ -71,8 +93,21 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'fb',
 		  link: 'https://www.facebook.com/sebastian.stupurac'
+		}, {
+		  name: 'in',
+		  link: 'https://il.linkedin.com/in/sebastian-stupurac-6bbb1712'
 		}]
 	 },
+   {
+     name: 'Chandler Guo',
+     title: 'Strategic Adviser',
+     pic: 'chandler',
+     bio: 'Angel investor in Bitcoin and Ethereum Classic startups Bitangel including Btc123.com Bitbank.com Jua.com Bw.com Bitfund.pe Richfund.pe etcchain.com',
+     social: [{
+       name: 'in',
+       link: 'https://www.linkedin.com/in/chandler-guo-151681b7'
+     }]
+   },
 	 {
 		name: 'Dominik Zynis',
 		title: 'Marketing & Communications',
@@ -131,22 +166,23 @@ app.factory('teamFactory', function ($translate, $q) {
 		title: 'Strategic Advisor',
 		pic: 'matt',
 		bio: 'A legal and subject matter expert in Bitcoin, cryptocurrency, and decentralized technologies. In 2011, wrote about the legal considerations of pseudonymous Bitcoin/e-cash. I advise and consult with entrepreneurs, technologists, and policy makers at Nomos Labs LLC., formerly; Counterparty, Mastercoin/Omni Protocol, FCC (Federal Communication Commission).'
-	 }
+	 },
+    {}, {}
   ];
-  
+
   function getTeam() {
 	 var bios = [];
 	 var names = [];
 	 var titles = [];
-	 
+
 	 var realTeam = angular.copy(team);
-	
+
 	 angular.forEach(realTeam, function (t) {
 		bios.push(t.bio);
 		names.push(t.name);
 		titles.push(t.title);
 	 });
-	 
+
 	 return $q.all([
 	   $translate(bios),
 		$translate(names),
@@ -155,17 +191,17 @@ app.factory('teamFactory', function ($translate, $q) {
 		bios = result[0];
 		names = result[1];
 		titles = result[2];
-		
+
 		angular.forEach(realTeam, function (t) {
 		  t.bio = bios[t.bio];
 		  t.title = titles[t.title];
 		  t.name = names[t.name];
 		});
-		
+
 		return realTeam;
 	 });
   }
-  
+
   return {
 	 getTeam: getTeam
   };

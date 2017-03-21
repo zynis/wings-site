@@ -1,4 +1,4 @@
-app.controller('indexController', function ($scope, $window, usSpinnerService, $timeout, sizeFactory, videoFactory, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
+app.controller('indexController', function ($scope, $window, linkFactory, usSpinnerService, $timeout, sizeFactory, videoFactory, pressFactory, whitepaperFactory, responsiveFactory, remodal, $stateParams, apiFactory, teamFactory, $q, languageFactory, smoothScroll, $rootScope, $log, $translate, config) {
   $log.info("Index controller");
   var bonusChange = 1480399200;
   if (bonusChange > Math.floor(new Date().getTime() / 1000)) {
@@ -81,13 +81,16 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   $scope.openChat = function () {
 	 return remodal({
 		templateUrl: '/assets/app/templates/modals/chat.html'
-	 }).open();
+	 }).open({
+	 	links: $scope.links
+	 });
   }
   
   $scope.changeLang = function (lang) {
 	 $translate.use(lang.value);
 	 $scope.updateVideo(lang.value);
-  }
+	 $scope.links =  lang.value == 'en' || currentLanguage == 'ru' || lang.value == 'uk' ? linkFactory.getLink(lang.value) : linkFactory.getLink('en')
+	};
   
   $scope.subscribe = function () {
 	 if ($scope.loading) {
@@ -166,4 +169,5 @@ app.controller('indexController', function ($scope, $window, usSpinnerService, $
   $scope.getData();
 
   $scope.updateVideo(currentLanguage);
+  $scope.links = currentLanguage== 'en' || currentLanguage == 'ru' || currentLanguage == 'uk' ? linkFactory.getLink(currentLanguage) : linkFactory.getLink('en')
 });
