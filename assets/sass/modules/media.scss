@@ -24,7 +24,7 @@
 	.main {
 		height: 100%;
 	}
-} 
+}
 
 @media screen and (max-width:1000px) {
 	.main {
@@ -96,7 +96,7 @@
 			margin-right: 20px;
 		}
 	}
-} 
+}
 
 
 @media screen and (max-width:900px) {
@@ -411,6 +411,16 @@
 }
 
 @media (min-width: 320px) and (max-width: 479px) {
+	.big-tab{
+		&.tabs-nav-item--1 {
+			border-top-left-radius: 0px;
+    	border-bottom-left-radius: 0px;
+		}
+		&.tabs-nav-item--2 {
+			border-top-right-radius: 0px;
+    	border-bottom-right-radius: 0px;
+		}
+	}
 	.main-video_content {
 		width: 290px;
 		height: 170px;
@@ -424,6 +434,7 @@
 	.top-menu__mobile {
 		display: flex;
 	}
+<<<<<<< HEAD
 	.top-logo {
 		z-index: 2000 !important;
 		position: relative;
@@ -434,3 +445,6 @@
 	}
 }
 
+=======
+}
+>>>>>>> feature/site-text-updates

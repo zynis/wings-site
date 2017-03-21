@@ -45,6 +45,12 @@
 		border-bottom: 1px solid #b8b9cb;
 		clear: both;
 		overflow: auto;
+		&.future-rounds {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border: none;
+			text-align: justify;
+		}
 		&--left {
 			text-align: left;
 			.future-item-image {float: left;margin-right: 30px;padding-left: 60px;}
