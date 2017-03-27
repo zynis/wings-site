@@ -8,6 +8,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'btt',
 		  link: 'https://bitcointalk.org/index.php?action=profile;u=168348'
+		}, {
+		  name: 'in',
+		  link: 'https://br.linkedin.com/in/serguei-popov-631bb762'
 		}]
 	 },
 	 {
@@ -25,6 +28,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		}, {
 		  name: 'tw',
 		  link: 'https://twitter.com/mr_povod'
+		}, {
+		  name: 'in',
+		  link: 'https://ru.linkedin.com/in/boris-povod-361a1b79/'
 		}]
 	 },
 	 {
@@ -35,6 +41,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'btt',
 		  link: 'https://bitcointalk.org/index.php?action=profile;u=20214'
+		}, {
+		  name: 'in',
+		  link: 'https://il.linkedin.com/in/stasoskin'
 		}]
 	 },
 	 {
@@ -50,6 +59,19 @@ app.factory('teamFactory', function ($translate, $q) {
 		  link: 'https://ru.linkedin.com/in/alexey-kopievskiy-a472a0102'
 		}]
 	 },
+    {
+      name: 'Anton Bilyk',
+      title: 'Frontend Developer',
+      pic: 'anton',
+      bio: 'Anton is Javascript evangelist with 16 years experience. His area includes fullstack developing, frontend developing, UI/UX.',
+      social: [{
+        name: 'fb',
+        link: 'https://facebook.com/anton.v.bilyk'
+      }, {
+        name: 'in',
+        link: 'https://www.linkedin.com/in/antonbilyk/'
+      }]
+    },
     {
       name: 'Artem Gorbachev',
       title: 'Math Model Developer',
@@ -84,6 +106,9 @@ app.factory('teamFactory', function ($translate, $q) {
 		social: [{
 		  name: 'fb',
 		  link: 'https://www.facebook.com/sebastian.stupurac'
+		}, {
+		  name: 'in',
+		  link: 'https://il.linkedin.com/in/sebastian-stupurac-6bbb1712'
 		}]
 	 },
    {
@@ -154,8 +179,7 @@ app.factory('teamFactory', function ($translate, $q) {
 		title: 'Strategic Advisor',
 		pic: 'matt',
 		bio: 'A legal and subject matter expert in Bitcoin, cryptocurrency, and decentralized technologies. In 2011, wrote about the legal considerations of pseudonymous Bitcoin/e-cash. I advise and consult with entrepreneurs, technologists, and policy makers at Nomos Labs LLC., formerly; Counterparty, Mastercoin/Omni Protocol, FCC (Federal Communication Commission).'
-	 },
-    {}, {}
+	 }
   ];
 
   function getTeam() {

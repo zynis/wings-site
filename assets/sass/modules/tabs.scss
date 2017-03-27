@@ -2,6 +2,9 @@
 	&-nav {
 		text-align: center;
 		&-item {
+			&.big-tab {
+				width: 220px;
+			}
 			width: 185px;
 			height: 63px;
 			background-color: #fff;
